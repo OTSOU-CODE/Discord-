@@ -30,6 +30,9 @@ jobs:
 
       - name: Run Bot
         env:
-          TOKEN: ${{ secrets.TOKEN }}
+        TOKEN: ${{ secrets.TOKEN }}
+        DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        DISCORD_TOCKEN: ${{ secrets.DISCORD_TOCKEN }}
         run: |
           python millionaire_bot.py
