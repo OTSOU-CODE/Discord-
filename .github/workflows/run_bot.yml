@@ -20,6 +20,9 @@ jobs:
         with:
           python-version: "3.9"
 
+      - name: Debug File Structure
+        run: ls -R
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
