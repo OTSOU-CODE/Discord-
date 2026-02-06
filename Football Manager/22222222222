@@ -1,9 +1,0 @@
-Roles:
-involves 4-card private dealing from a shuffled deck, with a revealed center card. Key rules include matching the number or symbol;
-specifically, playing a 1 skips the next player's turn, a 2 triggers a "take 2" penalty or matching response, and a 7 allows you to change
-the current suit. The first player to empty their hand wins.
-
-Prompt
-The Python code should precisely implement the detailed rules: a shuffled deck with Moroccan elements, dealing 4 cards to each player via ephemeral messages, and a randomized center card. Crucially, incorporate the specific logic for each special card: 1 to immediately skip the next player, 2 to enforce the "take 2" or matching rule, and 7 to allow the current player to change the active element, with the game ending upon a player emptying their hand.
-
-Generate Python code that generates player cards. The code should utilize the Pillow library to dynamically combine card asset images based on a shuffled hand, creating composite visuals for each player's dealt cards. The generation should be integrated with the game logic for dealing and saving player hands.
