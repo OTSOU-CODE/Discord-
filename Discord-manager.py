@@ -342,8 +342,11 @@ def get_perm_level(member):
         return PermLevel.OWNER
     if member.guild_permissions.administrator:
         return PermLevel.ADMIN
-    if MOD_ROLE_ID and int(MOD_ROLE_ID) in [r.id for r in member.roles]:
-        return PermLevel.MODERATOR
+    if MOD_ROLE_ID:
+        mod_role_id = int(MOD_ROLE_ID)
+        for r in member.roles:
+            if r.id == mod_role_id:
+                return PermLevel.MODERATOR
     return PermLevel.MEMBER
 
 def log_command(command_name):
@@ -2880,8 +2883,12 @@ async def on_message(message):
     if isinstance(message.author, discord.Member):
         if message.author.guild_permissions.manage_messages:
             is_mod = True
-        elif MOD_ROLE_ID != 0 and any(r.id == MOD_ROLE_ID for r in message.author.roles):
-            is_mod = True
+        elif MOD_ROLE_ID:
+            mod_role_id = int(MOD_ROLE_ID)
+            for r in message.author.roles:
+                if r.id == mod_role_id:
+                    is_mod = True
+                    break
 
     if is_mod:
         if base_cmd.startswith('.warn '):
