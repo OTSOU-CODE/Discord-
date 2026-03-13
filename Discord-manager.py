@@ -1721,7 +1721,7 @@ async def check_reminders():
                     user_id = reminder['user_id']
                     message = reminder['message']
                     try:
-                        user = await client.fetch_user(user_id)
+                        user = client.get_user(user_id) or await client.fetch_user(user_id)
                         embed = discord.Embed(title="⏰ Reminder!", description=message, color=discord.Color.gold())
                         await user.send(embed=embed)
                     except Exception as e:
