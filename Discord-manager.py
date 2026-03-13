@@ -426,7 +426,7 @@ class TicketCloseButton(discord.ui.View):
     @discord.ui.button(label="Close Ticket", style=discord.ButtonStyle.danger, custom_id="close_ticket_btn", emoji="🔒")
     async def close_ticket(self, interaction: discord.Interaction, button: discord.ui.Button):
         # Prevent double clicks
-        if interaction.channel.id in [data.get('channel_id') for data in tickets_data.values()]:
+        if any(data.get('channel_id') == interaction.channel.id for data in tickets_data.values()):
             guild = interaction.guild
             ticket_id = next((tid for tid, data in tickets_data.items() if data['channel_id'] == interaction.channel.id), None)
             
