@@ -1,0 +1,1208 @@
+{
+    "0": {
+        "type": "hybrid",
+        "voice_minutes_required": 0,
+        "text_minutes_required": 0,
+        "role_id": 1480949276623503503
+    },
+    "1": {
+        "type": "hybrid",
+        "voice_minutes_required": 0,
+        "text_minutes_required": 10,
+        "role_id": 1480949210227544291
+    },
+    "2": {
+        "voice_minutes_required": 69,
+        "text_minutes_required": 20,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "3": {
+        "voice_minutes_required": 156,
+        "text_minutes_required": 30,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "4": {
+        "voice_minutes_required": 278,
+        "text_minutes_required": 40,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "5": {
+        "voice_minutes_required": 314,
+        "text_minutes_required": 50,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "6": {
+        "voice_minutes_required": 400,
+        "text_minutes_required": 60,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "7": {
+        "voice_minutes_required": 500,
+        "text_minutes_required": 70,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "8": {
+        "voice_minutes_required": 600,
+        "text_minutes_required": 80,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "9": {
+        "voice_minutes_required": 700,
+        "text_minutes_required": 90,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "10": {
+        "voice_minutes_required": 600,
+        "text_minutes_required": 100,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "11": {
+        "voice_minutes_required": 660,
+        "text_minutes_required": 110,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "12": {
+        "voice_minutes_required": 720,
+        "text_minutes_required": 120,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "13": {
+        "voice_minutes_required": 780,
+        "text_minutes_required": 130,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "14": {
+        "voice_minutes_required": 840,
+        "text_minutes_required": 140,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "15": {
+        "voice_minutes_required": 900,
+        "text_minutes_required": 150,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "16": {
+        "voice_minutes_required": 960,
+        "text_minutes_required": 160,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "17": {
+        "voice_minutes_required": 1020,
+        "text_minutes_required": 170,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "18": {
+        "voice_minutes_required": 1080,
+        "text_minutes_required": 180,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "19": {
+        "voice_minutes_required": 1140,
+        "text_minutes_required": 190,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "20": {
+        "voice_minutes_required": 1200,
+        "text_minutes_required": 200,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "21": {
+        "voice_minutes_required": 1260,
+        "text_minutes_required": 210,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "22": {
+        "voice_minutes_required": 1320,
+        "text_minutes_required": 220,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "23": {
+        "voice_minutes_required": 1380,
+        "text_minutes_required": 230,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "24": {
+        "voice_minutes_required": 1440,
+        "text_minutes_required": 240,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "25": {
+        "voice_minutes_required": 1500,
+        "text_minutes_required": 250,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "26": {
+        "voice_minutes_required": 1560,
+        "text_minutes_required": 260,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "27": {
+        "voice_minutes_required": 1620,
+        "text_minutes_required": 270,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "28": {
+        "voice_minutes_required": 1680,
+        "text_minutes_required": 280,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "29": {
+        "voice_minutes_required": 1740,
+        "text_minutes_required": 290,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "30": {
+        "voice_minutes_required": 1800,
+        "text_minutes_required": 300,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "31": {
+        "voice_minutes_required": 1860,
+        "text_minutes_required": 310,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "32": {
+        "voice_minutes_required": 1920,
+        "text_minutes_required": 320,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "33": {
+        "voice_minutes_required": 1980,
+        "text_minutes_required": 330,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "34": {
+        "voice_minutes_required": 2040,
+        "text_minutes_required": 340,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "35": {
+        "voice_minutes_required": 2100,
+        "text_minutes_required": 350,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "36": {
+        "voice_minutes_required": 2160,
+        "text_minutes_required": 360,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "37": {
+        "voice_minutes_required": 2220,
+        "text_minutes_required": 370,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "38": {
+        "voice_minutes_required": 2280,
+        "text_minutes_required": 380,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "39": {
+        "voice_minutes_required": 2340,
+        "text_minutes_required": 390,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "40": {
+        "voice_minutes_required": 2400,
+        "text_minutes_required": 400,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "41": {
+        "voice_minutes_required": 2460,
+        "text_minutes_required": 410,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "42": {
+        "voice_minutes_required": 2520,
+        "text_minutes_required": 420,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "43": {
+        "voice_minutes_required": 2580,
+        "text_minutes_required": 430,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "44": {
+        "voice_minutes_required": 2640,
+        "text_minutes_required": 440,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "45": {
+        "voice_minutes_required": 2700,
+        "text_minutes_required": 450,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "46": {
+        "voice_minutes_required": 2760,
+        "text_minutes_required": 460,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "47": {
+        "voice_minutes_required": 2820,
+        "text_minutes_required": 470,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "48": {
+        "voice_minutes_required": 2880,
+        "text_minutes_required": 480,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "49": {
+        "voice_minutes_required": 2940,
+        "text_minutes_required": 490,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "50": {
+        "voice_minutes_required": 3000,
+        "text_minutes_required": 500,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "51": {
+        "voice_minutes_required": 3060,
+        "text_minutes_required": 510,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "52": {
+        "voice_minutes_required": 3120,
+        "text_minutes_required": 520,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "53": {
+        "voice_minutes_required": 3180,
+        "text_minutes_required": 530,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "54": {
+        "voice_minutes_required": 3240,
+        "text_minutes_required": 540,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "55": {
+        "voice_minutes_required": 3300,
+        "text_minutes_required": 550,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "56": {
+        "voice_minutes_required": 3360,
+        "text_minutes_required": 560,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "57": {
+        "voice_minutes_required": 3420,
+        "text_minutes_required": 570,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "58": {
+        "voice_minutes_required": 3480,
+        "text_minutes_required": 580,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "59": {
+        "voice_minutes_required": 3540,
+        "text_minutes_required": 590,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "60": {
+        "voice_minutes_required": 3600,
+        "text_minutes_required": 600,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "61": {
+        "voice_minutes_required": 3660,
+        "text_minutes_required": 610,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "62": {
+        "voice_minutes_required": 3720,
+        "text_minutes_required": 620,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "63": {
+        "voice_minutes_required": 3780,
+        "text_minutes_required": 630,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "64": {
+        "voice_minutes_required": 3840,
+        "text_minutes_required": 640,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "65": {
+        "voice_minutes_required": 3900,
+        "text_minutes_required": 650,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "66": {
+        "voice_minutes_required": 3960,
+        "text_minutes_required": 660,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "67": {
+        "voice_minutes_required": 4020,
+        "text_minutes_required": 670,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "68": {
+        "voice_minutes_required": 4080,
+        "text_minutes_required": 680,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "69": {
+        "voice_minutes_required": 4140,
+        "text_minutes_required": 690,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "70": {
+        "voice_minutes_required": 4200,
+        "text_minutes_required": 700,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "71": {
+        "voice_minutes_required": 4260,
+        "text_minutes_required": 710,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "72": {
+        "voice_minutes_required": 4320,
+        "text_minutes_required": 720,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "73": {
+        "voice_minutes_required": 4380,
+        "text_minutes_required": 730,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "74": {
+        "voice_minutes_required": 4440,
+        "text_minutes_required": 740,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "75": {
+        "voice_minutes_required": 4500,
+        "text_minutes_required": 750,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "76": {
+        "voice_minutes_required": 4560,
+        "text_minutes_required": 760,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "77": {
+        "voice_minutes_required": 4620,
+        "text_minutes_required": 770,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "78": {
+        "voice_minutes_required": 4680,
+        "text_minutes_required": 780,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "79": {
+        "voice_minutes_required": 4740,
+        "text_minutes_required": 790,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "80": {
+        "voice_minutes_required": 4800,
+        "text_minutes_required": 800,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "81": {
+        "voice_minutes_required": 4860,
+        "text_minutes_required": 810,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "82": {
+        "voice_minutes_required": 4920,
+        "text_minutes_required": 820,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "83": {
+        "voice_minutes_required": 4980,
+        "text_minutes_required": 830,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "84": {
+        "voice_minutes_required": 5040,
+        "text_minutes_required": 840,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "85": {
+        "voice_minutes_required": 5100,
+        "text_minutes_required": 850,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "86": {
+        "voice_minutes_required": 5160,
+        "text_minutes_required": 860,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "87": {
+        "voice_minutes_required": 5220,
+        "text_minutes_required": 870,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "88": {
+        "voice_minutes_required": 5280,
+        "text_minutes_required": 880,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "89": {
+        "voice_minutes_required": 5340,
+        "text_minutes_required": 890,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "90": {
+        "voice_minutes_required": 5400,
+        "text_minutes_required": 900,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "91": {
+        "voice_minutes_required": 5460,
+        "text_minutes_required": 910,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "92": {
+        "voice_minutes_required": 5520,
+        "text_minutes_required": 920,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "93": {
+        "voice_minutes_required": 5580,
+        "text_minutes_required": 930,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "94": {
+        "voice_minutes_required": 5640,
+        "text_minutes_required": 940,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "95": {
+        "voice_minutes_required": 5700,
+        "text_minutes_required": 950,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "96": {
+        "voice_minutes_required": 5760,
+        "text_minutes_required": 960,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "97": {
+        "voice_minutes_required": 5820,
+        "text_minutes_required": 970,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "98": {
+        "voice_minutes_required": 5880,
+        "text_minutes_required": 980,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "99": {
+        "voice_minutes_required": 5940,
+        "text_minutes_required": 990,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "100": {
+        "voice_minutes_required": 6000,
+        "text_minutes_required": 1000,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "101": {
+        "voice_minutes_required": 6060,
+        "text_minutes_required": 1010,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "102": {
+        "voice_minutes_required": 6120,
+        "text_minutes_required": 1020,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "103": {
+        "voice_minutes_required": 6180,
+        "text_minutes_required": 1030,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "104": {
+        "voice_minutes_required": 6240,
+        "text_minutes_required": 1040,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "105": {
+        "voice_minutes_required": 6300,
+        "text_minutes_required": 1050,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "106": {
+        "voice_minutes_required": 6360,
+        "text_minutes_required": 1060,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "107": {
+        "voice_minutes_required": 6420,
+        "text_minutes_required": 1070,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "108": {
+        "voice_minutes_required": 6480,
+        "text_minutes_required": 1080,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "109": {
+        "voice_minutes_required": 6540,
+        "text_minutes_required": 1090,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "110": {
+        "voice_minutes_required": 6600,
+        "text_minutes_required": 1100,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "111": {
+        "voice_minutes_required": 6660,
+        "text_minutes_required": 1110,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "112": {
+        "voice_minutes_required": 6720,
+        "text_minutes_required": 1120,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "113": {
+        "voice_minutes_required": 6780,
+        "text_minutes_required": 1130,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "114": {
+        "voice_minutes_required": 6840,
+        "text_minutes_required": 1140,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "115": {
+        "voice_minutes_required": 6900,
+        "text_minutes_required": 1150,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "116": {
+        "voice_minutes_required": 6960,
+        "text_minutes_required": 1160,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "117": {
+        "voice_minutes_required": 7020,
+        "text_minutes_required": 1170,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "118": {
+        "voice_minutes_required": 7080,
+        "text_minutes_required": 1180,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "119": {
+        "voice_minutes_required": 7140,
+        "text_minutes_required": 1190,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "120": {
+        "voice_minutes_required": 7200,
+        "text_minutes_required": 1200,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "121": {
+        "voice_minutes_required": 7260,
+        "text_minutes_required": 1210,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "122": {
+        "voice_minutes_required": 7320,
+        "text_minutes_required": 1220,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "123": {
+        "voice_minutes_required": 7380,
+        "text_minutes_required": 1230,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "124": {
+        "voice_minutes_required": 7440,
+        "text_minutes_required": 1240,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "125": {
+        "voice_minutes_required": 7500,
+        "text_minutes_required": 1250,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "126": {
+        "voice_minutes_required": 7560,
+        "text_minutes_required": 1260,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "127": {
+        "voice_minutes_required": 7620,
+        "text_minutes_required": 1270,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "128": {
+        "voice_minutes_required": 7680,
+        "text_minutes_required": 1280,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "129": {
+        "voice_minutes_required": 7740,
+        "text_minutes_required": 1290,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "130": {
+        "voice_minutes_required": 7800,
+        "text_minutes_required": 1300,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "131": {
+        "voice_minutes_required": 7860,
+        "text_minutes_required": 1310,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "132": {
+        "voice_minutes_required": 7920,
+        "text_minutes_required": 1320,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "133": {
+        "voice_minutes_required": 7980,
+        "text_minutes_required": 1330,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "134": {
+        "voice_minutes_required": 8040,
+        "text_minutes_required": 1340,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "135": {
+        "voice_minutes_required": 8100,
+        "text_minutes_required": 1350,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "136": {
+        "voice_minutes_required": 8160,
+        "text_minutes_required": 1360,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "137": {
+        "voice_minutes_required": 8220,
+        "text_minutes_required": 1370,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "138": {
+        "voice_minutes_required": 8280,
+        "text_minutes_required": 1380,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "139": {
+        "voice_minutes_required": 8340,
+        "text_minutes_required": 1390,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "140": {
+        "voice_minutes_required": 8400,
+        "text_minutes_required": 1400,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "141": {
+        "voice_minutes_required": 8460,
+        "text_minutes_required": 1410,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "142": {
+        "voice_minutes_required": 8520,
+        "text_minutes_required": 1420,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "143": {
+        "voice_minutes_required": 8580,
+        "text_minutes_required": 1430,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "144": {
+        "voice_minutes_required": 8640,
+        "text_minutes_required": 1440,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "145": {
+        "voice_minutes_required": 8700,
+        "text_minutes_required": 1450,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "146": {
+        "voice_minutes_required": 8760,
+        "text_minutes_required": 1460,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "147": {
+        "voice_minutes_required": 8820,
+        "text_minutes_required": 1470,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "148": {
+        "voice_minutes_required": 8880,
+        "text_minutes_required": 1480,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "149": {
+        "voice_minutes_required": 8940,
+        "text_minutes_required": 1490,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "150": {
+        "voice_minutes_required": 9000,
+        "text_minutes_required": 1500,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "151": {
+        "voice_minutes_required": 9060,
+        "text_minutes_required": 1510,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "152": {
+        "voice_minutes_required": 9120,
+        "text_minutes_required": 1520,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "153": {
+        "voice_minutes_required": 9180,
+        "text_minutes_required": 1530,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "154": {
+        "voice_minutes_required": 9240,
+        "text_minutes_required": 1540,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "155": {
+        "voice_minutes_required": 9300,
+        "text_minutes_required": 1550,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "156": {
+        "voice_minutes_required": 9360,
+        "text_minutes_required": 1560,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "157": {
+        "voice_minutes_required": 9420,
+        "text_minutes_required": 1570,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "158": {
+        "voice_minutes_required": 9480,
+        "text_minutes_required": 1580,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "159": {
+        "voice_minutes_required": 9540,
+        "text_minutes_required": 1590,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "160": {
+        "voice_minutes_required": 9600,
+        "text_minutes_required": 1600,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "161": {
+        "voice_minutes_required": 9660,
+        "text_minutes_required": 1610,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "162": {
+        "voice_minutes_required": 9720,
+        "text_minutes_required": 1620,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "163": {
+        "voice_minutes_required": 9780,
+        "text_minutes_required": 1630,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "164": {
+        "voice_minutes_required": 9840,
+        "text_minutes_required": 1640,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "165": {
+        "voice_minutes_required": 9900,
+        "text_minutes_required": 1650,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "166": {
+        "voice_minutes_required": 9960,
+        "text_minutes_required": 1660,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "167": {
+        "voice_minutes_required": 10020,
+        "text_minutes_required": 1670,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "168": {
+        "voice_minutes_required": 10080,
+        "text_minutes_required": 1680,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "169": {
+        "voice_minutes_required": 10140,
+        "text_minutes_required": 1690,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "170": {
+        "voice_minutes_required": 10200,
+        "text_minutes_required": 1700,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "171": {
+        "voice_minutes_required": 10260,
+        "text_minutes_required": 1710,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "172": {
+        "voice_minutes_required": 10320,
+        "text_minutes_required": 1720,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "173": {
+        "voice_minutes_required": 10380,
+        "text_minutes_required": 1730,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "174": {
+        "voice_minutes_required": 10440,
+        "text_minutes_required": 1740,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "175": {
+        "voice_minutes_required": 10500,
+        "text_minutes_required": 1750,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "176": {
+        "voice_minutes_required": 10560,
+        "text_minutes_required": 1760,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "177": {
+        "voice_minutes_required": 10620,
+        "text_minutes_required": 1770,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "178": {
+        "voice_minutes_required": 10680,
+        "text_minutes_required": 1780,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "179": {
+        "voice_minutes_required": 10740,
+        "text_minutes_required": 1790,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "180": {
+        "voice_minutes_required": 10800,
+        "text_minutes_required": 1800,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "181": {
+        "voice_minutes_required": 10860,
+        "text_minutes_required": 1810,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "182": {
+        "voice_minutes_required": 10920,
+        "text_minutes_required": 1820,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "183": {
+        "voice_minutes_required": 10980,
+        "text_minutes_required": 1830,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "184": {
+        "voice_minutes_required": 11040,
+        "text_minutes_required": 1840,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "185": {
+        "voice_minutes_required": 11100,
+        "text_minutes_required": 1850,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "186": {
+        "voice_minutes_required": 11160,
+        "text_minutes_required": 1860,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "187": {
+        "voice_minutes_required": 11220,
+        "text_minutes_required": 1870,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "188": {
+        "voice_minutes_required": 11280,
+        "text_minutes_required": 1880,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "189": {
+        "voice_minutes_required": 11340,
+        "text_minutes_required": 1890,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "190": {
+        "voice_minutes_required": 11400,
+        "text_minutes_required": 1900,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "191": {
+        "voice_minutes_required": 11460,
+        "text_minutes_required": 1910,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "192": {
+        "voice_minutes_required": 11520,
+        "text_minutes_required": 1920,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "193": {
+        "voice_minutes_required": 11580,
+        "text_minutes_required": 1930,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "194": {
+        "voice_minutes_required": 11640,
+        "text_minutes_required": 1940,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "195": {
+        "voice_minutes_required": 11700,
+        "text_minutes_required": 1950,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "196": {
+        "voice_minutes_required": 11760,
+        "text_minutes_required": 1960,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "197": {
+        "voice_minutes_required": 11820,
+        "text_minutes_required": 1970,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "198": {
+        "voice_minutes_required": 11880,
+        "text_minutes_required": 1980,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "199": {
+        "voice_minutes_required": 11940,
+        "text_minutes_required": 1990,
+        "role_id": 0,
+        "type": "hybrid"
+    },
+    "200": {
+        "voice_minutes_required": 12000,
+        "text_minutes_required": 2000,
+        "role_id": 0,
+        "type": "hybrid"
+    }
+}

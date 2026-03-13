@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOTCTL — Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg:           #060b12;
+  --bg2:          #0a1120;
+  --sidebar:      #0c1422;
+  --card:         #0f1929;
+  --card2:        #111f33;
+  --border:       #1a2d47;
+  --border2:      #243855;
+  --accent:       #00d9ff;
+  --accent-dim:   rgba(0,217,255,0.12);
+  --accent-glow:  rgba(0,217,255,0.25);
+  --purple:       #a855f7;
+  --purple-dim:   rgba(168,85,247,0.12);
+  --green:        #10b981;
+  --green-dim:    rgba(16,185,129,0.12);
+  --yellow:       #f59e0b;
+  --yellow-dim:   rgba(245,158,11,0.12);
+  --red:          #ef4444;
+  --red-dim:      rgba(239,68,68,0.12);
+  --text:         #e2e8f0;
+  --text-dim:     #94a3b8;
+  --text-muted:   #4a6080;
+  --radius:       8px;
+  --font:         'IBM Plex Mono', monospace;
+  --display:      'Rajdhani', sans-serif;
+  --sidebar-w:    230px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background-image:
+    linear-gradient(rgba(0,217,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,217,255,0.025) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── SIDEBAR ────────────────────────────────────────────────────────────────── */
+.sidebar {
+  width: var(--sidebar-w);
+  min-height: 100vh;
+  background: var(--sidebar);
+  border-right: 1px solid var(--border);
+  display: flex; flex-direction: column;
+  position: fixed; left: 0; top: 0; bottom: 0;
+  z-index: 20;
+}
+
+.sidebar-brand {
+  padding: 22px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: 12px;
+}
+.brand-icon {
+  width: 38px; height: 38px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--purple) 100%);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+  box-shadow: 0 0 16px rgba(0,217,255,0.3);
+}
+.brand-name {
+  font-family: var(--display);
+  font-size: 20px; font-weight: 700;
+  letter-spacing: 2px; color: var(--text);
+}
+.brand-ver { font-size: 10px; color: var(--text-muted); letter-spacing: 1px; margin-top: 1px; }
+
+.nav { flex: 1; padding: 10px 10px; display: flex; flex-direction: column; gap: 1px; overflow-y: auto; }
+
+.nav-section {
+  font-size: 9px; color: var(--text-muted);
+  text-transform: uppercase; letter-spacing: 2px;
+  padding: 14px 10px 5px;
+}
+
+.nav-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 12px; border-radius: var(--radius);
+  cursor: pointer; color: var(--text-dim); font-size: 12px;
+  transition: all 0.15s ease; user-select: none;
+  border: 1px solid transparent;
+}
+.nav-item:hover { background: rgba(255,255,255,0.04); color: var(--text); }
+.nav-item.active {
+  background: var(--accent-dim); color: var(--accent);
+  border-color: rgba(0,217,255,0.2);
+}
+.nav-icon { font-size: 14px; width: 18px; text-align: center; flex-shrink: 0; }
+
+.sidebar-footer {
+  padding: 10px; border-top: 1px solid var(--border);
+}
+.logout-btn {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 12px; border-radius: var(--radius);
+  cursor: pointer; color: var(--red); font-size: 12px;
+  transition: all 0.15s; background: transparent; border: none;
+  width: 100%; font-family: var(--font);
+}
+.logout-btn:hover { background: var(--red-dim); }
+
+/* ── MAIN ──────────────────────────────────────────────────────────────────── */
+.main {
+  margin-left: var(--sidebar-w);
+  flex: 1; position: relative; z-index: 1;
+  min-height: 100vh; display: flex; flex-direction: column;
+}
+
+.page-header {
+  padding: 24px 30px 18px;
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(6,11,18,0.8); backdrop-filter: blur(4px);
+  position: sticky; top: 0; z-index: 10;
+}
+.page-title {
+  font-family: var(--display);
+  font-size: 24px; font-weight: 700; letter-spacing: 2px;
+}
+.page-sub { font-size: 10px; color: var(--text-muted); letter-spacing: 1px; margin-top: 2px; }
+.status-dot { display: flex; align-items: center; gap: 6px; font-size: 11px; color: var(--text-muted); }
+.dot-green { width: 7px; height: 7px; border-radius: 50%; background: var(--green); box-shadow: 0 0 8px var(--green); }
+
+.page-body { padding: 24px 30px; flex: 1; }
+
+/* ── CARDS ─────────────────────────────────────────────────────────────────── */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+.card:hover { border-color: var(--border2); }
+.card-title {
+  font-family: var(--display);
+  font-size: 11px; font-weight: 600;
+  color: var(--text-muted); text-transform: uppercase; letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+/* ── STAT GRID ─────────────────────────────────────────────────────────────── */
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; margin-bottom: 20px; }
+.stat-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 18px 20px;
+  position: relative; overflow: hidden; transition: all 0.2s;
+}
+.stat-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--c, var(--accent)); opacity: 0.7;
+}
+.stat-card:hover { border-color: var(--c, var(--accent)); transform: translateY(-1px); box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+.stat-icon { font-size: 20px; margin-bottom: 10px; }
+.stat-val { font-family: var(--display); font-size: 28px; font-weight: 700; color: var(--c, var(--accent)); line-height: 1; }
+.stat-lbl { font-size: 10px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 1px; }
+
+/* ── TABLES ────────────────────────────────────────────────────────────────── */
+.tbl-wrap { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th {
+  text-align: left; padding: 9px 12px;
+  color: var(--text-muted); font-size: 9px;
+  text-transform: uppercase; letter-spacing: 2px;
+  border-bottom: 1px solid var(--border); white-space: nowrap;
+  font-weight: 600;
+}
+td { padding: 10px 12px; border-bottom: 1px solid rgba(26,45,71,0.5); color: var(--text-dim); font-size: 12px; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: rgba(255,255,255,0.02); color: var(--text); }
+
+/* ── BUTTONS ───────────────────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 14px; border-radius: var(--radius);
+  font-family: var(--font); font-size: 11px; font-weight: 500;
+  cursor: pointer; border: none; transition: all 0.15s; white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-primary { background: var(--accent); color: #000; }
+.btn-primary:hover:not(:disabled) { opacity: 0.85; box-shadow: 0 0 12px var(--accent-glow); }
+.btn-ghost { background: transparent; color: var(--text-dim); border: 1px solid var(--border); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+.btn-danger { background: var(--red); color: #fff; }
+.btn-danger:hover { opacity: 0.85; }
+.btn-success { background: var(--green); color: #000; }
+.btn-success:hover { opacity: 0.85; }
+.btn-purple { background: var(--purple); color: #fff; }
+.btn-sm { padding: 5px 10px; font-size: 10px; }
+
+/* ── TABS ──────────────────────────────────────────────────────────────────── */
+.tabs { display: flex; gap: 4px; margin-bottom: 20px; }
+.tab {
+  padding: 8px 16px; border-radius: var(--radius);
+  font-family: var(--font); font-size: 11px; cursor: pointer;
+  color: var(--text-muted); background: transparent;
+  border: 1px solid var(--border); transition: all 0.15s;
+}
+.tab:hover { color: var(--text); border-color: var(--border2); }
+.tab.active { background: var(--accent-dim); color: var(--accent); border-color: rgba(0,217,255,0.3); }
+
+/* ── FORM ──────────────────────────────────────────────────────────────────── */
+.form-group { display: flex; flex-direction: column; gap: 5px; }
+label { font-size: 9px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600; }
+input, textarea, select {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: var(--radius); color: var(--text);
+  font-family: var(--font); font-size: 12px; padding: 9px 12px;
+  outline: none; transition: border-color 0.15s; width: 100%;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
+select option { background: var(--bg2); }
+
+/* ── TOGGLE ────────────────────────────────────────────────────────────────── */
+.toggle {
+  width: 42px; height: 22px; background: var(--border);
+  border-radius: 11px; position: relative; cursor: pointer;
+  transition: background 0.2s; border: none; flex-shrink: 0;
+}
+.toggle.on { background: var(--accent); }
+.toggle::after {
+  content: ''; position: absolute;
+  width: 16px; height: 16px; background: #fff;
+  border-radius: 50%; top: 3px; left: 3px; transition: transform 0.2s;
+}
+.toggle.on::after { transform: translateX(20px); }
+
+/* ── BADGES ────────────────────────────────────────────────────────────────── */
+.badge {
+  display: inline-block; padding: 2px 7px; border-radius: 4px;
+  font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+}
+.bg { background: var(--green-dim); color: var(--green); }
+.br { background: var(--red-dim); color: var(--red); }
+.by { background: var(--yellow-dim); color: var(--yellow); }
+.bb { background: var(--accent-dim); color: var(--accent); }
+.bp { background: var(--purple-dim); color: var(--purple); }
+
+/* ── TOAST ─────────────────────────────────────────────────────────────────── */
+#toast-root {
+  position: fixed; bottom: 24px; right: 24px;
+  display: flex; flex-direction: column; gap: 8px; z-index: 9999;
+}
+.toast {
+  background: var(--card2); border: 1px solid var(--border2);
+  border-radius: var(--radius); padding: 12px 16px;
+  font-size: 12px; display: flex; align-items: center; gap: 10px;
+  min-width: 220px; max-width: 340px;
+  animation: toastIn 0.2s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+}
+.toast.s { border-left: 3px solid var(--green); }
+.toast.e { border-left: 3px solid var(--red); }
+.toast.i { border-left: 3px solid var(--accent); }
+@keyframes toastIn { from { transform: translateX(110%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+
+/* ── SPINNER ───────────────────────────────────────────────────────────────── */
+.spinner {
+  width: 18px; height: 18px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.55s linear infinite; display: inline-block;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading { display: flex; align-items: center; justify-content: center; padding: 70px; }
+
+/* ── EMPTY STATE ───────────────────────────────────────────────────────────── */
+.empty { text-align: center; padding: 50px 20px; }
+.empty .ei { font-size: 36px; margin-bottom: 10px; }
+.empty p { font-size: 12px; color: var(--text-muted); }
+
+/* ── GRID UTILITIES ────────────────────────────────────────────────────────── */
+.g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.g3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+.g4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+.flex { display: flex; }
+.ai-c { align-items: center; }
+.jb { justify-content: space-between; }
+.gap-2 { gap: 8px; }
+.gap-3 { gap: 12px; }
+.mb-3 { margin-bottom: 12px; }
+.mb-4 { margin-bottom: 16px; }
+.mb-5 { margin-bottom: 20px; }
+.mt-3 { margin-top: 12px; }
+.mt-4 { margin-top: 16px; }
+.muted { color: var(--text-muted); font-size: 11px; }
+.accent { color: var(--accent); }
+.mono { font-family: var(--font); }
+.inline-inp {
+  width: 90px; padding: 4px 8px; font-size: 11px;
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 4px; color: var(--text); font-family: var(--font);
+  outline: none;
+}
+.inline-inp:focus { border-color: var(--accent); }
+
+/* ── LOGIN ─────────────────────────────────────────────────────────────────── */
+.login-wrap {
+  min-height: 100vh; display: flex;
+  align-items: center; justify-content: center;
+  position: relative; z-index: 1;
+}
+.login-box {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 48px 40px;
+  width: 380px; text-align: center;
+  box-shadow: 0 0 60px rgba(0,0,0,0.6), 0 0 40px rgba(0,217,255,0.05);
+}
+.login-logo {
+  width: 68px; height: 68px;
+  background: linear-gradient(135deg, var(--accent), var(--purple));
+  border-radius: 18px; margin: 0 auto 22px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 30px; box-shadow: 0 0 30px rgba(0,217,255,0.4);
+}
+.login-title { font-family: var(--display); font-size: 26px; font-weight: 700; letter-spacing: 3px; }
+.login-sub { font-size: 11px; color: var(--text-muted); margin-top: 4px; margin-bottom: 30px; letter-spacing: 1px; }
+.login-err { color: var(--red); font-size: 11px; margin-bottom: 10px; }
+.login-hint { margin-top: 22px; font-size: 10px; color: var(--text-muted); line-height: 1.8; }
+
+/* ── CHART BARS ────────────────────────────────────────────────────────────── */
+.bar-row { display: flex; align-items: center; gap: 12px; padding: 8px 0; border-bottom: 1px solid rgba(26,45,71,0.4); }
+.bar-row:last-child { border-bottom: none; }
+.bar-label { font-size: 11px; color: var(--text-dim); width: 120px; flex-shrink: 0; }
+.bar-track { flex: 1; background: var(--border); border-radius: 3px; height: 6px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 3px; transition: width 0.4s ease; }
+.bar-num { font-size: 11px; color: var(--text-muted); width: 40px; text-align: right; flex-shrink: 0; }
+
+/* ── SECTION HEADER ────────────────────────────────────────────────────────── */
+.section-hdr { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
+
+/* ── SCROLLBAR ─────────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border2); }
+</style>
+</head>
+<body>
+<div id="root"></div>
+<div id="toast-root"></div>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+const { useState, useEffect, useRef, useCallback } = React;
+
+// ── Config ────────────────────────────────────────────────────────────────────
+const API = 'http://localhost:8000';
+
+// ── API layer ─────────────────────────────────────────────────────────────────
+const hdr = () => ({
+  'X-Dashboard-Secret': localStorage.getItem('ds_tok') || '',
+  'Content-Type': 'application/json',
+});
+
+const api = {
+  get:   p       => fetch(`${API}${p}`, { headers: hdr() }).then(r => { if (!r.ok) throw r.status; return r.json(); }),
+  patch: (p, b)  => fetch(`${API}${p}`, { method:'PATCH',  headers: hdr(), body: JSON.stringify(b) }).then(r => r.json()),
+  post:  (p, b)  => fetch(`${API}${p}`, { method:'POST',   headers: hdr(), body: JSON.stringify(b) }).then(r => r.json()),
+  del:   p       => fetch(`${API}${p}`, { method:'DELETE', headers: hdr() }).then(r => r.json()),
+};
+
+// ── Toast ─────────────────────────────────────────────────────────────────────
+let _addToast = null;
+const toast = {
+  ok:  m => _addToast?.({ t:'s', m }),
+  err: m => _addToast?.({ t:'e', m }),
+  inf: m => _addToast?.({ t:'i', m }),
+};
+
+function Toasts() {
+  const [list, setList] = useState([]);
+  const idRef = useRef(0);
+  useEffect(() => {
+    _addToast = (item) => {
+      const id = ++idRef.current;
+      setList(p => [...p, { ...item, id }]);
+      setTimeout(() => setList(p => p.filter(x => x.id !== id)), 3200);
+    };
+  }, []);
+  const icons = { s:'✓', e:'✕', i:'·' };
+  const clr = { s:'var(--green)', e:'var(--red)', i:'var(--accent)' };
+  return ReactDOM.createPortal(
+    list.map(x => (
+      <div key={x.id} className={`toast ${x.t}`}>
+        <span style={{ color: clr[x.t], fontWeight: 700 }}>{icons[x.t]}</span>
+        {x.m}
+      </div>
+    )),
+    document.getElementById('toast-root')
+  );
+}
+
+// ── Primitives ────────────────────────────────────────────────────────────────
+const Spin = ({ size = 18 }) => <div className="spinner" style={{ width: size, height: size }} />;
+const Loading = () => <div className="loading"><Spin size={24}/></div>;
+const Empty = ({ icon='📭', msg='No data found' }) => (
+  <div className="empty"><div className="ei">{icon}</div><p>{msg}</p></div>
+);
+
+function Badge({ type='b', children }) {
+  return <span className={`badge b${type}`}>{children}</span>;
+}
+
+// ── Login ─────────────────────────────────────────────────────────────────────
+function Login({ onLogin }) {
+  const [sec, setSec] = useState('');
+  const [busy, setBusy] = useState(false);
+  const [err, setErr] = useState('');
+
+  const submit = async (e) => {
+    e.preventDefault(); setBusy(true); setErr('');
+    try {
+      const res = await fetch(`${API}/auth/login`, {
+        method:'POST', headers:{'Content-Type':'application/json'},
+        body: JSON.stringify({ secret: sec }),
+      });
+      if (!res.ok) throw new Error();
+      localStorage.setItem('ds_tok', sec);
+      onLogin();
+    } catch { setErr('Wrong secret or server offline'); }
+    setBusy(false);
+  };
+
+  return (
+    <div className="login-wrap">
+      <div className="login-box">
+        <div className="login-logo">🤖</div>
+        <div className="login-title">BOTCTL</div>
+        <div className="login-sub">ENTER YOUR DASHBOARD SECRET</div>
+        <form onSubmit={submit}>
+          <div className="form-group" style={{ textAlign:'left', marginBottom:10 }}>
+            <label>Secret Key</label>
+            <input type="password" value={sec} onChange={e=>setSec(e.target.value)}
+              placeholder="••••••••••••" required autoFocus />
+          </div>
+          {err && <div className="login-err">{err}</div>}
+          <button type="submit" className="btn btn-primary"
+            style={{ width:'100%', justifyContent:'center', padding:'11px', letterSpacing:1 }}
+            disabled={busy}>
+            {busy ? <Spin size={14}/> : '→'} ACCESS DASHBOARD
+          </button>
+        </form>
+        <div className="login-hint">
+          Set env: <span className="accent">DASHBOARD_SECRET=yourkey</span><br/>
+          Default: <span className="accent">changeme123</span>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Sidebar ───────────────────────────────────────────────────────────────────
+const NAV = [
+  { id:'overview',        icon:'⬡', label:'Overview' },
+  { section: 'Manage' },
+  { id:'config',          icon:'⚙', label:'Config' },
+  { id:'moderation',      icon:'🛡', label:'Moderation' },
+  { id:'economy',         icon:'🪙', label:'Economy' },
+  { id:'levels',          icon:'⬆', label:'Levels' },
+  { section: 'Features' },
+  { id:'channels',        icon:'🎙', label:'Temp Channels' },
+  { id:'tickets',         icon:'🎫', label:'Tickets' },
+  { id:'shop',            icon:'🏪', label:'Shop' },
+  { id:'rxroles',         icon:'😊', label:'Reaction Roles' },
+  { section: 'Insights' },
+  { id:'analytics',       icon:'📊', label:'Analytics' },
+];
+
+function Sidebar({ page, setPage, logout }) {
+  return (
+    <div className="sidebar">
+      <div className="sidebar-brand">
+        <div className="brand-icon">🤖</div>
+        <div>
+          <div className="brand-name">BOTCTL</div>
+          <div className="brand-ver">DASHBOARD v1.0</div>
+        </div>
+      </div>
+      <div className="nav">
+        {NAV.map((n, i) => {
+          if (n.section) return <div key={i} className="nav-section">{n.section}</div>;
+          return (
+            <div key={n.id} className={`nav-item ${page===n.id?'active':''}`} onClick={() => setPage(n.id)}>
+              <span className="nav-icon">{n.icon}</span>{n.label}
+            </div>
+          );
+        })}
+      </div>
+      <div className="sidebar-footer">
+        <button className="logout-btn" onClick={logout}>
+          <span className="nav-icon">⏻</span> Logout
+        </button>
+      </div>
+    </div>
+  );
+}
+
+// ── PAGE: Overview ────────────────────────────────────────────────────────────
+function OverviewPage() {
+  const [ov, setOv] = useState(null);
+  const [an, setAn] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    Promise.all([api.get('/api/overview'), api.get('/api/analytics')])
+      .then(([o, a]) => { setOv(o); setAn(a||{}); })
+      .catch(() => toast.err('Failed to load overview'))
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) return <Loading/>;
+
+  const stats = [
+    { icon:'👥', label:'Users Tracked',   val: ov?.total_users??0,                                    c:'var(--accent)',  },
+    { icon:'🪙', label:'Total Coins',      val: (ov?.total_coins??0).toLocaleString(),                  c:'var(--yellow)', },
+    { icon:'🎙', label:'Active Channels',  val: ov?.active_channels??0,                               c:'var(--purple)', },
+    { icon:'🎫', label:'Open Tickets',     val: ov?.open_tickets??0,                                   c:'var(--green)',  },
+    { icon:'⚠️', label:'Total Warnings',   val: ov?.total_warnings??0,                                 c:'var(--red)',    },
+    { icon:'🏆', label:'Top Command',      val: ov?.top_command??'—',                                  c:'var(--accent)', },
+  ];
+
+  const cmds = Object.entries(an).sort((a,b) => b[1].total - a[1].total).slice(0,8);
+  const maxV = cmds[0]?.[1]?.total || 1;
+
+  return (
+    <div className="page-body">
+      <div className="stat-grid">
+        {stats.map((s,i) => (
+          <div key={i} className="stat-card" style={{'--c': s.c}}>
+            <div className="stat-icon">{s.icon}</div>
+            <div className="stat-val">{s.val}</div>
+            <div className="stat-lbl">{s.label}</div>
+          </div>
+        ))}
+      </div>
+
+      <div className="card">
+        <div className="card-title">Command Usage — All Time</div>
+        {cmds.length === 0 ? <Empty icon="📊" msg="No analytics data yet"/> : (
+          cmds.map(([cmd, d]) => (
+            <div key={cmd} className="bar-row">
+              <div className="bar-label"><code style={{ color:'var(--accent)' }}>.{cmd}</code></div>
+              <div className="bar-track">
+                <div className="bar-fill"
+                  style={{ width:`${(d.total/maxV)*100}%`, background:'var(--accent)' }}/>
+              </div>
+              <div className="bar-num">{d.total}</div>
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── PAGE: Config ──────────────────────────────────────────────────────────────
+function ConfigPage() {
+  const [cfg, setCfg] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    api.get('/api/config').then(setCfg).catch(() => toast.err('Failed to load config')).finally(() => setLoading(false));
+  }, []);
+
+  const save = async () => {
+    setSaving(true);
+    try { await api.patch('/api/config', cfg); toast.ok('Config saved'); }
+    catch { toast.err('Save failed'); }
+    setSaving(false);
+  };
+
+  if (loading) return <Loading/>;
+
+  const F = ({ k, label, type='text' }) => (
+    <div className="form-group">
+      <label>{label}</label>
+      <input type={type} step={type==='number'?'0.1':undefined}
+        value={cfg?.[k] ?? ''}
+        onChange={e => setCfg({ ...cfg, [k]: type==='number' ? parseFloat(e.target.value)||0 : e.target.value })}
+      />
+    </div>
+  );
+
+  return (
+    <div className="page-body">
+      <div className="flex jb ai-c mb-5">
+        <span className="muted">Changes apply on next bot command execution</span>
+        <button className="btn btn-primary" onClick={save} disabled={saving}>
+          {saving ? <Spin size={12}/> : '💾'} Save Config
+        </button>
+      </div>
+
+      <div className="card mb-4">
+        <div className="card-title">Channel & Category IDs</div>
+        <div className="g2">
+          <F k="creator_channel_id"       label="Creator Channel ID"/>
+          <F k="temp_channel_category_id" label="Temp Channel Category ID"/>
+          <F k="levelup_channel_id"       label="Level Up Channel ID"/>
+          <F k="ticket_category_id"       label="Ticket Category ID"/>
+          <F k="ticket_log_channel_id"    label="Ticket Log Channel ID"/>
+          <F k="welcome_channel_id"       label="Welcome Channel ID"/>
+          <F k="leave_channel_id"         label="Leave Channel ID"/>
+          <F k="mod_role_id"              label="Moderator Role ID"/>
+        </div>
+      </div>
+
+      <div className="card mb-4">
+        <div className="card-title">XP Multipliers</div>
+        <div className="g3">
+          <F k="xp_multiplier"             label="Base XP Multiplier"   type="number"/>
+          <F k="weekend_multiplier"        label="Weekend Multiplier"   type="number"/>
+          <F k="special_event_multiplier"  label="Event Multiplier"     type="number"/>
+        </div>
+      </div>
+
+      <div className="card mb-4">
+        <div className="card-title">Messages</div>
+        <div style={{ display:'flex', flexDirection:'column', gap:12 }}>
+          <F k="levelup_message"  label="Level Up Message"/>
+          <F k="welcome_message"  label="Welcome Message"/>
+          <F k="leave_message"    label="Leave Message"/>
+        </div>
+      </div>
+
+      <div className="card mb-4">
+        <div className="card-title">Webhooks</div>
+        <F k="mod_log_webhook_url" label="Mod Log Webhook URL"/>
+      </div>
+
+      <div className="card">
+        <div className="card-title">Toggles</div>
+        {[{ k:'event_active', label:'Special Event Active' }].map(f => (
+          <div key={f.k} className="flex jb ai-c" style={{ padding:'10px 0', borderBottom:'1px solid var(--border)' }}>
+            <span style={{ fontSize:13 }}>{f.label}</span>
+            <button className={`toggle ${cfg?.[f.k]?'on':''}`}
+              onClick={() => setCfg({ ...cfg, [f.k]: !cfg?.[f.k] })}/>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+// ── PAGE: Moderation ──────────────────────────────────────────────────────────
+function ModerationPage() {
+  const [tab, setTab] = useState('warnings');
+  const [warns, setWarns] = useState({});
+  const [log, setLog] = useState([]);
+  const [am, setAm] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    Promise.all([
+      api.get('/api/moderation/warnings'),
+      api.get('/api/moderation/mod-log'),
+      api.get('/api/moderation/automod'),
+    ]).then(([w, ml, a]) => {
+      setWarns(w||{}); setLog(Array.isArray(ml)?ml:[]); setAm(a||{});
+    }).catch(() => toast.err('Failed to load moderation'))
+    .finally(() => setLoading(false));
+  }, []);
+
+  const clearWarn = async (uid) => {
+    try {
+      await api.del(`/api/moderation/warnings/${uid}`);
+      const w = { ...warns }; delete w[uid]; setWarns(w);
+      toast.ok('Warnings cleared');
+    } catch { toast.err('Failed'); }
+  };
+
+  const saveAm = async () => {
+    try { await api.patch('/api/moderation/automod', am); toast.ok('AutoMod saved'); }
+    catch { toast.err('Failed to save'); }
+  };
+
+  if (loading) return <Loading/>;
+
+  return (
+    <div className="page-body">
+      <div className="tabs">
+        {[['warnings','⚠️ Warnings'],['mod-log','📋 Mod Log'],['automod','🤖 AutoMod']].map(([id,lbl]) => (
+          <button key={id} className={`tab ${tab===id?'active':''}`} onClick={() => setTab(id)}>{lbl}</button>
+        ))}
+      </div>
+
+      {tab === 'warnings' && (
+        <div className="card">
+          <div className="card-title">User Warnings ({Object.keys(warns).length} users)</div>
+          {!Object.keys(warns).length ? <Empty icon="✅" msg="No warnings on record"/> : (
+            <div className="tbl-wrap">
+              <table>
+                <thead><tr><th>User ID</th><th>Count</th><th>Last Reason</th><th>Last Mod</th><th>Action</th></tr></thead>
+                <tbody>
+                  {Object.entries(warns).sort((a,b) => b[1].length - a[1].length).map(([uid, w]) => {
+                    const last = Array.isArray(w) ? w[w.length-1] : null;
+                    return (
+                      <tr key={uid}>
+                        <td><code className="accent" style={{ fontSize:11 }}>{uid}</code></td>
+                        <td><Badge type={w.length>=5?'r':w.length>=3?'y':'b'}>{w.length} warn{w.length!==1?'s':''}</Badge></td>
+                        <td style={{ maxWidth:220, overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap' }}>{last?.reason||'—'}</td>
+                        <td style={{ fontSize:11, color:'var(--text-muted)' }}>{last?.mod_id||'—'}</td>
+                        <td><button className="btn btn-danger btn-sm" onClick={() => clearWarn(uid)}>Clear</button></td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      )}
+
+      {tab === 'mod-log' && (
+        <div className="card">
+          <div className="card-title">Moderation Log ({log.length} entries)</div>
+          {!log.length ? <Empty icon="📋" msg="No mod actions logged"/> : (
+            <div className="tbl-wrap">
+              <table>
+                <thead><tr><th>Time</th><th>Action</th><th>Target</th><th>Mod</th><th>Reason</th></tr></thead>
+                <tbody>
+                  {[...log].reverse().slice(0,100).map((e, i) => (
+                    <tr key={i}>
+                      <td style={{ whiteSpace:'nowrap', fontSize:10 }}>{new Date(e.timestamp).toLocaleString()}</td>
+                      <td><Badge type={e.action==='ban'?'r':e.action==='warn'?'y':e.action==='kick'?'y':'b'}>{e.action}</Badge></td>
+                      <td style={{ fontSize:11 }}>{e.target_name||e.target_id}</td>
+                      <td style={{ fontSize:11, color:'var(--text-muted)' }}>{e.mod_name||e.mod_id}</td>
+                      <td style={{ maxWidth:200, overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap', fontSize:10, color:'var(--text-muted)' }}>{e.reason}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      )}
+
+      {tab === 'automod' && (
+        <div className="card">
+          <div className="card-title">AutoMod Configuration</div>
+          <div style={{ maxWidth:500, display:'flex', flexDirection:'column', gap:14 }}>
+            <div className="form-group">
+              <label>Mention Limit (per message)</label>
+              <input type="number" value={am.mention_limit??5}
+                onChange={e => setAm({...am, mention_limit: parseInt(e.target.value)})}/>
+            </div>
+            <div className="form-group">
+              <label>Message Cooldown (seconds)</label>
+              <input type="number" value={am.message_cooldown_seconds??2}
+                onChange={e => setAm({...am, message_cooldown_seconds: parseInt(e.target.value)})}/>
+            </div>
+            <div className="form-group">
+              <label>Allowed Domains (comma-separated)</label>
+              <input type="text"
+                value={(am.allowed_domains||[]).join(', ')}
+                onChange={e => setAm({...am, allowed_domains: e.target.value.split(',').map(s=>s.trim()).filter(Boolean)})}
+                placeholder="github.com, youtube.com, discord.com"/>
+            </div>
+            <button className="btn btn-primary" style={{ width:'fit-content' }} onClick={saveAm}>💾 Save AutoMod</button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ── PAGE: Economy ─────────────────────────────────────────────────────────────
+function EconomyPage() {
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [editId, setEditId] = useState(null);
+  const [editVal, setEditVal] = useState('');
+
+  useEffect(() => {
+    api.get('/api/economy').then(setData).catch(() => toast.err('Failed')).finally(() => setLoading(false));
+  }, []);
+
+  const saveCoins = async (uid) => {
+    try {
+      const updated = await api.patch(`/api/economy/${uid}`, { coins: parseInt(editVal) });
+      setData({ ...data, [uid]: { ...data[uid], coins: updated.coins } });
+      setEditId(null); toast.ok('Updated');
+    } catch { toast.err('Failed to update'); }
+  };
+
+  if (loading) return <Loading/>;
+
+  const sorted = Object.entries(data).sort((a,b) => (b[1]?.coins||0) - (a[1]?.coins||0));
+  const total = sorted.reduce((s, [,d]) => s + (d?.coins||0), 0);
+
+  return (
+    <div className="page-body">
+      <div className="stat-grid" style={{ gridTemplateColumns:'repeat(3,1fr)', maxWidth:600, marginBottom:20 }}>
+        <div className="stat-card" style={{'--c':'var(--yellow)'}}>
+          <div className="stat-icon">🪙</div>
+          <div className="stat-val">{total.toLocaleString()}</div>
+          <div className="stat-lbl">Total Coins</div>
+        </div>
+        <div className="stat-card" style={{'--c':'var(--accent)'}}>
+          <div className="stat-icon">👥</div>
+          <div className="stat-val">{sorted.length}</div>
+          <div className="stat-lbl">Tracked Users</div>
+        </div>
+        <div className="stat-card" style={{'--c':'var(--green)'}}>
+          <div className="stat-icon">💎</div>
+          <div className="stat-val">{sorted[0]?.[1]?.coins?.toLocaleString()||0}</div>
+          <div className="stat-lbl">Richest User</div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-title">Coin Balances</div>
+        {!sorted.length ? <Empty icon="🪙" msg="No economy data yet"/> : (
+          <div className="tbl-wrap">
+            <table>
+              <thead><tr><th>#</th><th>User ID</th><th>Coins</th><th>Total Earned</th><th>Edit</th></tr></thead>
+              <tbody>
+                {sorted.map(([uid, d], i) => (
+                  <tr key={uid}>
+                    <td style={{ color:'var(--text-muted)', width:40 }}>
+                      {i===0?'🥇':i===1?'🥈':i===2?'🥉':`#${i+1}`}
+                    </td>
+                    <td><code className="accent" style={{ fontSize:11 }}>{uid}</code></td>
+                    <td>
+                      {editId===uid ? (
+                        <input className="inline-inp" type="number" value={editVal}
+                          onChange={e=>setEditVal(e.target.value)}
+                          onKeyDown={e=>e.key==='Enter'&&saveCoins(uid)} autoFocus/>
+                      ) : (
+                        <span style={{ color:'var(--yellow)', fontWeight:600 }}>
+                          🪙 {(d?.coins||0).toLocaleString()}
+                        </span>
+                      )}
+                    </td>
+                    <td style={{ color:'var(--text-muted)' }}>{(d?.total_earned||0).toLocaleString()}</td>
+                    <td>
+                      {editId===uid ? (
+                        <span className="flex gap-2">
+                          <button className="btn btn-success btn-sm" onClick={()=>saveCoins(uid)}>✓ Save</button>
+                          <button className="btn btn-ghost btn-sm" onClick={()=>setEditId(null)}>✕</button>
+                        </span>
+                      ) : (
+                        <button className="btn btn-ghost btn-sm"
+                          onClick={()=>{ setEditId(uid); setEditVal(d?.coins||0); }}>Edit</button>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── PAGE: Levels ──────────────────────────────────────────────────────────────
+function LevelsPage() {
+  const [stats, setStats] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    api.get('/api/levels/stats').then(setStats).catch(() => toast.err('Failed')).finally(() => setLoading(false));
+  }, []);
+
+  if (loading) return <Loading/>;
+
+  const sorted = Object.entries(stats).sort((a,b) =>
+    ((b[1]?.voice_minutes||0) + (b[1]?.text_minutes||0)) -
+    ((a[1]?.voice_minutes||0) + (a[1]?.text_minutes||0))
+  );
+
+  return (
+    <div className="page-body">
+      <div className="card">
+        <div className="card-title">User Level Stats — {sorted.length} users tracked</div>
+        {!sorted.length ? <Empty icon="⬆️" msg="No level data yet"/> : (
+          <div className="tbl-wrap">
+            <table>
+              <thead><tr>
+                <th>#</th><th>User ID</th><th>Voice Mins</th><th>Text Mins</th>
+                <th>Total Score</th><th>Messages</th>
+              </tr></thead>
+              <tbody>
+                {sorted.map(([uid, s], i) => {
+                  const score = (s?.voice_minutes||0) + (s?.text_minutes||0);
+                  return (
+                    <tr key={uid}>
+                      <td style={{ color: i<3?'var(--yellow)':'var(--text-muted)', fontWeight: i<3?700:400 }}>
+                        {i===0?'🥇':i===1?'🥈':i===2?'🥉':`#${i+1}`}
+                      </td>
+                      <td><code className="accent" style={{ fontSize:11 }}>{uid}</code></td>
+                      <td><span style={{ color:'var(--purple)' }}>🎙 {s?.voice_minutes||0}</span></td>
+                      <td><span style={{ color:'var(--green)' }}>💬 {s?.text_minutes||0}</span></td>
+                      <td style={{ fontWeight:600 }}>{score.toLocaleString()}</td>
+                      <td style={{ color:'var(--text-muted)' }}>{s?.total_messages||0}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── PAGE: Channels ────────────────────────────────────────────────────────────
+function ChannelsPage() {
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    api.get('/api/channels').then(setData).catch(() => toast.err('Failed')).finally(() => setLoading(false));
+  }, []);
+
+  if (loading) return <Loading/>;
+
+  const channels = data?.channels || (typeof data === 'object' ? data : {});
+  const settings = data?.settings || {};
+
+  return (
+    <div className="page-body">
+      <div className="card">
+        <div className="section-hdr">
+          <div className="card-title" style={{ marginBottom:0 }}>
+            Active Temp Channels
+          </div>
+          <Badge type={Object.keys(channels).length>0?'g':'r'}>
+            {Object.keys(channels).length} active
+          </Badge>
+        </div>
+        {!Object.keys(channels).length ? <Empty icon="🎙" msg="No active temp channels right now"/> : (
+          <div className="tbl-wrap">
+            <table>
+              <thead><tr><th>Channel ID</th><th>Owner ID</th><th>Mode</th></tr></thead>
+              <tbody>
+                {Object.entries(channels).map(([ch, owner]) => (
+                  <tr key={ch}>
+                    <td><code className="accent" style={{ fontSize:11 }}>{ch}</code></td>
+                    <td><code style={{ fontSize:11 }}>{owner}</code></td>
+                    <td>
+                      <Badge type={settings[ch]?.mode==='private'?'r':'g'}>
+                        {settings[ch]?.mode||'public'}
+                      </Badge>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── PAGE: Tickets ─────────────────────────────────────────────────────────────
+function TicketsPage() {
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    api.get('/api/tickets').then(setData).catch(() => toast.err('Failed')).finally(() => setLoading(false));
+  }, []);
+
+  const close = async (id) => {
+    try {
+      await api.del(`/api/tickets/${id}`);
+      setData({ ...data, [id]: { ...data[id], status:'closed' } });
+      toast.ok('Ticket closed');
+    } catch { toast.err('Failed'); }
+  };
+
+  if (loading) return <Loading/>;
+
+  const entries = Object.entries(data).sort((a,b) => (a[1].status==='open'?-1:1));
+  const open = entries.filter(([,t]) => t.status === 'open').length;
+
+  return (
+    <div className="page-body">
+      <div className="flex gap-3 mb-5">
+        <div className="stat-card" style={{'--c':'var(--green)', padding:'14px 20px'}}>
+          <div className="stat-val" style={{ fontSize:22 }}>{open}</div>
+          <div className="stat-lbl">Open Tickets</div>
+        </div>
+        <div className="stat-card" style={{'--c':'var(--text-muted)', padding:'14px 20px'}}>
+          <div className="stat-val" style={{ fontSize:22 }}>{entries.length - open}</div>
+          <div className="stat-lbl">Closed</div>
+        </div>
+      </div>
+
+      <div className="card">
+        <div className="card-title">All Tickets</div>
+        {!entries.length ? <Empty icon="🎫" msg="No tickets found"/> : (
+          <div className="tbl-wrap">
+            <table>
+              <thead><tr><th>ID</th><th>Opener</th><th>Status</th><th>Opened</th><th>Action</th></tr></thead>
+              <tbody>
+                {entries.map(([id, t]) => (
+                  <tr key={id}>
+                    <td><code style={{ fontSize:11 }}>#{id}</code></td>
+                    <td><code className="accent" style={{ fontSize:11 }}>{t.opener_id}</code></td>
+                    <td><Badge type={t.status==='open'?'g':'r'}>{t.status}</Badge></td>
+                    <td style={{ fontSize:10, color:'var(--text-muted)' }}>
+                      {t.opened_at ? new Date(t.opened_at).toLocaleString() : '—'}
+                    </td>
+                    <td>
+                      {t.status==='open' && (
+                        <button className="btn btn-danger btn-sm" onClick={()=>close(id)}>Close</button>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── PAGE: Shop ────────────────────────────────────────────────────────────────
+function ShopPage() {
+  const [items, setItems] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [adding, setAdding] = useState(false);
+  const [f, setF] = useState({ id:'', name:'', price:'', description:'' });
+
+  useEffect(() => {
+    api.get('/api/shop').then(d => setItems(Array.isArray(d)?d:[])).catch(() => toast.err('Failed')).finally(() => setLoading(false));
+  }, []);
+
+  const add = async () => {
+    if (!f.id || !f.name || !f.price) return toast.err('ID, name and price required');
+    try {
+      const r = await api.post('/api/shop', { ...f, price: parseInt(f.price) });
+      setItems(Array.isArray(r) ? r : [...items, f]);
+      setF({ id:'', name:'', price:'', description:'' }); setAdding(false);
+      toast.ok('Item added');
+    } catch { toast.err('Failed'); }
+  };
+
+  const remove = async (id) => {
+    try {
+      const r = await api.del(`/api/shop/${id}`);
+      setItems(Array.isArray(r) ? r : items.filter(i => i.id !== id));
+      toast.ok('Removed');
+    } catch { toast.err('Failed'); }
+  };
+
+  if (loading) return <Loading/>;
+
+  return (
+    <div className="page-body">
+      <div className="flex jb ai-c mb-5">
+        <span className="muted">{items.length} items in shop</span>
+        <button className="btn btn-primary" onClick={() => setAdding(!adding)}>+ Add Item</button>
+      </div>
+
+      {adding && (
+        <div className="card mb-4">
+          <div className="card-title">New Item</div>
+          <div className="g2" style={{ gap:12 }}>
+            {[
+              ['id','Item ID','e.g. xp_boost_24h'],
+              ['name','Display Name','e.g. 24h XP Boost'],
+            ].map(([k,lbl,ph]) => (
+              <div key={k} className="form-group">
+                <label>{lbl}</label>
+                <input placeholder={ph} value={f[k]} onChange={e=>setF({...f,[k]:e.target.value})}/>
+              </div>
+            ))}
+            <div className="form-group">
+              <label>Price (coins)</label>
+              <input type="number" placeholder="500" value={f.price} onChange={e=>setF({...f,price:e.target.value})}/>
+            </div>
+            <div className="form-group">
+              <label>Description</label>
+              <input placeholder="What it does..." value={f.description} onChange={e=>setF({...f,description:e.target.value})}/>
+            </div>
+          </div>
+          <div className="flex gap-2 mt-3">
+            <button className="btn btn-primary" onClick={add}>Add Item</button>
+            <button className="btn btn-ghost" onClick={() => setAdding(false)}>Cancel</button>
+          </div>
+        </div>
+      )}
+
+      <div className="card">
+        <div className="card-title">Shop Items</div>
+        {!items.length ? <Empty icon="🏪" msg="Shop is empty — add some items"/> : (
+          <div className="tbl-wrap">
+            <table>
+              <thead><tr><th>ID</th><th>Name</th><th>Price</th><th>Description</th><th>Action</th></tr></thead>
+              <tbody>
+                {items.map((item, i) => (
+                  <tr key={i}>
+                    <td><code className="accent" style={{ fontSize:11 }}>{item.id}</code></td>
+                    <td style={{ fontWeight:500 }}>{item.name}</td>
+                    <td><span style={{ color:'var(--yellow)' }}>🪙 {item.price?.toLocaleString()}</span></td>
+                    <td style={{ maxWidth:250, overflow:'hidden', textOverflow:'ellipsis', whiteSpace:'nowrap', fontSize:11, color:'var(--text-muted)' }}>{item.description}</td>
+                    <td><button className="btn btn-danger btn-sm" onClick={()=>remove(item.id)}>Remove</button></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── PAGE: Reaction Roles ──────────────────────────────────────────────────────
+function RxRolesPage() {
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
+  const [adding, setAdding] = useState(false);
+  const [f, setF] = useState({ message_id:'', emoji:'', role_id:'' });
+
+  useEffect(() => {
+    api.get('/api/reaction-roles').then(setData).catch(() => toast.err('Failed')).finally(() => setLoading(false));
+  }, []);
+
+  const add = async () => {
+    if (!f.message_id || !f.emoji || !f.role_id) return toast.err('All fields required');
+    try {
+      const r = await api.post('/api/reaction-roles', f);
+      setData(r); setF({ message_id:'', emoji:'', role_id:'' }); setAdding(false);
+      toast.ok('Mapping added');
+    } catch { toast.err('Failed'); }
+  };
+
+  const remove = async (msgId) => {
+    try {
+      await api.del(`/api/reaction-roles/${msgId}`);
+      const n = { ...data }; delete n[msgId]; setData(n);
+      toast.ok('Removed');
+    } catch { toast.err('Failed'); }
+  };
+
+  if (loading) return <Loading/>;
+
+  return (
+    <div className="page-body">
+      <div className="flex jb ai-c mb-5">
+        <span className="muted">Map emoji reactions on messages to Discord roles</span>
+        <button className="btn btn-primary" onClick={() => setAdding(!adding)}>+ Add Mapping</button>
+      </div>
+
+      {adding && (
+        <div className="card mb-4">
+          <div className="card-title">New Reaction Role</div>
+          <div className="g3" style={{ gap:12 }}>
+            <div className="form-group"><label>Message ID</label>
+              <input placeholder="Discord message ID" value={f.message_id} onChange={e=>setF({...f,message_id:e.target.value})}/></div>
+            <div className="form-group"><label>Emoji</label>
+              <input placeholder="🎮" value={f.emoji} onChange={e=>setF({...f,emoji:e.target.value})}/></div>
+            <div className="form-group"><label>Role ID</label>
+              <input placeholder="Discord role ID" value={f.role_id} onChange={e=>setF({...f,role_id:e.target.value})}/></div>
+          </div>
+          <div className="flex gap-2 mt-3">
+            <button className="btn btn-primary" onClick={add}>Add</button>
+            <button className="btn btn-ghost" onClick={() => setAdding(false)}>Cancel</button>
+          </div>
+        </div>
+      )}
+
+      <div className="card">
+        <div className="card-title">Reaction Role Mappings</div>
+        {!Object.keys(data).length ? <Empty icon="😊" msg="No reaction roles configured"/> : (
+          <div className="tbl-wrap">
+            <table>
+              <thead><tr><th>Message ID</th><th>Emoji → Role Mappings</th><th>Action</th></tr></thead>
+              <tbody>
+                {Object.entries(data).map(([msgId, mappings]) => (
+                  <tr key={msgId}>
+                    <td><code className="accent" style={{ fontSize:11 }}>{msgId}</code></td>
+                    <td>
+                      {Object.entries(mappings||{}).map(([emoji, roleId]) => (
+                        <span key={emoji} style={{ display:'inline-flex', alignItems:'center', gap:4, marginRight:14, fontSize:12 }}>
+                          <span style={{ fontSize:16 }}>{emoji}</span>
+                          <span style={{ color:'var(--text-muted)' }}>→</span>
+                          <code style={{ color:'var(--purple)', fontSize:11 }}>{roleId}</code>
+                        </span>
+                      ))}
+                    </td>
+                    <td><button className="btn btn-danger btn-sm" onClick={()=>remove(msgId)}>Remove</button></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+// ── PAGE: Analytics ───────────────────────────────────────────────────────────
+function AnalyticsPage() {
+  const [data, setData] = useState({});
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    api.get('/api/analytics').then(setData).catch(() => toast.err('Failed')).finally(() => setLoading(false));
+  }, []);
+
+  if (loading) return <Loading/>;
+
+  const cmds = Object.entries(data).sort((a,b) => b[1].total - a[1].total);
+  const total = cmds.reduce((s,[,d]) => s + d.total, 0);
+  const maxV = cmds[0]?.[1]?.total || 1;
+
+  return (
+    <div className="page-body">
+      <div className="g4" style={{ marginBottom:20 }}>
+        <div className="stat-card" style={{'--c':'var(--accent)'}}>
+          <div className="stat-icon">📊</div>
+          <div className="stat-val">{total}</div>
+          <div className="stat-lbl">Total Commands</div>
+        </div>
+        <div className="stat-card" style={{'--c':'var(--purple)'}}>
+          <div className="stat-icon">⌨️</div>
+          <div className="stat-val">{cmds.length}</div>
+          <div className="stat-lbl">Unique Commands</div>
+        </div>
+        <div className="stat-card" style={{'--c':'var(--green)'}}>
+          <div className="stat-icon">🏆</div>
+          <div className="stat-val">{cmds[0]?.[0] || '—'}</div>
+          <div className="stat-lbl">Most Used</div>
+        </div>
+        <div className="stat-card" style={{'--c':'var(--yellow)'}}>
+          <div className="stat-icon">📈</div>
+          <div className="stat-val">{cmds[0]?.[1]?.total || 0}</div>
+          <div className="stat-lbl">Top Command Uses</div>
+        </div>
+      </div>
+
+      <div className="g2">
+        <div className="card">
+          <div className="card-title">Usage Chart</div>
+          {!cmds.length ? <Empty icon="📊" msg="No analytics yet"/> : cmds.map(([cmd, d]) => (
+            <div key={cmd} className="bar-row">
+              <div className="bar-label"><code style={{ color:'var(--accent)', fontSize:11 }}>.{cmd}</code></div>
+              <div className="bar-track">
+                <div className="bar-fill" style={{ width:`${(d.total/maxV)*100}%`, background:'var(--purple)' }}/>
+              </div>
+              <div className="bar-num">{d.total}</div>
+            </div>
+          ))}
+        </div>
+
+        <div className="card">
+          <div className="card-title">Breakdown Table</div>
+          {!cmds.length ? <Empty icon="📋" msg="No data"/> : (
+            <div className="tbl-wrap">
+              <table>
+                <thead><tr><th>Rank</th><th>Command</th><th>Uses</th><th>Share</th></tr></thead>
+                <tbody>
+                  {cmds.map(([cmd, d], i) => (
+                    <tr key={cmd}>
+                      <td style={{ color:'var(--text-muted)' }}>#{i+1}</td>
+                      <td><code className="accent">.{cmd}</code></td>
+                      <td style={{ fontWeight:600 }}>{d.total}</td>
+                      <td style={{ color:'var(--text-muted)' }}>{((d.total/total)*100).toFixed(1)}%</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Page registry ─────────────────────────────────────────────────────────────
+const PAGES = {
+  overview:   { title:'OVERVIEW',       sub:'Bot status and key statistics',    C: OverviewPage },
+  config:     { title:'CONFIG',         sub:'Bot configuration settings',        C: ConfigPage },
+  moderation: { title:'MODERATION',     sub:'Warnings, mod log, and automod',    C: ModerationPage },
+  economy:    { title:'ECONOMY',        sub:'Coin balances and management',      C: EconomyPage },
+  levels:     { title:'LEVELS',         sub:'User XP and activity stats',        C: LevelsPage },
+  channels:   { title:'TEMP CHANNELS',  sub:'Active voice channel sessions',     C: ChannelsPage },
+  tickets:    { title:'TICKETS',        sub:'Support ticket management',         C: TicketsPage },
+  shop:       { title:'SHOP',           sub:'Purchasable economy items',         C: ShopPage },
+  rxroles:    { title:'REACTION ROLES', sub:'Emoji to role mappings',            C: RxRolesPage },
+  analytics:  { title:'ANALYTICS',      sub:'Command usage statistics',          C: AnalyticsPage },
+};
+
+// ── App root ──────────────────────────────────────────────────────────────────
+function App() {
+  const [authed, setAuthed] = useState(!!localStorage.getItem('ds_tok'));
+  const [page, setPage] = useState('overview');
+
+  const logout = () => { localStorage.removeItem('ds_tok'); setAuthed(false); };
+
+  if (!authed) return (
+    <>
+      <Login onLogin={() => setAuthed(true)}/>
+      <Toasts/>
+    </>
+  );
+
+  const { title, sub, C } = PAGES[page] || PAGES.overview;
+
+  return (
+    <>
+      <Sidebar page={page} setPage={setPage} logout={logout}/>
+      <div className="main">
+        <div className="page-header">
+          <div>
+            <div className="page-title">{title}</div>
+            <div className="page-sub">{sub}</div>
+          </div>
+          <div className="status-dot">
+            <div className="dot-green"/>
+            Connected · localhost:8000
+          </div>
+        </div>
+        <C/>
+      </div>
+      <Toasts/>
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App/>);
+</script>
+</body>
+</html>

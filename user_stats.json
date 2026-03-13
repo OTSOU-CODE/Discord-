@@ -1,0 +1,33 @@
+{
+    "885760321938132992": {
+        "voice_minutes": 0,
+        "text_minutes": 2.0,
+        "total_messages": 2,
+        "weekly_voice": 0,
+        "weekly_text": 2.0,
+        "monthly_voice": 0,
+        "monthly_text": 2.0,
+        "last_message_minute": "2026-03-13 11:12",
+        "current_level": 0
+    },
+    "1345907948647354492": {
+        "voice_minutes": 0,
+        "text_minutes": 0,
+        "total_messages": 0,
+        "weekly_voice": 0,
+        "weekly_text": 0,
+        "monthly_voice": 0,
+        "monthly_text": 0,
+        "last_message_minute": null
+    },
+    "660209948877127701": {
+        "voice_minutes": 0,
+        "text_minutes": 0,
+        "total_messages": 0,
+        "weekly_voice": 0,
+        "weekly_text": 0,
+        "monthly_voice": 0,
+        "monthly_text": 0,
+        "last_message_minute": null
+    }
+}

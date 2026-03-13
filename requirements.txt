@@ -1,0 +1,17 @@
+# Discord Manager Bot - Requirements
+# Install with: pip install -r requirements.txt
+
+# Discord library (official fork - supports app_commands)
+discord.py>=2.3.2
+
+# Image generation for rank cards
+easy-pil>=0.3.7
+
+# Pillow (required by easy-pil for image processing)
+Pillow>=10.0.0
+
+# aiohttp (required for moderation webhook logging)
+aiohttp>=3.8.0
+fastapi
+uvicorn[standard]
+python-multipart
