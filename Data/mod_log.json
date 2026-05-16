@@ -1,0 +1,1550 @@
+[
+    {
+        "timestamp": "2026-03-18T01:46:22.237490",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-18T01:46:22.294592",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-19T00:37:40.207085",
+        "action": "auto-disconnect",
+        "target_id": "1170482208994238614",
+        "target_name": "Matteo",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-19T00:37:40.239908",
+        "action": "auto-disconnect",
+        "target_id": "1170482208994238614",
+        "target_name": "Matteo",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-19T01:02:40.851254",
+        "action": "auto-disconnect",
+        "target_id": "1170482208994238614",
+        "target_name": "Matteo",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-19T01:02:40.958986",
+        "action": "auto-disconnect",
+        "target_id": "1170482208994238614",
+        "target_name": "Matteo",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-20T23:40:33.517478",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-20T23:40:33.569899",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-21T01:24:35.473890",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-21T01:24:35.479501",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-21T21:10:59.191252",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-21T21:10:59.200872",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-22T00:00:03.301390",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-22T00:00:03.398558",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-22T00:21:04.019561",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-22T00:21:04.039275",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-22T02:55:07.097663",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-22T02:55:07.108833",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof Mostafa",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-24T23:23:42.552170",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-24T23:23:42.557716",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-24T23:44:43.092269",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-24T23:44:43.134699",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-25T00:19:43.598513",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-25T00:19:43.605546",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-25T13:54:13.070325",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-25T13:54:13.076237",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-25T14:22:13.749445",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-25T14:22:13.791894",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-27T02:09:48.407339",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-27T02:09:48.498198",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-27T14:30:24.839491",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-27T14:30:24.884761",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-27T16:17:24.002032",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-28T00:05:35.316820",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-28T00:05:35.326932",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-28T00:05:36.603355",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-28T01:09:36.875176",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-28T01:09:36.892058",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-28T01:09:37.233259",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-29T01:10:32.658711",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-29T01:10:32.673161",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-29T01:10:32.715231",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-29T17:12:49.447039",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-29T17:12:49.487951",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-29T17:12:49.504228",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-29T18:19:50.586881",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-29T18:19:50.604528",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-29T18:19:50.612146",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-29T18:48:51.128874",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-29T18:48:51.143916",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-29T18:48:51.189142",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-30T01:50:58.085135",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-30T01:50:58.098821",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-30T01:50:58.106863",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-30T19:30:16.922344",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-30T19:30:16.929252",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-30T19:30:16.933790",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-31T01:32:23.827515",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-31T01:32:23.836869",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-31T01:32:23.872669",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-31T16:13:38.263357",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-31T16:13:38.274411",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-03-31T16:13:38.281183",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-01T01:35:47.497989",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-01T01:35:47.523564",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-01T01:35:47.558005",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-01T02:23:48.236126",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-01T02:23:48.253549",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-01T02:23:48.262186",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-02T02:19:10.884779",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-02T02:19:10.905499",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-02T02:19:10.915333",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-04T00:27:54.589122",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-04T00:27:54.610138",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-04T00:27:54.615498",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-04T00:27:54.621546",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-04T20:39:20.714131",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-04T20:39:20.738908",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-04T20:39:20.759778",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-04T20:39:20.768557",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-04T21:01:21.308563",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-04T21:01:21.316523",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-04T21:01:21.375846",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-04T21:01:21.464357",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-06T00:59:52.154102",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-06T00:59:52.168144",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-06T01:20:52.781930",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-06T01:20:52.832937",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-06T14:48:10.580894",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-06T14:48:10.591577",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-07T00:53:07.500955",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-07T10:13:17.673120",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-07T10:13:17.702680",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-07T15:17:23.321185",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-07T15:17:23.370071",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-08T00:23:34.916258",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-08T00:23:34.929888",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-08T14:30:52.114406",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-08T14:30:52.193506",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-08T15:04:52.832990",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-08T15:04:52.848634",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-08T15:46:53.523553",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-08T15:46:53.548870",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-09T01:12:05.849073",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-09T01:12:05.921176",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-09T01:33:06.507387",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-09T01:33:08.441104",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-09T17:23:26.318282",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-09T17:23:26.341731",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-10T19:17:23.530928",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-10T19:17:24.279128",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-11T00:18:30.321834",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-11T00:18:30.385989",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-11T00:44:31.245264",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-11T00:44:31.708677",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-12T00:51:04.304356",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-12T00:51:04.314450",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-12T01:12:04.818286",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-12T01:12:04.876793",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-14T00:47:10.473577",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-14T00:47:10.506942",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-15T00:15:39.043481",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-15T00:15:39.053307",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-15T00:40:39.764035",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-15T00:40:39.804162",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-15T01:18:40.856943",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-15T01:18:40.876250",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-16T16:48:07.065253",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-16T16:48:07.074558",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-16T17:09:07.756197",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-16T17:09:07.767838",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-16T17:36:08.380828",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-16T17:36:08.393782",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-16T19:10:12.643326",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-16T19:10:13.096977",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-16T19:40:13.639829",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-16T19:40:13.693448",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-16T20:01:14.195431",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-16T20:01:14.404218",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-18T00:34:49.736388",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-18T00:34:50.181519",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-18T17:27:11.761686",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-18T17:27:11.792338",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-18T18:58:14.678647",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-18T18:58:14.706550",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-19T01:16:23.241794",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-19T01:16:23.261636",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-20T01:02:59.147934",
+        "action": "auto-disconnect",
+        "target_id": "660209948877127701",
+        "target_name": "DR2MM 🐉",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-20T01:02:59.160196",
+        "action": "auto-disconnect",
+        "target_id": "660209948877127701",
+        "target_name": "DR2MM 🐉",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-20T02:00:00.582911",
+        "action": "auto-disconnect",
+        "target_id": "660209948877127701",
+        "target_name": "DR2MM 🐉",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-20T02:00:00.659382",
+        "action": "auto-disconnect",
+        "target_id": "660209948877127701",
+        "target_name": "DR2MM 🐉",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-20T16:28:19.852348",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-20T16:28:19.868628",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-21T18:21:57.546898",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-21T18:21:57.567038",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-21T18:51:58.254891",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-21T18:51:58.284113",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-21T19:32:59.555817",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-21T19:32:59.608090",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-21T21:36:03.541191",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-21T21:36:03.829259",
+        "action": "auto-disconnect",
+        "target_id": "1345907948647354492",
+        "target_name": "Prof",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-22T21:48:52.216252",
+        "action": "auto-disconnect",
+        "target_id": "660209948877127701",
+        "target_name": "DR2MM 🐉",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-22T21:48:52.230688",
+        "action": "auto-disconnect",
+        "target_id": "660209948877127701",
+        "target_name": "DR2MM 🐉",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-30T02:53:11.609129",
+        "action": "auto-disconnect",
+        "target_id": "885760321938132992",
+        "target_name": "✓®ΩTMÂÑ″🫥\"0T$OU-0T$\"",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-04-30T02:53:11.633012",
+        "action": "auto-disconnect",
+        "target_id": "885760321938132992",
+        "target_name": "✓®ΩTMÂÑ″🫥\"0T$OU-0T$\"",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-05-03T16:03:54.896330",
+        "action": "auto-disconnect",
+        "target_id": "885760321938132992",
+        "target_name": "✓®ΩTMÂÑ″🫥\"0T$OU-0T$\"",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-05-03T16:03:54.917021",
+        "action": "auto-disconnect",
+        "target_id": "885760321938132992",
+        "target_name": "✓®ΩTMÂÑ″🫥\"0T$OU-0T$\"",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-05-05T22:28:13.543178",
+        "action": "auto-disconnect",
+        "target_id": "660209948877127701",
+        "target_name": "DR2MM 🐉",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-05-06T23:46:39.081149",
+        "action": "auto-disconnect",
+        "target_id": "885760321938132992",
+        "target_name": "♬💀 𝓞𝑇𝓢𝓞𝓤-𝓞𝑇𝓢 🐨👽",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-05-07T23:13:08.703867",
+        "action": "auto-disconnect",
+        "target_id": "661924032870088705",
+        "target_name": "JΛMΣL𝙸𝚜ΉΣЯΣ",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-05-11T00:00:55.958618",
+        "action": "auto-disconnect",
+        "target_id": "941663107653181510",
+        "target_name": "Axemara",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    },
+    {
+        "timestamp": "2026-05-11T22:29:35.042494",
+        "action": "auto-disconnect",
+        "target_id": "660209948877127701",
+        "target_name": "DR2MM 🐉",
+        "mod_id": "1439672958451978340",
+        "mod_name": "OTSOU Manager",
+        "reason": "Muted for 20+ minutes in Temp Channel"
+    }
+]
