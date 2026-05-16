@@ -1,0 +1,1231 @@
+{
+    "channels": {
+        "1476037535011573791": 885760321938132992,
+        "1476907447716413520": 885760321938132992,
+        "1477455974225674310": 885760321938132992,
+        "1477458403977855047": 1345907948647354492,
+        "1481972979754864792": 885760321938132992,
+        "1484206318171459747": 885760321938132992,
+        "1484213636363849768": 885760321938132992,
+        "1485768721074094272": 1345907948647354492,
+        "1487106099168547057": 1345907948647354492,
+        "1489379871028412630": 1345907948647354492,
+        "1489625049274126498": 1170482208994238614,
+        "1490068982273675325": 660209948877127701,
+        "1490455459784556596": 1345907948647354492,
+        "1490674438700666972": 885760321938132992,
+        "1493672906868260964": 1345907948647354492,
+        "1495190819366244455": 885760321938132992,
+        "1495191029001883659": 885760321938132992,
+        "1501253295233040485": 885760321938132992,
+        "1501264613008871474": 885760321938132992,
+        "1501280985789108495": 885760321938132992,
+        "1501531556659855360": 1345907948647354492,
+        "1501602161560387625": 885760321938132992,
+        "1501910183691948092": 885760321938132992,
+        "1502383929066389524": 1345907948647354492,
+        "1503687122832326736": 1170482208994238614
+    },
+    "settings": {
+        "1477455925009715402": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1477455974225674310": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1477458403977855047": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1481972979754864792": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1482172579413495929": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1482395877212422346": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1482473820135755886": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1482481857114411163": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1482511410658283611": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1482879002820612207": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1483238999060516997": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1483427828908425348": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1483476862796828712": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1483604605647720649": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1483618649829802016": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1483950266955993300": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1484206318171459747": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1484213636363849768": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1484605568269160690": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1484607044186276080": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1484620370647580753": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1484661655882170420": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1484671596286316636": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1484677939088986264": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1484987644650721546": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1485024807644041428": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1485074141534224394": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1485315662162428114": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1485622483703828533": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1485663080997191710": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1485710877377298463": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1485768529096478791": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1485768721074094272": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1485991049829810357": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486006021775294638": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486020413330030622": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486108188985266236": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486113447933640765": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486122292508491896": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486327161643073546": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486334167540301824": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486472009226387547": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486476725805125774": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486743019406364904": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486750615660007444": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486802252818813010": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486855510085992458": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486859978458530043": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486859979553112074": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486859984867426334": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486979875939287132": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1486983549285306428": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487061218136035328": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487087937752404108": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487094182311890985": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487106099168547057": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487129878833922210": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487154159919566888": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487175352563535903": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487205869971312680": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487211310591508662": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487454545339482143": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487468717724925963": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487470341356781681": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487563315462017206": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487584245647151114": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487764747750215712": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487764816763551775": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487803750465933375": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487929093365432420": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1487930959486517441": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1488124613614637056": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1488160751003893870": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1488299220099272865": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1488309751531180052": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1488509128371470450": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1488586390936486192": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1488645443020787783": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1488854858571452547": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1488989299914444960": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1488989302103736470": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1489233857155825784": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1489240061068447885": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1489240068941152317": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1489375814268096622": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1489379871028412630": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1489625049274126498": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1489660459161489639": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1489667509069283358": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1489680822041710592": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1489732957328642248": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1489741056860754033": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1489967797130891334": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490037861666394345": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490043456591233094": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490068982273675325": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490454591278547054": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490454593992265911": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490454741824569345": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490455459784556596": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490662158177009806": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490674438700666972": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490748452274176060": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490793798375051506": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490826564206727219": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490826569273577594": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490833012781355048": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1490967128499814522": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491044080547926026": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491067910750208101": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491080126081929460": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491082886525354024": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491179248814260384": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491179255038738623": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491190914465665174": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491332416009273445": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491335184988111001": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491394750106960004": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491399963031376022": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491413787138461757": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491428624593584209": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491428626963497081": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491428628137906227": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491502751337676924": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491504235479826543": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491546900158218330": {
+            "mode": "private",
+            "recording": false,
+            "video": true
+        },
+        "1491752861456138281": {
+            "mode": "public",
+            "recording": false,
+            "video": false
+        },
+        "1491771063493984436": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491826752790728866": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491827515847737595": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491827530230136972": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1491887402946527513": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492055968664522853": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492109761263440035": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492147411768840344": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492164323005431888": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492169299538874560": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492221790301327410": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492247124681822328": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492266205656907987": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492266211034136766": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492267462144561323": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492267468012523611": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492274102004879411": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492280185574391972": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492479516860354631": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492491101666410536": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492883726936440992": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492903481688981574": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1492934228789432360": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1493207368266416271": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1493254753881296907": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1493276427771183265": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1493672906868260964": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1493712008699187201": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1493740469203501208": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1493998399123492915": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494004908813455501": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494100242163830784": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494100317103587503": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494108169134276759": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494296007909965975": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494418273423327353": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494463849196425227": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494464669711077376": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494717627048923359": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494748758066331779": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494804308108247201": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494808231476859133": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1494824128224563271": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495062830158844027": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495181205665222846": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495190809262166097": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495190819081158697": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495190819366244455": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495191029001883659": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495394915889451073": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495409242012909739": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495712162943860807": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495772945170305158": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495792444841656350": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495853080531435712": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495878543425540306": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1495916249023254568": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496099302056001677": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496224785267687484": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496276792791797873": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496487428116971631": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496510928634773695": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496526572222681118": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496530617813307462": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496626347496444046": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496636723403161714": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496640311949263010": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496846360480055316": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496860387352510486": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496867020921245706": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496872991223447655": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496923066045960262": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496924100419915776": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496928134526668982": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496928140801347694": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496929077854998659": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1496958930356801638": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497004975958528071": {
+            "mode": "public",
+            "recording": false,
+            "video": false
+        },
+        "1497200053708918915": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497233166472057042": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497245766853459989": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497359118200213525": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497359121618571405": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497365942630486170": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497556263393820824": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497598858983768245": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497602094645903471": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497608217876889650": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497936166819729589": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497936169474986175": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497936170661707927": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1497936173824344135": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1498394355487215927": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1498730300904181840": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1498790660264693942": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1499089709190615242": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1499378568315011164": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1499507400330182757": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1499792470316421242": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1499800329330626620": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1499871841634877561": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1500248511990599690": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1500254873269043333": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1500467637912600688": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1500519267333046415": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1501253295233040485": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1501264613008871474": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1501280985789108495": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1501531556659855360": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1501602161560387625": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1501910183691948092": {
+            "mode": "private",
+            "recording": false,
+            "video": true
+        },
+        "1502383929066389524": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        },
+        "1503687122832326736": {
+            "mode": "public",
+            "recording": false,
+            "video": true
+        }
+    }
+}

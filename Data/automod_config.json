@@ -1,0 +1,5 @@
+{
+  "allowed_domains": ["github.com", "youtube.com", "tenor.com", "discord.com", "store.steampowered.com"],
+  "mention_limit": 5,
+  "message_cooldown_seconds": 2
+}
