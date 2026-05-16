@@ -1,0 +1,312 @@
+2026-05-15 22:02:23,684 [INFO] discord.client: logging in using static token
+2026-05-15 22:02:24,460 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-15 22:02:24,460 [INFO] DiscordGameBot: Restoring active games...
+2026-05-15 22:02:24,466 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-15 22:02:24,470 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-15 22:02:24,475 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-15 22:02:24,478 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-15 22:02:24,494 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-15 22:02:24,498 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-15 22:02:24,502 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-15 22:02:24,506 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-15 22:02:24,510 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-15 22:02:24,514 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-15 22:02:24,519 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-15 22:02:24,524 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-15 22:02:24,529 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-15 22:02:24,533 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-15 22:02:24,538 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-15 22:02:24,541 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-15 22:02:24,545 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-15 22:02:24,550 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-15 22:02:24,554 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-15 22:02:24,558 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-15 22:02:24,679 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-15 22:02:24,686 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-15 22:02:24,691 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-15 22:02:24,696 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-15 22:02:24,696 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-15 22:02:25,000 [INFO] DiscordGameBot: Synced 29 global commands.
+2026-05-15 22:02:25,715 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: c411f41277d8effc83b59918f1b30a6a).
+2026-05-15 22:02:27,729 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)
+2026-05-15 22:03:33,983 [ERROR] discord.ui.view: Ignoring exception in view <NightActionView timeout=300 children=1> for item <Select placeholder='Choose a target...' min_values=1 max_values=1 disabled=False id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy (2)\games\mafia\commands.py", line 48, in select_target
+    await interaction.response.send_message(f"Action recorded! You have chosen {interaction.guild.get_member(target_id).display_name}.", ephemeral=True)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get_member'
+2026-05-15 22:03:37,216 [ERROR] discord.ui.view: Ignoring exception in view <NightActionView timeout=300 children=1> for item <Select placeholder='Choose a target...' min_values=1 max_values=1 disabled=False id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy (2)\games\mafia\commands.py", line 48, in select_target
+    await interaction.response.send_message(f"Action recorded! You have chosen {interaction.guild.get_member(target_id).display_name}.", ephemeral=True)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get_member'
+2026-05-15 22:03:39,602 [ERROR] discord.ui.view: Ignoring exception in view <NightActionView timeout=300 children=1> for item <Select placeholder='Choose a target...' min_values=1 max_values=1 disabled=False id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy (2)\games\mafia\commands.py", line 48, in select_target
+    await interaction.response.send_message(f"Action recorded! You have chosen {interaction.guild.get_member(target_id).display_name}.", ephemeral=True)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get_member'
+2026-05-15 22:03:44,289 [ERROR] discord.ui.view: Ignoring exception in view <NightActionView timeout=300 children=1> for item <Select placeholder='Choose a target...' min_values=1 max_values=1 disabled=False id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy (2)\games\mafia\commands.py", line 48, in select_target
+    await interaction.response.send_message(f"Action recorded! You have chosen {interaction.guild.get_member(target_id).display_name}.", ephemeral=True)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get_member'
+2026-05-15 22:03:45,661 [ERROR] discord.ui.view: Ignoring exception in view <NightActionView timeout=300 children=1> for item <Select placeholder='Choose a target...' min_values=1 max_values=1 disabled=False id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy (2)\games\mafia\commands.py", line 48, in select_target
+    await interaction.response.send_message(f"Action recorded! You have chosen {interaction.guild.get_member(target_id).display_name}.", ephemeral=True)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get_member'
+2026-05-15 22:04:36,138 [INFO] discord.client: logging in using static token
+2026-05-15 22:04:37,013 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-15 22:04:37,013 [INFO] DiscordGameBot: Restoring active games...
+2026-05-15 22:04:37,028 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-15 22:04:37,032 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-15 22:04:37,036 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-15 22:04:37,039 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-15 22:04:37,042 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-15 22:04:37,045 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-15 22:04:37,047 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-15 22:04:37,051 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-15 22:04:37,054 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-15 22:04:37,057 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-15 22:04:37,060 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-15 22:04:37,062 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-15 22:04:37,067 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-15 22:04:37,070 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-15 22:04:37,073 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-15 22:04:37,076 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-15 22:04:37,078 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-15 22:04:37,081 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-15 22:04:37,085 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-15 22:04:37,088 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-15 22:04:37,118 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-15 22:04:37,122 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-15 22:04:37,125 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-15 22:04:37,128 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-15 22:04:37,128 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-15 22:04:37,432 [INFO] DiscordGameBot: Synced 29 global commands.
+2026-05-15 22:04:38,045 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: 141fedbd69463fc77c73bb840525de56).
+2026-05-15 22:04:40,053 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)
+2026-05-15 22:05:20,051 [ERROR] discord.ui.view: Ignoring exception in view <NightActionView timeout=300 children=1> for item <Select placeholder='Choose a target...' min_values=1 max_values=1 disabled=False id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy (2)\games\mafia\commands.py", line 48, in select_target
+    await interaction.response.send_message(f"Action recorded! You have chosen {interaction.guild.get_member(target_id).display_name}.", ephemeral=True)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get_member'
+2026-05-15 22:05:21,508 [ERROR] discord.ui.view: Ignoring exception in view <NightActionView timeout=300 children=1> for item <Select placeholder='Choose a target...' min_values=1 max_values=1 disabled=False id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy (2)\games\mafia\commands.py", line 48, in select_target
+    await interaction.response.send_message(f"Action recorded! You have chosen {interaction.guild.get_member(target_id).display_name}.", ephemeral=True)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get_member'
+2026-05-15 22:05:21,982 [ERROR] discord.ui.view: Ignoring exception in view <NightActionView timeout=300 children=1> for item <Select placeholder='Choose a target...' min_values=1 max_values=1 disabled=False id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy (2)\games\mafia\commands.py", line 48, in select_target
+    await interaction.response.send_message(f"Action recorded! You have chosen {interaction.guild.get_member(target_id).display_name}.", ephemeral=True)
+                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get_member'
+2026-05-15 22:08:38,441 [INFO] discord.client: logging in using static token
+2026-05-15 22:08:39,042 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-15 22:08:39,043 [INFO] DiscordGameBot: Restoring active games...
+2026-05-15 22:08:39,076 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-15 22:08:39,079 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-15 22:08:39,082 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-15 22:08:39,085 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-15 22:08:39,108 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-15 22:08:39,112 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-15 22:08:39,116 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-15 22:08:39,119 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-15 22:08:39,123 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-15 22:08:39,127 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-15 22:08:39,131 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-15 22:08:39,134 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-15 22:08:39,143 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-15 22:08:39,148 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-15 22:08:39,150 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-15 22:08:39,155 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-15 22:08:39,159 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-15 22:08:39,161 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-15 22:08:39,164 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-15 22:08:39,166 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-15 22:08:39,202 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-15 22:08:39,206 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-15 22:08:39,208 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-15 22:08:39,210 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-15 22:08:39,210 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-15 22:08:39,534 [INFO] DiscordGameBot: Synced 29 global commands.
+2026-05-15 22:08:40,259 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: 26ea26443268643e1c6fd9ac68edc3a1).
+2026-05-15 22:08:42,270 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)
+2026-05-15 22:19:59,437 [INFO] discord.client: logging in using static token
+2026-05-15 22:20:00,170 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-15 22:20:00,171 [INFO] DiscordGameBot: Restoring active games...
+2026-05-15 22:20:00,182 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-15 22:20:00,192 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-15 22:20:00,196 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-15 22:20:00,202 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-15 22:20:00,234 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-15 22:20:00,237 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-15 22:20:00,246 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-15 22:20:00,256 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-15 22:20:00,261 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-15 22:20:00,273 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-15 22:20:00,282 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-15 22:20:00,288 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-15 22:20:00,301 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-15 22:20:00,306 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-15 22:20:00,317 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-15 22:20:00,327 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-15 22:20:00,332 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-15 22:20:00,341 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-15 22:20:00,346 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-15 22:20:00,350 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-15 22:20:00,529 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-15 22:20:00,533 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-15 22:20:00,539 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-15 22:20:00,549 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-15 22:20:00,550 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-15 22:20:01,333 [INFO] DiscordGameBot: Synced 29 global commands.
+2026-05-15 22:20:01,964 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: 7041ed628dcab3da3ebbf4172a80d88e).
+2026-05-15 22:20:03,999 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)
+2026-05-15 22:57:03,590 [INFO] discord.client: logging in using static token
+2026-05-15 22:57:04,223 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-15 22:57:04,224 [INFO] DiscordGameBot: Restoring active games...
+2026-05-15 22:57:04,243 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-15 22:57:04,250 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-15 22:57:04,259 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-15 22:57:04,269 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-15 22:57:04,276 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-15 22:57:04,281 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-15 22:57:04,285 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-15 22:57:04,289 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-15 22:57:04,292 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-15 22:57:04,296 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-15 22:57:04,300 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-15 22:57:04,305 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-15 22:57:04,309 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-15 22:57:04,313 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-15 22:57:04,317 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-15 22:57:04,320 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-15 22:57:04,325 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-15 22:57:04,329 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-15 22:57:04,333 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-15 22:57:04,337 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-15 22:57:04,404 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-15 22:57:04,410 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-15 22:57:04,417 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-15 22:57:04,424 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-15 22:57:04,424 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-15 22:57:04,788 [INFO] DiscordGameBot: Synced 29 global commands.
+2026-05-15 22:57:05,884 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: bcc55c6fa4e70e212598f4de32272cf5).
+2026-05-15 22:57:07,892 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)
+2026-05-15 23:04:07,796 [INFO] discord.client: logging in using static token
+2026-05-15 23:04:08,621 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-15 23:04:08,621 [INFO] DiscordGameBot: Restoring active games...
+2026-05-15 23:04:08,634 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-15 23:04:08,638 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-15 23:04:08,641 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-15 23:04:08,644 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-15 23:04:08,646 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-15 23:04:08,648 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-15 23:04:08,650 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-15 23:04:08,652 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-15 23:04:08,654 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-15 23:04:08,656 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-15 23:04:08,659 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-15 23:04:08,662 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-15 23:04:08,664 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-15 23:04:08,666 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-15 23:04:08,669 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-15 23:04:08,671 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-15 23:04:08,673 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-15 23:04:08,675 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-15 23:04:08,678 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-15 23:04:08,680 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-15 23:04:08,710 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-15 23:04:08,712 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-15 23:04:08,714 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-15 23:04:08,716 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-15 23:04:08,716 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-15 23:04:09,313 [INFO] DiscordGameBot: Synced 29 global commands.
+2026-05-15 23:04:09,994 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: f032a6a85b2aa4d5ab4ff65d0db87d44).
+2026-05-15 23:04:12,000 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)
+2026-05-15 23:22:48,148 [INFO] discord.client: logging in using static token
+2026-05-15 23:22:48,921 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-15 23:22:48,921 [INFO] DiscordGameBot: Restoring active games...
+2026-05-15 23:22:48,939 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-15 23:22:48,943 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-15 23:22:48,945 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-15 23:22:48,948 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-15 23:22:48,962 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-15 23:22:48,965 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-15 23:22:48,968 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-15 23:22:48,972 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-15 23:22:48,976 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-15 23:22:48,979 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-15 23:22:48,983 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-15 23:22:48,986 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-15 23:22:48,991 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-15 23:22:48,994 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-15 23:22:48,997 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-15 23:22:49,000 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-15 23:22:49,004 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-15 23:22:49,007 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-15 23:22:49,010 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-15 23:22:49,013 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-15 23:22:49,056 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-15 23:22:49,059 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-15 23:22:49,062 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-15 23:22:49,064 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-15 23:22:49,065 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-15 23:22:49,445 [INFO] DiscordGameBot: Synced 29 global commands.
+2026-05-15 23:22:50,122 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: f9cc02ca9c2ff68e03f54b0fc0f7df41).
+2026-05-15 23:22:52,136 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)
+2026-05-15 23:40:46,702 [INFO] discord.client: logging in using static token
+2026-05-15 23:40:47,396 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-15 23:40:47,397 [INFO] DiscordGameBot: Restoring active games...
+2026-05-15 23:40:47,416 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-15 23:40:47,419 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-15 23:40:47,421 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-15 23:40:47,423 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-15 23:40:47,431 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-15 23:40:47,435 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-15 23:40:47,438 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-15 23:40:47,440 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-15 23:40:47,443 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-15 23:40:47,445 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-15 23:40:47,448 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-15 23:40:47,452 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-15 23:40:47,456 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-15 23:40:47,459 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-15 23:40:47,461 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-15 23:40:47,463 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-15 23:40:47,466 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-15 23:40:47,468 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-15 23:40:47,470 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-15 23:40:47,473 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-15 23:40:47,502 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-15 23:40:47,505 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-15 23:40:47,508 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-15 23:40:47,515 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-15 23:40:47,516 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-15 23:40:47,872 [INFO] DiscordGameBot: Synced 29 global commands.
+2026-05-15 23:40:49,091 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: e2e0c7536e3a1f629a75a4d812cd60a8).
+2026-05-15 23:40:51,094 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)

@@ -1,0 +1,409 @@
+2026-05-14 14:00:02,726 [INFO] discord.client: logging in using static token
+2026-05-14 14:00:03,949 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-14 14:00:03,969 [INFO] DiscordGameBot: Restoring active games...
+2026-05-14 14:00:03,992 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-14 14:00:04,124 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-14 14:00:04,236 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-14 14:00:04,455 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-14 14:00:04,582 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-14 14:00:04,607 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-14 14:00:04,722 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-14 14:00:04,758 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-14 14:00:04,922 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-14 14:00:04,987 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-14 14:00:05,088 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-14 14:00:05,175 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-14 14:00:05,191 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-14 14:00:05,294 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-14 14:00:05,314 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-14 14:00:05,343 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-14 14:00:05,581 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-14 14:00:05,701 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-14 14:00:05,922 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-14 14:00:06,097 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-14 14:00:06,941 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-14 14:00:07,139 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-14 14:00:07,190 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-14 14:00:07,218 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-14 14:00:07,268 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-14 14:00:08,001 [INFO] DiscordGameBot: Synced 27 global commands.
+2026-05-14 14:00:08,899 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: 4c79ff6eb9e4eec545346f04ee82b822).
+2026-05-14 14:00:10,945 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)
+2026-05-14 14:02:28,175 [ERROR] discord.ui.view: Ignoring exception in view <ChairsView timeout=600 children=1> for item <Button style=<ButtonStyle.secondary: 2> url=None disabled=True label='TAKEN 🪑' emoji=None row=None sku_id=None id=2>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\chairs\view.py", line 84, in callback
+    await self.end_round(interaction.channel)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\chairs\view.py", line 110, in end_round
+    await self.on_end(None, winner)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:07:10,282 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\correctletter\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\correctletter\game.py", line 44, in start
+    await self.on_end(msg, msg.author)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:09:56,207 [ERROR] discord.ui.view: Ignoring exception in view <DeathWheelView timeout=600 children=5> for item <Button style=<ButtonStyle.secondary: 2> url=None disabled=False label='Box 5 📦' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\deathwheel\view.py", line 78, in callback
+    await self.on_end(None, winner)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:12:20,187 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\findemoji\game.py", line 58, in start
+    msg = await self.bot.wait_for('message', check=check, timeout=10) # 10 seconds
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 487, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\timeouts.py", line 114, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\findemoji\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\findemoji\game.py", line 66, in start
+    await self.on_end(None, None)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:13:29,273 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\findemoji\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\findemoji\game.py", line 63, in start
+    await self.on_end(msg, msg.author)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:15:47,603 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\findemoji\game.py", line 58, in start
+    msg = await self.bot.wait_for('message', check=check, timeout=10) # 10 seconds
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 487, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\timeouts.py", line 114, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\findemoji\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\findemoji\game.py", line 66, in start
+    await self.on_end(None, None)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:16:55,909 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\findemoji\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\findemoji\game.py", line 63, in start
+    await self.on_end(msg, msg.author)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:18:23,797 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\guesscountry\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\guesscountry\game.py", line 39, in start
+    await self.on_end(msg, msg.author)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:19:08,664 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\guesscountry\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\guesscountry\game.py", line 39, in start
+    await self.on_end(msg, msg.author)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:20:01,609 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\guesscountry\game.py", line 34, in start
+    msg = await self.bot.wait_for('message', check=check, timeout=45)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 487, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\timeouts.py", line 114, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\guesscountry\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\guesscountry\game.py", line 42, in start
+    await self.on_end(None, None)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:20:44,655 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\guessthecolor\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\guessthecolor\game.py", line 53, in start
+    await self.on_end(msg, msg.author)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:21:30,365 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\guessthecolor\game.py", line 48, in start
+    msg = await self.bot.wait_for('message', check=check, timeout=10) # 10 seconds
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 487, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\timeouts.py", line 114, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\guessthecolor\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\guessthecolor\game.py", line 56, in start
+    await self.on_end(None, None)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:22:04,461 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\guesstheflag\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\guesstheflag\game.py", line 42, in start
+    await self.on_end(msg, msg.author)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:22:43,021 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\hideseek\commands.py", line 19, in start_game
+    view = HideSeekView(seeker, hiders, lambda inter, winner: None)
+TypeError: HideSeekView.__init__() takes 3 positional arguments but 4 were given
+2026-05-14 14:23:21,347 [INFO] discord.client: logging in using static token
+2026-05-14 14:23:21,925 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-14 14:23:21,927 [INFO] DiscordGameBot: Restoring active games...
+2026-05-14 14:23:21,939 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-14 14:23:21,946 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-14 14:23:21,952 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-14 14:23:21,970 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-14 14:23:21,981 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-14 14:23:21,996 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-14 14:23:22,003 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-14 14:23:22,019 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-14 14:23:22,028 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-14 14:23:22,036 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-14 14:23:22,051 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-14 14:23:22,061 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-14 14:23:22,070 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-14 14:23:22,081 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-14 14:23:22,089 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-14 14:23:22,099 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-14 14:23:22,113 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-14 14:23:22,120 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-14 14:23:22,130 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-14 14:23:22,139 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-14 14:23:22,234 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-14 14:23:22,241 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-14 14:23:22,250 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-14 14:23:22,258 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-14 14:23:22,259 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-14 14:23:22,599 [INFO] DiscordGameBot: Synced 27 global commands.
+2026-05-14 14:23:23,204 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: c5a8b26567db044e6f357d5ca3fe2e9b).
+2026-05-14 14:23:25,212 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)
+2026-05-14 14:24:37,590 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\hideseek\commands.py", line 19, in start_game
+    view = HideSeekView(seeker, hiders, lambda inter, winner: None)
+TypeError: HideSeekView.__init__() takes 3 positional arguments but 4 were given
+2026-05-14 14:29:07,521 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\mergetext\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\mergetext\game.py", line 44, in start
+    await self.on_end(msg, msg.author)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:31:32,743 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\sortnumbers\game.py", line 49, in start
+    msg = await self.bot.wait_for('message', check=check, timeout=10) # 10 seconds
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 487, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\timeouts.py", line 114, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\sortnumbers\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\sortnumbers\game.py", line 57, in start
+    await self.on_end(None, None)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:32:04,896 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 488, in wait_for
+    return await fut
+           ^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\sortnumbers\game.py", line 49, in start
+    msg = await self.bot.wait_for('message', check=check, timeout=10) # 10 seconds
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\tasks.py", line 487, in wait_for
+    async with timeouts.timeout(timeout):
+               ~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\asyncio\timeouts.py", line 114, in __aexit__
+    raise TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\sortnumbers\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\sortnumbers\game.py", line 57, in start
+    await self.on_end(None, None)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:33:01,869 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\textreveal\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\textreveal\game.py", line 59, in start
+    await self.on_end(guess_msg, guess_msg.author)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:33:20,421 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\textreverse\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\textreverse\game.py", line 40, in start
+    await self.on_end(msg, msg.author)
+TypeError: 'NoneType' object can't be awaited
+2026-05-14 14:33:39,808 [ERROR] discord.ui.view: Ignoring exception in view <BaseLobbyView timeout=600 children=4> for item <Button style=<ButtonStyle.primary: 1> url=None disabled=False label='Start' emoji=None row=None sku_id=None id=None>
+Traceback (most recent call last):
+  File "C:\Users\ELECTRO-RIMO\AppData\Local\Programs\Python\Python314\Lib\site-packages\discord\ui\view.py", line 598, in _scheduled_task
+    await item.callback(interaction)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\core\views.py", line 52, in start
+    await self.on_start(interaction, self.players)
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\textsplit\commands.py", line 17, in start_game
+    await game.start()
+  File "c:\Users\ELECTRO-RIMO\Desktop\Discords Games - Copy - Copy\games\minigames\textsplit\game.py", line 44, in start
+    await self.on_end(msg, msg.author)
+TypeError: 'NoneType' object can't be awaited

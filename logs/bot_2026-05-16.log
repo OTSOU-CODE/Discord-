@@ -1,0 +1,124 @@
+2026-05-16 00:14:22,067 [INFO] discord.client: logging in using static token
+2026-05-16 00:14:22,768 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-16 00:14:22,768 [INFO] DiscordGameBot: Restoring active games...
+2026-05-16 00:14:22,826 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-16 00:14:22,831 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-16 00:14:22,834 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-16 00:14:22,836 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-16 00:14:22,857 [ERROR] DiscordGameBot: Failed to load game Mafia: Extension 'games.mafia.commands' raised an error: IndentationError: unexpected indent (game.py, line 182)
+2026-05-16 00:14:22,860 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-16 00:14:22,863 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-16 00:14:22,866 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-16 00:14:22,869 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-16 00:14:22,876 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-16 00:14:22,879 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-16 00:14:22,882 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-16 00:14:22,886 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-16 00:14:22,893 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-16 00:14:22,897 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-16 00:14:22,899 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-16 00:14:22,902 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-16 00:14:22,906 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-16 00:14:22,909 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-16 00:14:22,913 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-16 00:14:22,950 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-16 00:14:22,952 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-16 00:14:22,954 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-16 00:14:22,958 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-16 00:14:22,958 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-16 00:14:23,271 [INFO] DiscordGameBot: Synced 26 global commands.
+2026-05-16 00:14:24,167 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: 18a7780df73230c6ca3a45fcb8ad053c).
+2026-05-16 00:14:26,173 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)
+2026-05-16 00:17:41,293 [INFO] discord.client: logging in using static token
+2026-05-16 00:17:41,977 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-16 00:17:41,978 [INFO] DiscordGameBot: Restoring active games...
+2026-05-16 00:17:41,987 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-16 00:17:41,990 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-16 00:17:41,993 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-16 00:17:41,996 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-16 00:17:42,005 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-16 00:17:42,009 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-16 00:17:42,012 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-16 00:17:42,014 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-16 00:17:42,016 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-16 00:17:42,018 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-16 00:17:42,020 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-16 00:17:42,023 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-16 00:17:42,026 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-16 00:17:42,028 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-16 00:17:42,031 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-16 00:17:42,032 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-16 00:17:42,034 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-16 00:17:42,036 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-16 00:17:42,037 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-16 00:17:42,039 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-16 00:17:42,101 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-16 00:17:42,104 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-16 00:17:42,107 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-16 00:17:42,111 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-16 00:17:42,111 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-16 00:17:42,451 [INFO] DiscordGameBot: Synced 29 global commands.
+2026-05-16 00:17:43,118 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: d141fc78c9d0a2a2008ac98535dd2e5b).
+2026-05-16 00:17:45,138 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)
+2026-05-16 00:20:19,947 [INFO] discord.client: logging in using static token
+2026-05-16 00:20:21,115 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-16 00:20:21,115 [INFO] DiscordGameBot: Restoring active games...
+2026-05-16 00:20:21,126 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-16 00:20:21,129 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-16 00:20:21,132 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-16 00:20:21,135 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-16 00:20:21,139 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-16 00:20:21,141 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-16 00:20:21,145 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-16 00:20:21,150 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-16 00:20:21,154 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-16 00:20:21,157 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-16 00:20:21,160 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-16 00:20:21,163 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-16 00:20:21,168 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-16 00:20:21,171 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-16 00:20:21,173 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-16 00:20:21,176 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-16 00:20:21,179 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-16 00:20:21,182 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-16 00:20:21,185 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-16 00:20:21,188 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-16 00:20:21,218 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-16 00:20:21,221 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-16 00:20:21,223 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-16 00:20:21,225 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-16 00:20:21,225 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-16 00:20:21,525 [INFO] DiscordGameBot: Synced 29 global commands.
+2026-05-16 00:20:22,666 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: 118c24c80593018bd3adc8f9cc0080e4).
+2026-05-16 00:20:24,683 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)
+2026-05-16 00:22:10,069 [INFO] discord.client: logging in using static token
+2026-05-16 00:22:10,910 [INFO] DiscordGameBot: Setting up bot extensions...
+2026-05-16 00:22:10,910 [INFO] DiscordGameBot: Restoring active games...
+2026-05-16 00:22:10,919 [INFO] DiscordGameBot: Loaded core commands.
+2026-05-16 00:22:10,922 [INFO] DiscordGameBot: Loaded game extension: XO
+2026-05-16 00:22:10,924 [INFO] DiscordGameBot: Loaded game extension: Dice Battle
+2026-05-16 00:22:10,927 [INFO] DiscordGameBot: Loaded game extension: Roulette
+2026-05-16 00:22:10,931 [INFO] DiscordGameBot: Loaded game extension: Mafia
+2026-05-16 00:22:10,933 [INFO] DiscordGameBot: Loaded game extension: Rock Paper Scissors
+2026-05-16 00:22:10,934 [INFO] DiscordGameBot: Loaded game extension: Musical Chairs
+2026-05-16 00:22:10,936 [INFO] DiscordGameBot: Loaded game extension: Guess The Country
+2026-05-16 00:22:10,938 [INFO] DiscordGameBot: Loaded game extension: Death Wheel
+2026-05-16 00:22:10,940 [INFO] DiscordGameBot: Loaded game extension: Hide and Seek
+2026-05-16 00:22:10,942 [INFO] DiscordGameBot: Loaded game extension: Replica
+2026-05-16 00:22:10,944 [INFO] DiscordGameBot: Loaded game extension: HotXO Tournament
+2026-05-16 00:22:10,947 [INFO] DiscordGameBot: Loaded game extension: Fast Click
+2026-05-16 00:22:10,950 [INFO] DiscordGameBot: Loaded game extension: Fast Type
+2026-05-16 00:22:10,952 [INFO] DiscordGameBot: Loaded game extension: Text Split
+2026-05-16 00:22:10,953 [INFO] DiscordGameBot: Loaded game extension: Merge Text
+2026-05-16 00:22:10,955 [INFO] DiscordGameBot: Loaded game extension: Text Reverse
+2026-05-16 00:22:10,957 [INFO] DiscordGameBot: Loaded game extension: Find Letter
+2026-05-16 00:22:10,959 [INFO] DiscordGameBot: Loaded game extension: Correct Letter
+2026-05-16 00:22:10,961 [INFO] DiscordGameBot: Loaded game extension: Guess The Flag
+2026-05-16 00:22:10,988 [INFO] DiscordGameBot: Loaded game extension: Guess The Color
+2026-05-16 00:22:10,990 [INFO] DiscordGameBot: Loaded game extension: Find The Emoji
+2026-05-16 00:22:10,991 [INFO] DiscordGameBot: Loaded game extension: Sort Numbers
+2026-05-16 00:22:10,993 [INFO] DiscordGameBot: Loaded game extension: Text Reveal
+2026-05-16 00:22:10,993 [INFO] DiscordGameBot: Syncing slash commands...
+2026-05-16 00:22:11,526 [INFO] DiscordGameBot: Synced 29 global commands.
+2026-05-16 00:22:12,698 [INFO] discord.gateway: Shard ID None has connected to Gateway (Session ID: 6636bfb4c27ad897ebab5c3c6d855d8c).
+2026-05-16 00:22:14,722 [INFO] DiscordGameBot: Logged in as OTSOU#7843 (ID: 1419299843981053952)

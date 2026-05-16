@@ -1,0 +1,22 @@
+{
+    "mafia": {
+        "name": "Mafia",
+        "team": "mafia",
+        "description": "Kill one person each night."
+    },
+    "villager": {
+        "name": "Villager",
+        "team": "town",
+        "description": "Find the mafia and vote them out."
+    },
+    "doctor": {
+        "name": "Doctor",
+        "team": "town",
+        "description": "Protect one person each night from being killed."
+    },
+    "detective": {
+        "name": "Detective",
+        "team": "town",
+        "description": "Investigate one person each night to see if they are Mafia."
+    }
+}

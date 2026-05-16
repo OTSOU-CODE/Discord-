@@ -1,0 +1,32 @@
+[
+    {
+        "name": "France",
+        "capital": "Paris",
+        "continent": "Europe",
+        "clue": "Known for the Eiffel Tower and fine wine."
+    },
+    {
+        "name": "Japan",
+        "capital": "Tokyo",
+        "continent": "Asia",
+        "clue": "Land of the rising sun and sushi."
+    },
+    {
+        "name": "Brazil",
+        "capital": "Brasilia",
+        "continent": "South America",
+        "clue": "Largest country in South America, famous for Carnival."
+    },
+    {
+        "name": "Egypt",
+        "capital": "Cairo",
+        "continent": "Africa",
+        "clue": "Home to the ancient Pyramids of Giza."
+    },
+    {
+        "name": "Australia",
+        "capital": "Canberra",
+        "continent": "Oceania",
+        "clue": "Country and continent, known for kangaroos and the Outback."
+    }
+]

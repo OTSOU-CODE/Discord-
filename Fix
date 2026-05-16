@@ -1,0 +1,23 @@
+- chair games : fix the button the sit button must be more than one the number of player - 1 
+- deth wheel game : how to play "1- A wheel will spin and a player will be randomly chosen
+  2- Chosen player have to pick one box from the available boxes
+  3- A box may be safe or a trap, if it's a trap, player is kicked
+  4- The last player will win the game "
+- the dice game : the maximum number of player unlimited 
+- fast typer game : fix game the use can copy the sentence also the text muxt be a word not a sentence and the game must be 10 seconds not 30 seconds
+- find the emojie game : fix the game the user can copy the emoji and the game must be 10 seconds not 30 seconds also more emojies like 50 emojiesalso they must be identical to each other so the use must find it hard 
+- find the find letter game : fix the game the user can copy the letter and the game must be 10 seconds not 30 seconds also more letters like 50 letters also they must be identical to each other so the use must find it hard
+- gess the color game : fix the game the bot must sent a color first not the bar the color muts be sentin the form of color and the game must be 10seconds not 30 seconds 
+- Hide and seek game : how to play :1- Click the button below to join the game
+  2- Players have to choose a spot to hide in
+  3- Each round a seeker is randomly assigned
+  4- The seeker have to choose a spot to check, if there were players hiding in the spot, they are kicked
+  5- Remaining players wins if one spot or player is remaining
+- Hot XO game : how to play : 1- Two players will be randomly chosen each round
+  2- Chosen players will compete in Hot XO, every fourth move the first is inflamed na d deleted to continu playing 
+  3- Last player wins the game
+- mafia game : not working properly the how to play improve it and make it better and more clear and the game must be 10 minutes not 30 minutes also the game must be 5 players minimum and 20 players maximum also the bot must send the role of each player in the chat not in the DM and the bot must send the role of each player at the start of the game not after 30 seconds also the bot must send the role of each player in a form of embed and the bot must send the role of each player in a form of embed with a color that represent the role like red for mafia and green for doctor and blue for detective and gray for civilian also the bot must send the role of each player in a form of embed with a color that represent the role like red for mafia and green for doctor and blue for detective and gray for civilian 
+- roulette game : fix the game not working properly 
+- sort the number game : fix the game the user can copy the number and the game must be 10 seconds not 30 seconds . and make the numbers  just from 0 to 9 . the numbers can be repeated the numbers must be 5 or 20 for the highste difficulty randomly 
+
+the games are good improve them more for more stable user experience
