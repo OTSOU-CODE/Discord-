@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة التحكم — TrustWall</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-content">
+            <a href="dashboard.html" class="logo">🛡️ TrustWall</a>
+            <div class="nav-links">
+                <span id="userName" style="font-weight: 600; color: var(--dark);">مرحباً</span>
+                <a href="index.html" class="btn-outline">الموقع</a>
+                <button onclick="logout()" class="btn-ghost">خروج</button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <h1>جدراني 🧱</h1>
+                <button onclick="openCreateModal()" class="btn-primary">+ جدار جديد</button>
+            </div>
+
+            <div id="wallsList" class="walls-grid">
+                <!-- Walls will be loaded here -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Create Wall Modal -->
+    <div id="createModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>جدار جديد</h2>
+                <button onclick="closeCreateModal()" class="btn-close">×</button>
+            </div>
+            <form id="createWallForm">
+                <div class="form-group">
+                    <label>اسم الجدار</label>
+                    <input type="text" id="wallTitle" required placeholder="مثال: شهادات متجري">
+                </div>
+                <div class="form-group">
+                    <label>وصف (اختياري)</label>
+                    <textarea id="wallDesc" rows="2" placeholder="وصف قصير للخدمة أو المتجر..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>اللون الرئيسي</label>
+                    <input type="color" id="wallColor" value="#3b82f6">
+                </div>
+                <div class="form-group">
+                    <label>رسالة الترحيب للعملاء</label>
+                    <input type="text" id="wallWelcome" value="شكراً لك على مشاركة تجربتك معنا!">
+                </div>
+                <button type="submit" class="btn-primary btn-full">إنشاء الجدار</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Testimonials Modal -->
+    <div id="testimonialsModal" class="modal" style="display:none;">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2>إدارة الشهادات</h2>
+                <button onclick="closeTestimonialsModal()" class="btn-close">×</button>
+            </div>
+            <div id="testimonialsList" class="testimonials-admin">
+                <!-- Testimonials will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+.wall-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.wall-header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.wall-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+.wall-header p { color: var(--gray); }
+
+.wall-footer {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    color: var(--gray);
+}
+
+.wall-footer a { color: var(--primary); text-decoration: none; font-weight: 600; }

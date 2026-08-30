@@ -1,0 +1,45 @@
+.submit-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, var(--primary-light), var(--white));
+}
+
+.submit-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: var(--shadow-lg);
+}
+
+.submit-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.submit-header h1 { margin-bottom: 0.5rem; }
+.submit-header p { color: var(--gray); }
+
+.rating-input {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.rating-input label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.rating-input label:hover { background: var(--light-gray); }
+
+.rating-input input[type="radio"] { margin: 0; }
