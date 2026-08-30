@@ -8,22 +8,48 @@
     <link rel="stylesheet" href="css/wall.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div id="wallContainer" class="wall-page">
-        <div class="wall-header">
+<body class="wall-page-wrapper">
+    <div class="container" id="wallWrapper">
+        <!-- Wall Header Card -->
+        <div class="wall-header-card">
+            <div class="wall-header-accent"></div>
             <h1 id="wallTitle">جدار الشهادات</h1>
-            <p id="wallDesc"></p>
+            <p id="wallDesc">آراء وتقييمات عملائنا الكرام</p>
+            <div class="wall-header-actions">
+                <a href="#" id="wallSubmitBtn" class="btn-apple btn-apple-primary btn-apple-large">✍️ أضف رأيك وتقييمك</a>
+                <button id="shareWallBtn" class="btn-apple btn-apple-glass">🔗 مشاركة الجدار</button>
+            </div>
         </div>
-        <div id="testimonialsGrid" class="testimonials-grid">
-            <!-- Testimonials loaded here -->
+
+        <!-- Wall Filters & Search Toolbar -->
+        <div class="wall-toolbar">
+            <div class="wall-filter-pills">
+                <button class="wall-filter-pill filter-pill active" data-filter="all">الكل</button>
+                <button class="wall-filter-pill filter-pill" data-filter="5">5 نجوم ⭐⭐⭐⭐⭐</button>
+                <button class="wall-filter-pill filter-pill" data-filter="4">4 نجوم ⭐⭐⭐⭐</button>
+                <button class="wall-filter-pill filter-pill" data-filter="photos">مع صور شخصية 📷</button>
+            </div>
+
+            <div class="wall-search-box">
+                <input type="text" id="wallSearchInput" placeholder="🔍 بحث في الآراء...">
+            </div>
         </div>
-        <div class="wall-footer">
-            <p>⚡ بُني بـ <a href="index.html">TrustWall</a></p>
+
+        <!-- Testimonials Masonry/Grid -->
+        <div id="testimonialsGrid" class="public-testimonials-grid">
+            <!-- Dynamically Loaded Approved Testimonials -->
+        </div>
+
+        <!-- Footer Brand -->
+        <div class="wall-footer-brand">
+            <p>⚡ مدعوم ومُوثق بواسطة <a href="index.html">TrustWall</a></p>
         </div>
     </div>
 
+    <!-- Scripts -->
+    <script src="js/toast.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/wall.js"></script>
 </body>

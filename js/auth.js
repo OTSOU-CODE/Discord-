@@ -1,5 +1,24 @@
-// Auth handling for TrustWall
+/**
+ * TrustWall Authentication Logic & One-Click Demo Mode
+ */
 document.addEventListener('DOMContentLoaded', () => {
+    // Quick Demo Mode Button
+    const demoBtn = document.getElementById('quickDemoBtn');
+    if (demoBtn) {
+        demoBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (window.TrustWallStorage) {
+                window.TrustWallStorage.demoLogin();
+                if (window.TrustWallToast) {
+                    window.TrustWallToast.show('مرحباً بك! تم تسجيل الدخول بالحساب التجريبي 🚀', 'success', 2000);
+                }
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html';
+                }, 400);
+            }
+        });
+    }
+
     // Register Form
     const registerForm = document.getElementById('registerForm');
     if (registerForm) {
@@ -12,33 +31,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const email = document.getElementById('email').value.trim();
             const password = document.getElementById('password').value;
 
+            if (!name || !email || !password) {
+                showError('يرجى ملء جميع الحقول المطلوبة');
+                return;
+            }
+
             try {
                 if (window.TrustWallStorage) {
                     window.TrustWallStorage.register(name, email, password);
-                    window.location.href = 'dashboard.html';
-                } else {
-                    const res = await fetch('/api/auth/register', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ name, email, password })
-                    });
-                    const data = await res.json();
-                    if (!res.ok) {
-                        if (errorMsg) {
-                            errorMsg.textContent = data.error || 'حدث خطأ في التسجيل';
-                            errorMsg.style.display = 'block';
-                        }
-                        return;
+                    if (window.TrustWallToast) {
+                        window.TrustWallToast.show('تم إنشاء حسابك بنجاح! جاري التحويل...', 'success', 2000);
                     }
-                    localStorage.setItem('token', data.token);
-                    localStorage.setItem('user', JSON.stringify(data.user));
-                    window.location.href = 'dashboard.html';
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 400);
                 }
             } catch (err) {
-                if (errorMsg) {
-                    errorMsg.textContent = err.message || 'حدث خطأ أثناء التسجيل';
-                    errorMsg.style.display = 'block';
-                }
+                showError(err.message || 'حدث خطأ أثناء إنشاء الحساب');
             }
         });
     }
@@ -57,36 +66,32 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 if (window.TrustWallStorage) {
                     window.TrustWallStorage.login(email, password);
-                    window.location.href = 'dashboard.html';
-                } else {
-                    const res = await fetch('/api/auth/login', {
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json' },
-                        body: JSON.stringify({ email, password })
-                    });
-                    const data = await res.json();
-                    if (!res.ok) {
-                        if (errorMsg) {
-                            errorMsg.textContent = data.error || 'بيانات الدخول غير صحيحة';
-                            errorMsg.style.display = 'block';
-                        }
-                        return;
+                    if (window.TrustWallToast) {
+                        window.TrustWallToast.show('أهلاً بعودتك! جاري الدخول...', 'success', 2000);
                     }
-                    localStorage.setItem('token', data.token);
-                    localStorage.setItem('user', JSON.stringify(data.user));
-                    window.location.href = 'dashboard.html';
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 400);
                 }
             } catch (err) {
-                if (errorMsg) {
-                    errorMsg.textContent = err.message || 'بيانات الدخول غير صحيحة';
-                    errorMsg.style.display = 'block';
-                }
+                showError(err.message || 'بيانات الدخول غير صحيحة');
             }
         });
     }
 });
 
-// Global Logout function
+function showError(msg) {
+    const errorMsg = document.getElementById('errorMsg');
+    if (errorMsg) {
+        errorMsg.textContent = msg;
+        errorMsg.style.display = 'block';
+    }
+    if (window.TrustWallToast) {
+        window.TrustWallToast.show(msg, 'error', 3000);
+    }
+}
+
+// Global Logout
 function logout() {
     if (window.TrustWallStorage) {
         window.TrustWallStorage.logout();

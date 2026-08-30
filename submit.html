@@ -8,60 +8,108 @@
     <link rel="stylesheet" href="css/submit.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="submit-page">
-        <div class="submit-card">
-            <div class="submit-header">
-                <h1 id="welcomeMsg">شارك تجربتك معنا</h1>
-                <p>رأيك يهمنا ويساعدنا على تقديم الأفضل دائماً</p>
+<body class="submit-page-wrapper">
+    <div class="submit-container">
+        <!-- Header -->
+        <div class="submit-header-section">
+            <h1 id="welcomeMsg">شارك تجربتك ورأيك معنا ✨</h1>
+            <p id="welcomeSub">رأيك الصادق يساعدنا على التطور ويلهم الآخرين لاتخاذ القرار الصحيح</p>
+        </div>
+
+        <div id="formSection" class="submit-split-layout">
+            <!-- Left: Form -->
+            <div class="submit-form-card">
+                <form id="testimonialSubmitForm">
+                    <div class="apple-form-group">
+                        <label class="apple-label">اسمك الكامل *</label>
+                        <input type="text" id="authorNameInput" required class="apple-input" placeholder="مثال: محمد الزروالي">
+                    </div>
+
+                    <div class="apple-form-group">
+                        <label class="apple-label">المسمى الوظيفي أو صفتك (اختياري)</label>
+                        <input type="text" id="authorRoleInput" class="apple-input" placeholder="مثال: رائد أعمال، صاحب متجر، مصمم...">
+                    </div>
+
+                    <div class="apple-form-group">
+                        <label class="apple-label">بريدك الإلكتروني (اختياري)</label>
+                        <input type="email" id="authorEmailInput" class="apple-input" placeholder="your@email.com">
+                    </div>
+
+                    <!-- Interactive Star Rating Picker -->
+                    <div class="apple-form-group">
+                        <label class="apple-label">تقييمك الإجمالي *</label>
+                        <div class="interactive-stars-wrapper">
+                            <button type="button" class="star-btn selected" data-val="1">★</button>
+                            <button type="button" class="star-btn selected" data-val="2">★</button>
+                            <button type="button" class="star-btn selected" data-val="3">★</button>
+                            <button type="button" class="star-btn selected" data-val="4">★</button>
+                            <button type="button" class="star-btn selected" data-val="5">★</button>
+                            <span id="ratingEmotion" class="rating-emotion-text">ممتاز واستثنائي! 🌟</span>
+                        </div>
+                        <input type="hidden" id="ratingInput" value="5">
+                    </div>
+
+                    <div class="apple-form-group">
+                        <label class="apple-label">تجربتك ورأيك بالتفصيل *</label>
+                        <textarea id="contentInput" required rows="4" class="apple-textarea" placeholder="ما الذي أعجبك في خدمتنا أو منتجاتنا؟ كيف كانت تجربتك؟"></textarea>
+                    </div>
+
+                    <!-- Drag & Drop Avatar Zone -->
+                    <div class="apple-form-group">
+                        <label class="apple-label">صورتك الشخصية (اختياري)</label>
+                        <div id="avatarDropZone" class="avatar-upload-zone">
+                            <input type="file" id="avatarFileInput" accept="image/*">
+                            <div class="upload-icon">📷</div>
+                            <div class="upload-text">اسحب وأفلت صورتك هنا أو انقر للاختيار</div>
+                            <div class="upload-hint">يدعم JPG, PNG, WebP (بحد أقصى 5MB)</div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-apple btn-apple-primary btn-apple-full btn-apple-large" style="margin-top: 1.5rem;">
+                        إرسال الشهادة الآن 🚀
+                    </button>
+                </form>
             </div>
 
-            <form id="submitForm" enctype="multipart/form-data">
-                <div class="form-group">
-                    <label>اسمك الكامل *</label>
-                    <input type="text" name="author_name" required placeholder="مثال: محمد الزروالي">
-                </div>
-
-                <div class="form-group">
-                    <label>بريدك الإلكتروني (اختياري)</label>
-                    <input type="email" name="author_email" placeholder="your@email.com">
-                </div>
-
-                <div class="form-group">
-                    <label>تقييمك *</label>
-                    <div class="rating-input">
-                        <label><input type="radio" name="rating" value="5" checked> ⭐⭐⭐⭐⭐ (ممتاز)</label>
-                        <label><input type="radio" name="rating" value="4"> ⭐⭐⭐⭐ (جيد جداً)</label>
-                        <label><input type="radio" name="rating" value="3"> ⭐⭐⭐ (متوسط)</label>
-                        <label><input type="radio" name="rating" value="2"> ⭐⭐ (مقبول)</label>
-                        <label><input type="radio" name="rating" value="1"> ⭐ (ضعيف)</label>
+            <!-- Right: Real-time Live Preview Card -->
+            <div class="live-preview-container">
+                <div class="preview-badge-header">👁️ معاينة مباشرة لكيف ستبدو شهادتك</div>
+                <div class="preview-card-output">
+                    <div id="previewStars" class="preview-stars">⭐⭐⭐⭐⭐</div>
+                    <p id="previewText" class="preview-text">
+                        "اكتب رأيك وتجربتك هنا وستظهر مباشرة في المعاينة الفورية..."
+                    </p>
+                    <div class="preview-author-box">
+                        <div id="previewAvatar">
+                            <div class="preview-avatar-init">👤</div>
+                        </div>
+                        <div>
+                            <div id="previewName" class="preview-author-name">اسمك الكامل</div>
+                            <div id="previewRole" class="preview-author-role">عميل موثق</div>
+                        </div>
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label>تجربتك ورأيك *</label>
-                    <textarea name="content" required rows="4" placeholder="اكتب تفاصيل تجربتك وانطباعك هنا..."></textarea>
-                </div>
-
-                <div class="form-group">
-                    <label>صورتك الشخصية (اختياري)</label>
-                    <input type="file" name="image" accept="image/*">
-                </div>
-
-                <button type="submit" class="btn-primary btn-full btn-large">إرسال الشهادة</button>
-            </form>
-
-            <div id="successMsg" class="success-msg" style="display:none;">
-                <h3>🎉 شكراً جزيلاً لك!</h3>
-                <p>تم استلام رأيك بنجاح وسيتم نشره بعد المراجعة.</p>
             </div>
+        </div>
 
-            <div id="errorMsg" class="error-msg" style="display:none;"></div>
+        <!-- Success Screen -->
+        <div id="successCard" class="submit-form-card submit-success-card">
+            <div class="success-icon-animated">✓</div>
+            <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 0.75rem;">شكراً جزيلاً لمشاركتك! 🎉</h2>
+            <p style="color: var(--text-secondary); max-width: 480px; margin: 0 auto 2rem; line-height: 1.6;">
+                تم استلام شهادتك ورأيك بنجاح، ويسعدنا جداً أن تكون جزءاً من قصة نجاحنا.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a id="viewWallLink" href="#" class="btn-apple btn-apple-primary btn-apple-large">مشاهدة جدار الشهادات 👁️</a>
+                <a href="index.html" class="btn-apple btn-apple-secondary btn-apple-large">الرئيسية</a>
+            </div>
         </div>
     </div>
 
+    <!-- Scripts -->
+    <script src="js/toast.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/submit.js"></script>
 </body>

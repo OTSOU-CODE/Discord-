@@ -1,26 +1,214 @@
-.wall-page {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 2rem 1rem;
+/* ==========================================================================
+   TrustWall — Apple-Grade Public Wall Stylesheet
+   ========================================================================== */
+
+.wall-page-wrapper {
+    min-height: 100vh;
+    background-color: var(--apple-bg);
+    padding: 3rem 0 5rem;
 }
 
-.wall-header {
+.wall-header-card {
+    background: #ffffff;
+    border: var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 3.5rem 2.5rem;
     text-align: center;
-    margin-bottom: 3rem;
-    padding: 2rem;
-    background: var(--white);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-card);
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
 }
 
-.wall-header h1 { font-size: 2rem; margin-bottom: 0.5rem; }
-.wall-header p { color: var(--gray); }
+.wall-header-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: var(--wall-accent-color, var(--apple-blue));
+}
 
-.wall-footer {
+.wall-header-card h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.wall-header-card p {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    max-width: 680px;
+    margin: 0 auto 2rem;
+    line-height: 1.6;
+}
+
+.wall-header-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Wall Filters & Search */
+.wall-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.wall-filter-pills {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.filter-pill {
+    padding: 0.5rem 1.1rem;
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.filter-pill:hover {
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--text-primary);
+}
+
+.filter-pill.active {
+    background: var(--wall-accent-color, var(--apple-blue));
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.25);
+}
+
+.wall-search-box {
+    position: relative;
+    min-width: 250px;
+}
+
+.wall-search-box input {
+    width: 100%;
+    padding: 0.55rem 1rem 0.55rem 2.25rem;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius-full);
+    font-family: inherit;
+    font-size: 0.9rem;
+}
+
+.wall-search-box input:focus {
+    outline: none;
+    border-color: var(--apple-blue);
+}
+
+/* Public Testimonials Grid */
+.public-testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+}
+
+.public-t-card {
+    background: #ffffff;
+    border: var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-card);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+    border-top: 3px solid var(--wall-accent-color, var(--apple-blue));
+}
+
+.public-t-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.public-t-stars {
+    color: var(--apple-gold);
+    font-size: 1.15rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.08em;
+}
+
+.public-t-content {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.public-t-footer {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.public-t-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(0, 113, 227, 0.15);
+}
+
+.public-t-avatar-initial {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background: var(--apple-blue-light);
+    color: var(--apple-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.public-t-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.public-t-name {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.public-t-meta {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.wall-footer-brand {
     text-align: center;
-    margin-top: 3rem;
-    padding: 2rem;
-    color: var(--gray);
+    margin-top: 4rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
 }
 
-.wall-footer a { color: var(--primary); text-decoration: none; font-weight: 600; }
+.wall-footer-brand a {
+    color: var(--apple-blue);
+    text-decoration: none;
+    font-weight: 600;
+}

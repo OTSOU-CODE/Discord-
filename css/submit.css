@@ -1,45 +1,236 @@
-.submit-page {
+/* ==========================================================================
+   TrustWall — Live Split-View Submission Stylesheet
+   ========================================================================== */
+
+.submit-page-wrapper {
     min-height: 100vh;
+    background: radial-gradient(circle at 50% 0%, rgba(0, 113, 227, 0.06) 0%, var(--apple-bg) 60%);
+    padding: 3rem 0 5rem;
+}
+
+.submit-container {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.submit-header-section {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+}
+
+.submit-header-section h1 {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+
+.submit-header-section p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+}
+
+/* Split-Screen Layout */
+.submit-split-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 2.5rem;
+    align-items: flex-start;
+}
+
+.submit-form-card {
+    background: #ffffff;
+    border: var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-card);
+}
+
+/* Interactive Star Rating Selector */
+.interactive-stars-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.star-btn {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #e5e5ea;
+    transition: transform 0.15s ease, color 0.15s ease;
+    padding: 0.1rem;
+}
+
+.star-btn:hover {
+    transform: scale(1.2);
+}
+
+.star-btn.selected,
+.star-btn.hovered {
+    color: var(--apple-gold);
+}
+
+.rating-emotion-text {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--apple-blue);
+    margin-right: 0.5rem;
+}
+
+/* Drag & Drop Avatar Uploader */
+.avatar-upload-zone {
+    border: 2px dashed rgba(0, 113, 227, 0.25);
+    border-radius: var(--radius-md);
+    padding: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(0, 113, 227, 0.02);
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.avatar-upload-zone:hover,
+.avatar-upload-zone.dragover {
+    border-color: var(--apple-blue);
+    background: var(--apple-blue-light);
+}
+
+.avatar-upload-zone input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.upload-icon {
+    font-size: 1.75rem;
+    color: var(--apple-blue);
+    margin-bottom: 0.5rem;
+}
+
+.upload-text {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.upload-hint {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Live Preview Sticky Card */
+.live-preview-container {
+    position: sticky;
+    top: 90px;
+}
+
+.preview-badge-header {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--apple-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.75rem;
+}
+
+.preview-card-output {
+    background: #ffffff;
+    border: var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-float);
+    border-top: 4px solid var(--preview-accent, var(--apple-blue));
+    transition: transform var(--transition-smooth);
+}
+
+.preview-stars {
+    color: var(--apple-gold);
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.preview-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    min-height: 70px;
+    font-style: italic;
+}
+
+.preview-author-box {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+}
+
+.preview-avatar-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.preview-avatar-init {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--apple-blue-light);
+    color: var(--apple-blue);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2rem 1rem;
-    background: linear-gradient(135deg, var(--primary-light), var(--white));
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
-.submit-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 2.5rem;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: var(--shadow-lg);
+.preview-author-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--text-primary);
 }
 
-.submit-header {
+.preview-author-role {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Success Card */
+.submit-success-card {
     text-align: center;
-    margin-bottom: 2rem;
+    padding: 3.5rem 2rem;
+    display: none;
 }
 
-.submit-header h1 { margin-bottom: 0.5rem; }
-.submit-header p { color: var(--gray); }
-
-.rating-input {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.rating-input label {
+.success-icon-animated {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(48, 209, 88, 0.15);
+    color: var(--apple-green);
+    font-size: 2.5rem;
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem;
-    border-radius: var(--radius-sm);
-    cursor: pointer;
-    transition: background 0.2s;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
 }
 
-.rating-input label:hover { background: var(--light-gray); }
-
-.rating-input input[type="radio"] { margin: 0; }
+@media (max-width: 860px) {
+    .submit-split-layout {
+        grid-template-columns: 1fr;
+    }
+    .live-preview-container {
+        position: static;
+        margin-top: 2rem;
+    }
+}

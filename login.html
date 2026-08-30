@@ -7,33 +7,85 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        .auth-container-apple {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1.5rem;
+            background: radial-gradient(circle at 50% 10%, rgba(0, 113, 227, 0.08) 0%, var(--apple-bg) 60%);
+        }
+        .auth-card-apple {
+            background: #ffffff;
+            border: var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: 3rem 2.5rem;
+            width: 100%;
+            max-width: 440px;
+            box-shadow: var(--shadow-float);
+            text-align: center;
+        }
+        .demo-login-box {
+            background: var(--apple-blue-light);
+            border: 1px dashed rgba(0, 113, 227, 0.3);
+            border-radius: var(--radius-md);
+            padding: 1rem;
+            margin-bottom: 1.75rem;
+            text-align: center;
+        }
+    </style>
 </head>
-<body class="auth-page">
-    <div class="auth-container">
-        <div class="auth-box">
-            <a href="index.html" class="auth-logo">🛡️ TrustWall</a>
-            <h1>تسجيل الدخول</h1>
-            <p>أهلاً بعودتك! سجّل دخولك للوحة التحكم</p>
+<body>
+    <div class="auth-container-apple">
+        <div class="auth-card-apple">
+            <a href="index.html" class="apple-logo" style="justify-content: center; margin-bottom: 1.5rem;">
+                🛡️ TrustWall <span class="logo-badge">Pro</span>
+            </a>
+            
+            <h1 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 0.5rem;">أهلاً بعودتك! 👋</h1>
+            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 2rem;">سجّل دخولك للوصول إلى لوحة التحكم وجدرانك</p>
 
-            <form id="loginForm" class="auth-form">
-                <div class="form-group">
-                    <label>البريد الإلكتروني</label>
-                    <input type="email" id="email" required placeholder="demo@trustwall.com" value="demo@trustwall.com">
+            <!-- Quick Demo Login Button for Seamless Testing -->
+            <div class="demo-login-box">
+                <p style="font-size: 0.85rem; font-weight: 600; color: var(--apple-blue); margin-bottom: 0.5rem;">🚀 للتجربة السريعة بدون إدخال بيانات:</p>
+                <button type="button" id="quickDemoBtn" class="btn-apple btn-apple-primary btn-apple-full" style="font-size: 0.9rem;">
+                    ⚡ دخول تجريبي فوري (Demo Mode)
+                </button>
+            </div>
+
+            <div style="position: relative; margin: 1.5rem 0; text-align: center;">
+                <hr style="border: none; border-top: 1px solid rgba(0,0,0,0.08);">
+                <span style="position: absolute; top: -10px; right: 50%; transform: translateX(50%); background: #fff; padding: 0 0.75rem; font-size: 0.8rem; color: var(--text-secondary);">أو عبر البريد</span>
+            </div>
+
+            <form id="loginForm" style="text-align: right;">
+                <div class="apple-form-group">
+                    <label class="apple-label">البريد الإلكتروني</label>
+                    <input type="email" id="email" required class="apple-input" placeholder="demo@trustwall.com" value="demo@trustwall.com">
                 </div>
-                <div class="form-group">
-                    <label>كلمة المرور</label>
-                    <input type="password" id="password" required placeholder="••••••••" value="password123">
+
+                <div class="apple-form-group">
+                    <label class="apple-label">كلمة المرور</label>
+                    <input type="password" id="password" required class="apple-input" placeholder="••••••••" value="password123">
                 </div>
-                <button type="submit" class="btn-primary btn-full">تسجيل الدخول</button>
+
+                <button type="submit" class="btn-apple btn-apple-primary btn-apple-full btn-apple-large" style="margin-top: 1rem;">
+                    تسجيل الدخول
+                </button>
             </form>
 
-            <div id="errorMsg" class="error-msg" style="display:none;"></div>
+            <div id="errorMsg" style="display: none; background: rgba(255, 69, 58, 0.1); color: var(--apple-red); padding: 0.75rem; border-radius: var(--radius-sm); margin-top: 1rem; font-size: 0.9rem;"></div>
 
-            <p class="auth-footer">ليس لديك حساب؟ <a href="register.html">سجّل الآن مجاناً</a></p>
+            <p style="margin-top: 2rem; color: var(--text-secondary); font-size: 0.9rem;">
+                ليس لديك حساب؟ <a href="register.html" style="color: var(--apple-blue); font-weight: 600; text-decoration: none;">سجّل مجاناً الآن</a>
+            </p>
         </div>
     </div>
 
+    <!-- Scripts -->
+    <script src="js/toast.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/auth.js"></script>
 </body>

@@ -8,75 +8,154 @@
     <link rel="stylesheet" href="css/dashboard.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="container nav-content">
-            <a href="dashboard.html" class="logo">🛡️ TrustWall</a>
-            <div class="nav-links">
-                <span id="userName" style="font-weight: 600; color: var(--dark);">مرحباً</span>
-                <a href="index.html" class="btn-outline">الموقع</a>
-                <button onclick="logout()" class="btn-ghost">خروج</button>
+<body class="dashboard-page">
+    <!-- Navbar -->
+    <nav class="apple-nav">
+        <div class="container apple-nav-content">
+            <a href="dashboard.html" class="apple-logo">
+                🛡️ TrustWall <span class="logo-badge">لوحة التحكم</span>
+            </a>
+            <div class="apple-nav-links">
+                <span id="userName" style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem;">مرحباً</span>
+                <a href="index.html" class="btn-apple btn-apple-secondary">الموقع الرئيسي</a>
+                <button onclick="logout()" class="btn-apple btn-apple-glass">خروج</button>
             </div>
         </div>
     </nav>
 
-    <main class="dashboard">
-        <div class="container">
-            <div class="dashboard-header">
-                <h1>جدراني 🧱</h1>
-                <button onclick="openCreateModal()" class="btn-primary">+ جدار جديد</button>
+    <main class="container">
+        <!-- Analytics Top Bar -->
+        <div class="analytics-bar">
+            <div class="stat-card">
+                <div class="stat-info">
+                    <span class="stat-label">إجمالي الجدران</span>
+                    <span class="stat-val" id="statTotalWalls">0</span>
+                </div>
+                <div class="stat-icon-wrapper">🧱</div>
             </div>
 
-            <div id="wallsList" class="walls-grid">
-                <!-- Walls will be loaded here -->
+            <div class="stat-card">
+                <div class="stat-info">
+                    <span class="stat-label">إجمالي الشهادات</span>
+                    <span class="stat-val" id="statTotalReviews">0</span>
+                </div>
+                <div class="stat-icon-wrapper purple">💬</div>
             </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <span class="stat-label">قيد المراجعة</span>
+                    <span class="stat-val" id="statPendingReviews" style="color: var(--apple-gold);">0</span>
+                </div>
+                <div class="stat-icon-wrapper warning">⏳</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-info">
+                    <span class="stat-label">متوسط التقييم</span>
+                    <span class="stat-val" id="statAvgRating" style="color: var(--apple-green);">5.0 ⭐</span>
+                </div>
+                <div class="stat-icon-wrapper success">⭐</div>
+            </div>
+        </div>
+
+        <!-- Dashboard Action Header -->
+        <div class="dashboard-actions-header">
+            <div class="dashboard-title-group">
+                <h1>جدران الشهادات الخاصة بك</h1>
+                <p>قم بإنشاء وإدارة وتضمين جدران تقييمات عملائك</p>
+            </div>
+
+            <div class="dashboard-btn-group">
+                <button id="exportDataBtn" class="btn-apple btn-apple-glass" title="تصدير نسخة احتياطية من البيانات">💾 تصدير JSON</button>
+                <button id="resetDataBtn" class="btn-apple btn-apple-secondary" title="استعادة البيانات التجريبية">🔄 بيانات تجريبية</button>
+                <button onclick="openCreateModal()" class="btn-apple btn-apple-primary">+ جدار جديد</button>
+            </div>
+        </div>
+
+        <!-- Toolbar: Search & Live Filter -->
+        <div class="toolbar-container">
+            <div class="search-input-wrapper">
+                <input type="text" id="searchWallInput" placeholder="🔍 ابحث في جدرانك بالاسم أو الوصف...">
+            </div>
+        </div>
+
+        <!-- Walls Grid -->
+        <div id="wallsList" class="walls-grid">
+            <!-- Dynamically Loaded Walls -->
         </div>
     </main>
 
     <!-- Create Wall Modal -->
-    <div id="createModal" class="modal" style="display:none;">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>جدار جديد</h2>
-                <button onclick="closeCreateModal()" class="btn-close">×</button>
+    <div id="createModal" class="apple-modal">
+        <div class="apple-modal-card">
+            <div class="apple-modal-header">
+                <h2 class="apple-modal-title">إنشاء جدار شهادات جديد ✨</h2>
+                <button onclick="closeCreateModal()" class="apple-modal-close">✕</button>
             </div>
+
             <form id="createWallForm">
-                <div class="form-group">
-                    <label>اسم الجدار</label>
-                    <input type="text" id="wallTitle" required placeholder="مثال: شهادات متجري">
+                <div class="apple-form-group">
+                    <label class="apple-label">اسم الجدار أو المتجر *</label>
+                    <input type="text" id="wallTitle" required class="apple-input" placeholder="مثال: متجر الأناقة الفاخر">
                 </div>
-                <div class="form-group">
-                    <label>وصف (اختياري)</label>
-                    <textarea id="wallDesc" rows="2" placeholder="وصف قصير للخدمة أو المتجر..."></textarea>
+
+                <div class="apple-form-group">
+                    <label class="apple-label">الاسم الفرعي للرابط (Slug اختياري)</label>
+                    <input type="text" id="wallSlug" class="apple-input" placeholder="مثال: anaqah-store (حروف إنجليزية)">
                 </div>
-                <div class="form-group">
-                    <label>اللون الرئيسي</label>
-                    <input type="color" id="wallColor" value="#3b82f6">
+
+                <div class="apple-form-group">
+                    <label class="apple-label">وصف قصير للجدار</label>
+                    <textarea id="wallDesc" rows="2" class="apple-textarea" placeholder="اكتب نبذة قصيرة عن منتجاتك أو خدماتك..."></textarea>
                 </div>
-                <div class="form-group">
-                    <label>رسالة الترحيب للعملاء</label>
-                    <input type="text" id="wallWelcome" value="شكراً لك على مشاركة تجربتك معنا!">
+
+                <div class="apple-form-group">
+                    <label class="apple-label">اللون الرئيسي للجدار والودجت</label>
+                    <div style="display: flex; gap: 0.75rem; align-items: center;">
+                        <input type="color" id="wallColor" value="#0071e3" style="width: 50px; height: 40px; border-radius: var(--radius-sm); border: none; cursor: pointer;">
+                        <span style="font-size: 0.85rem; color: var(--text-secondary);">اختر اللون المتماشي مع هويتك البصرية</span>
+                    </div>
                 </div>
-                <button type="submit" class="btn-primary btn-full">إنشاء الجدار</button>
+
+                <div class="apple-form-group">
+                    <label class="apple-label">رسالة الترحيب للعملاء في صفحة الجمع</label>
+                    <input type="text" id="wallWelcome" class="apple-input" value="شكراً لك على مشاركة تجربتك معنا! رأيك يسعدنا جداً">
+                </div>
+
+                <button type="submit" class="btn-apple btn-apple-primary btn-apple-full btn-apple-large" style="margin-top: 1rem;">
+                    إنشاء الجدار الآن 🚀
+                </button>
             </form>
         </div>
     </div>
 
-    <!-- Testimonials Modal -->
-    <div id="testimonialsModal" class="modal" style="display:none;">
-        <div class="modal-content modal-large">
-            <div class="modal-header">
-                <h2>إدارة الشهادات</h2>
-                <button onclick="closeTestimonialsModal()" class="btn-close">×</button>
+    <!-- Testimonials Moderation Modal -->
+    <div id="testimonialsModal" class="apple-modal">
+        <div class="apple-modal-card" style="max-width: 680px;">
+            <div class="apple-modal-header">
+                <h2 class="apple-modal-title" id="tModalTitle">إدارة ومراجعة الشهادات</h2>
+                <button onclick="closeTestimonialsModal()" class="apple-modal-close">✕</button>
             </div>
-            <div id="testimonialsList" class="testimonials-admin">
-                <!-- Testimonials will be loaded here -->
+
+            <!-- Filter Pills -->
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                <button class="filter-pill t-filter-pill active" onclick="setTestimonialFilter('all', this)">الكل</button>
+                <button class="filter-pill t-filter-pill" onclick="setTestimonialFilter('pending', this)">قيد المراجعة ⏳</button>
+                <button class="filter-pill t-filter-pill" onclick="setTestimonialFilter('approved', this)">المعتمدة ✓</button>
+                <button class="filter-pill t-filter-pill" onclick="setTestimonialFilter('rejected', this)">المرفوضة ✕</button>
+            </div>
+
+            <div id="testimonialsList" class="testimonials-admin-list">
+                <!-- Dynamically Loaded Testimonials -->
             </div>
         </div>
     </div>
 
+    <!-- Scripts -->
+    <script src="js/toast.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/dashboard.js"></script>
 </body>

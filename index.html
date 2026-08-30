@@ -3,105 +3,240 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrustWall — جمع شهادات عملائك بسهولة</title>
+    <title>TrustWall — منصة جمع وعرض الشهادات التفاعلية</title>
+    <meta name="description" content="اجمع شهادات وتقييمات عملائك بكل سهولة، واعرضها في موقعك أو متجرك بأسلوب تفاعلي يزيد الثقة والمبيعات.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- GSAP for Smooth 60fps Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container nav-content">
-            <a href="index.html" class="logo">🛡️ TrustWall</a>
-            <div class="nav-links">
-                <a href="login.html">تسجيل الدخول</a>
-                <a href="register.html" class="btn-primary">ابدأ مجاناً</a>
+    <!-- Apple Glass Navbar -->
+    <nav class="apple-nav">
+        <div class="container apple-nav-content">
+            <a href="index.html" class="apple-logo">
+                🛡️ TrustWall <span class="logo-badge">Pro</span>
+            </a>
+            <div class="apple-nav-links" id="appleNavLinks">
+                <a href="#features" class="apple-nav-link">المميزات</a>
+                <a href="#playground" class="apple-nav-link">المعاينة الحية</a>
+                <a href="#pricing" class="apple-nav-link">الأسعار</a>
+                <a href="login.html" class="apple-nav-link">دخول</a>
+                <a href="register.html" class="btn-apple btn-apple-primary">ابدأ مجاناً</a>
             </div>
         </div>
     </nav>
 
-    <header class="hero">
+    <!-- Apple Hero Section -->
+    <header class="apple-hero">
         <div class="container">
-            <h1>اجمع شهادات عملائك<br><span class="gradient-text">بكل سهولة وثقة</span></h1>
-            <p class="hero-desc">أنشئ صفحة جميلة لجمع آراء عملائك، واعرضها في موقعك بشكل احترافي يزيد المبيعات والمصداقية</p>
-            <div class="hero-buttons">
-                <a href="register.html" class="btn-primary btn-large">ابدأ مجاناً — لا يحتاج بطاقة</a>
-                <a href="#how" class="btn-outline">كيف يعمل؟</a>
+            <div class="hero-pill">
+                ✨ منصة الدليل الاجتماعي (Social Proof) الأسرع نمواً
             </div>
-            <div class="hero-stats">
-                <div class="stat">
-                    <span class="stat-number">+1000</span>
-                    <span class="stat-label">شهادة تم جمعها</span>
+            <h1 class="hero-title">
+                اجمع شهادات عملائك<br>
+                <span class="hero-gradient">بكل سلاسة واحترافية</span>
+            </h1>
+            <p class="hero-subtitle">
+                أنشئ جدران شهادات عصرية، واجمع تقييمات موثقة من عملائك في دقائق، ثم اعرضها في متجرك أو موقعك بضغطة زر لبناء الثقة ومضاعفة المبيعات.
+            </p>
+            <div class="hero-actions">
+                <a href="register.html" class="btn-apple btn-apple-primary btn-apple-large">ابدأ تجربتك المجانية ⚡</a>
+                <a href="#playground" class="btn-apple btn-apple-glass btn-apple-large">شاهد الودجت التفاعلي 👁️</a>
+            </div>
+
+            <!-- Floating 3D Testimonial Showcase -->
+            <div class="hero-floating-cards">
+                <div class="hero-float-card">
+                    <div style="color: var(--apple-gold); margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                    <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem; color: var(--text-primary);">
+                        "ارتفعت مبيعات متجرنا بنسبة 35% بعد تضمين شهادات العملاء على صفحات المنتجات!"
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div class="tw-avatar-init">أ</div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 0.9rem;">أحمد الفاسي</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary);">صاحب متجر إلكتروني</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">+50</span>
-                    <span class="stat-label">جدار نشط</span>
+
+                <div class="hero-float-card">
+                    <div style="color: var(--apple-gold); margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                    <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem; color: var(--text-primary);">
+                        "تصميم أبل الراقي والسهولة الفائقة في جمع الشهادات جعلت عملائنا يشاركون تجاربهم بحماس."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=120&auto=format&fit=crop&q=80" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;" alt="سارة">
+                        <div>
+                            <div style="font-weight: 700; font-size: 0.9rem;">سارة بنعلي</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary);">مديرة تسويق رقمي</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="stat">
-                    <span class="stat-number">99%</span>
-                    <span class="stat-label">رضا العملاء</span>
+
+                <div class="hero-float-card">
+                    <div style="color: var(--apple-gold); margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</div>
+                    <p style="font-size: 0.95rem; line-height: 1.6; margin-bottom: 1rem; color: var(--text-primary);">
+                        "الكود خفيف وسريع ولا يؤثر على سرعة الموقع أبداً، تجربة استثنائية."
+                    </p>
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <div class="tw-avatar-init">ك</div>
+                        <div>
+                            <div style="font-weight: 700; font-size: 0.9rem;">كريم المنصوري</div>
+                            <div style="font-size: 0.75rem; color: var(--text-secondary);">مطور برمجيات</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="how" class="how-it-works">
+    <!-- Metrics Bar -->
+    <section class="apple-metrics">
         <div class="container">
-            <h2>كيف يعمل TrustWall؟</h2>
-            <div class="steps">
-                <div class="step">
-                    <div class="step-icon">1</div>
-                    <h3>أنشئ جدارك</h3>
-                    <p>أنشئ صفحة جمع شهادات باسمك وشعارك وألوانك الخاصة في ثوانٍ</p>
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <div class="metric-num counter-anim" data-target="15000" data-prefix="+" data-suffix="">15,000+</div>
+                    <div class="metric-label">شهادة تم جمعها</div>
                 </div>
-                <div class="step">
-                    <div class="step-icon">2</div>
-                    <h3>شارك الرابط</h3>
-                    <p>أرسل الرابط لعملائك عبر واتساب، الإيميل أو شبكات التواصل</p>
+                <div class="metric-item">
+                    <div class="metric-num counter-anim" data-target="1200" data-prefix="+" data-suffix="">1,200+</div>
+                    <div class="metric-label">جدار نشط حول العالم</div>
                 </div>
-                <div class="step">
-                    <div class="step-icon">3</div>
-                    <h3>اعرض في موقعك</h3>
-                    <p>انسخ كود التضمين وألصقه في موقعك أو متجرك بضغطة زر</p>
+                <div class="metric-item">
+                    <div class="metric-num counter-anim" data-target="99" data-prefix="" data-suffix="%">99%</div>
+                    <div class="metric-label">نسبة رضا وثقة العملاء</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-num counter-anim" data-target="38" data-prefix="+" data-suffix="%">+38%</div>
+                    <div class="metric-label">متوسط زيادة التحويلات</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="demo-section">
+    <!-- Bento Grid Features Section -->
+    <section id="features" class="apple-bento-section">
         <div class="container">
-            <h2>شاهد كيف تبدو الشهادات</h2>
-            <div class="testimonials-grid" id="demoGrid">
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"خدمة ممتازة وسريعة جداً، المنتج وصل في أقل من 24 ساعة وبجودة عالية!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">أ</div>
-                        <div>
-                            <div class="author-name">أحمد الفاسي</div>
-                            <div class="author-role">صاحب متجر إلكتروني</div>
-                        </div>
+            <div class="section-header">
+                <div class="section-tag">لماذا TrustWall؟</div>
+                <h2 class="section-title">صُمم لرفع مبيعاتك وبناء مصداقيتك</h2>
+                <p class="section-desc">كل الأدوات التي تحتاجها لتحويل آراء العملاء الإيجابية إلى محرك نمو قوي.</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Bento Card 1 -->
+                <div class="bento-card bento-card--large">
+                    <div>
+                        <div class="bento-icon">✍️</div>
+                        <h3 class="bento-title">صفحات جمع شهادات مخصصة وفورية</h3>
+                        <p class="bento-desc">
+                            شارك رابطاً أنيقاً مع عملائك يتيح لهم إرسال آرائهم وصورهم وتقييماتهم في ثوانٍ معدودة بدون أي تسجيل دخول أو تعقيدات.
+                        </p>
+                    </div>
+                    <div style="margin-top: 1.5rem; background: var(--apple-bg); padding: 1rem; border-radius: var(--radius-md); font-family: monospace; font-size: 0.85rem; color: var(--apple-blue);">
+                        trustwall.com/submit/your-brand
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"احترافية عالية والتعامل راقي جداً، المنصة زادت ثقة عملائنا ومبيعاتنا بشكل ملحوظ."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">س</div>
-                        <div>
-                            <div class="author-name">سارة بنعلي</div>
-                            <div class="author-role">مديرة تسويق</div>
-                        </div>
+
+                <!-- Bento Card 2 -->
+                <div class="bento-card">
+                    <div class="bento-icon">🛡️</div>
+                    <h3 class="bento-title">فلترة ومراجعة ذكية</h3>
+                    <p class="bento-desc">
+                        تحكم كامل بما يظهر في موقعك. وافق على الشهادات الرائعة أو ارفضها بضغطة واحدة من لوحة التحكم.
+                    </p>
+                </div>
+
+                <!-- Bento Card 3 -->
+                <div class="bento-card">
+                    <div class="bento-icon">📎</div>
+                    <h3 class="bento-title">تضمين بضغطة زر</h3>
+                    <p class="bento-desc">
+                        انسخ سطر كود واحد وألصقه في ووردبريس، شوبيفاي، ويكس، سلة، زد، أو أي موقع مخصص.
+                    </p>
+                </div>
+
+                <!-- Bento Card 4 -->
+                <div class="bento-card bento-card--large bento-card--dark">
+                    <div>
+                        <div class="bento-icon" style="background: rgba(255,255,255,0.1); color: #fff;">🎨</div>
+                        <h3 class="bento-title">ودجات بتصميم أبل الزجاجي الفاخر</h3>
+                        <p class="bento-desc">
+                            اختر بين أنماط متعددة (الوضع الليلي، الزجاجي، الكلاسيكي الفاخر) ليتناغم تماماً مع هوية علامتك التجارية.
+                        </p>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="stars">⭐⭐⭐⭐⭐</div>
-                    <p class="testimonial-text">"تجربة رائعة من البداية للنهاية، تصميم سهل وتضمين سلس بدون تعقيدات برمجية."</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">م</div>
-                        <div>
-                            <div class="author-name">محمد الزروالي</div>
-                            <div class="author-role">مستقل في التصميم</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Live Widget Playground -->
+    <section id="playground" class="playground-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">تجربة حية</div>
+                <h2 class="section-title">استكشف الودجت التفاعلي</h2>
+                <p class="section-desc">جرب التبديل بين الأنماط وشاهد كيف ستبدو الشهادات في متجرك أو موقعك.</p>
+            </div>
+
+            <div class="playground-box">
+                <div class="playground-toolbar">
+                    <div style="font-weight: 700; font-size: 1rem;">معاينة الودجت المباشر 📱</div>
+                    <div class="theme-switcher">
+                        <span style="font-size: 0.85rem; color: var(--text-secondary); margin-left: 0.5rem;">النمط:</span>
+                        <button class="theme-pill active" data-theme="light">أبل فاتح ☀️</button>
+                        <button class="theme-pill" data-theme="dark">أسود فاخر 🌙</button>
+                        <button class="theme-pill" data-theme="glass">زجاجي شفاف 💎</button>
+                        <button class="theme-pill" data-theme="gold">ذهبي نخبة ✨</button>
+                    </div>
+                </div>
+
+                <div id="playgroundCanvas" class="playground-canvas">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem;">
+                        <div class="tw-card">
+                            <div>
+                                <div class="tw-card-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="tw-card-text">"سرعة التوصيل والجودة العالية كانت مفاجأة سارة جداً. أصبحتم خياري الأول دائماً."</p>
+                            </div>
+                            <div class="tw-card-author">
+                                <div class="tw-avatar-init">م</div>
+                                <div class="tw-author-info">
+                                    <div class="tw-author-name">مريم الصقلي <span class="tw-verified-badge">✓</span></div>
+                                    <div class="tw-author-role">عميل موثق</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tw-card">
+                            <div>
+                                <div class="tw-card-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="tw-card-text">"خدمة دعم العملاء متعاونة للغاية والمنتج وصل بالضبط كما في الصور وبجودة خرافية."</p>
+                            </div>
+                            <div class="tw-card-author">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=120&auto=format&fit=crop&q=80" class="tw-avatar-img" alt="طارق">
+                                <div class="tw-author-info">
+                                    <div class="tw-author-name">طارق الإدريسي <span class="tw-verified-badge">✓</span></div>
+                                    <div class="tw-author-role">مؤسس تقني</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tw-card">
+                            <div>
+                                <div class="tw-card-stars">⭐⭐⭐⭐⭐</div>
+                                <p class="tw-card-text">"التصميم أنيق وسهل جداً في التعامل. زادت ثقة زوارنا بشكل ملموس من أول أسبوع."</p>
+                            </div>
+                            <div class="tw-card-author">
+                                <div class="tw-avatar-init">ي</div>
+                                <div class="tw-author-info">
+                                    <div class="tw-author-name">ياسين بوزيد <span class="tw-verified-badge">✓</span></div>
+                                    <div class="tw-author-role">صانع محتوى</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -109,45 +244,72 @@
         </div>
     </section>
 
-    <section class="pricing">
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
         <div class="container">
-            <h2>اختر خطتك المناسبة</h2>
-            <div class="pricing-cards">
-                <div class="pricing-card">
-                    <h3>مجاني</h3>
-                    <div class="price">0$<span>/شهر</span></div>
-                    <ul>
-                        <li>✅ جدار واحد</li>
-                        <li>✅ 10 شهادات</li>
-                        <li>✅ صفحة جمع أساسية</li>
-                        <li>❌ فيديو</li>
-                        <li>❌ إزالة الشعار</li>
+            <div class="section-header">
+                <div class="section-tag">خطط الأسعار</div>
+                <h2 class="section-title">بسيطة، شفافة، وبدون التزامات</h2>
+                <p class="section-desc">ابدأ مجاناً اليوم ورقّي خطتك متى ما كبرت أعمالك.</p>
+            </div>
+
+            <!-- Billing Toggle Switch -->
+            <div class="pricing-toggle">
+                <span class="toggle-label active">شهرياً</span>
+                <label class="switch">
+                    <input type="checkbox" id="billingToggle">
+                    <span class="slider"></span>
+                </label>
+                <span class="toggle-label">سنوياً</span>
+                <span class="discount-badge">وفر 25% 🔥</span>
+            </div>
+
+            <div class="pricing-cards-container">
+                <!-- Free Plan -->
+                <div class="apple-pricing-card">
+                    <h3 style="font-size: 1.5rem; font-weight: 700;">المجانية</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; margin-top: 0.25rem;">للمستقلين والمشاريع الناشئة</p>
+                    <div class="pricing-price">0$<span>/شهرياً</span></div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature-item">✓ جدار شهادات واحد (1 Wall)</li>
+                        <li class="pricing-feature-item">✓ حتى 15 شهادة معتمدة</li>
+                        <li class="pricing-feature-item">✓ صفحة جمع شهادات أساسية</li>
+                        <li class="pricing-feature-item">✓ كود التضمين الأساسي</li>
+                        <li class="pricing-feature-item" style="opacity: 0.5;">✕ إزالة شعار TrustWall</li>
                     </ul>
-                    <a href="register.html" class="btn-secondary btn-full">ابدأ مجاناً</a>
+                    <a href="register.html" class="btn-apple btn-apple-secondary btn-apple-full">ابدأ مجاناً الآن</a>
                 </div>
-                <div class="pricing-card popular">
-                    <div class="badge">الأكثر شعبية</div>
-                    <h3>برو</h3>
-                    <div class="price">9$<span>/شهر</span></div>
-                    <ul>
-                        <li>✅ جدران غير محدودة</li>
-                        <li>✅ شهادات غير محدودة</li>
-                        <li>✅ صور وتقييمات متقدمة</li>
-                        <li>✅ تخصيص كامل للألوان</li>
-                        <li>✅ إزالة الشعار</li>
+
+                <!-- Pro Plan -->
+                <div class="apple-pricing-card featured">
+                    <div class="featured-pill">الأكثر طلباً 🔥</div>
+                    <h3 style="font-size: 1.5rem; font-weight: 700;">برو (Pro)</h3>
+                    <p style="color: #a1a1aa; font-size: 0.95rem; margin-top: 0.25rem;">للشركات والمتاجر المتقدمة</p>
+                    <div class="pricing-price" id="proPriceVal">9$<span>/شهر</span></div>
+                    <ul class="pricing-features">
+                        <li class="pricing-feature-item">✓ جدران غير محدودة (Unlimited Walls)</li>
+                        <li class="pricing-feature-item">✓ شهادات وتقييمات غير محدودة</li>
+                        <li class="pricing-feature-item">✓ رفع الصور الشخصية وإرفاق الروابط</li>
+                        <li class="pricing-feature-item">✓ كافة الأنماط (Dark, Glass, Gold)</li>
+                        <li class="pricing-feature-item">✓ إزالة شعار المنصة بالكامل</li>
+                        <li class="pricing-feature-item">✓ دعم فني ذو أولوية 24/7</li>
                     </ul>
-                    <a href="register.html" class="btn-primary btn-full">اشترك الآن</a>
+                    <a href="register.html" class="btn-apple btn-apple-primary btn-apple-full">اشترك الآن بضمان 14 يوم</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="apple-footer">
         <div class="container">
-            <p>© 2026 TrustWall — منصة جمع وعرض الشهادات التفاعلية</p>
+            <p style="margin-bottom: 0.5rem; font-weight: 600;">🛡️ TrustWall — منصة جمع وعرض الشهادات التفاعلية</p>
+            <p style="font-size: 0.85rem;">© 2026 جميع الحقوق محفوظة • متوافق بالكامل مع GitHub Pages والاستضافات السحابية</p>
         </div>
     </footer>
 
+    <!-- Core Scripts -->
+    <script src="js/toast.js"></script>
     <script src="js/storage.js"></script>
     <script src="js/main.js"></script>
 </body>
