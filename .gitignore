@@ -1,6 +1,0 @@
-node_modules/
-database/*.db
-public/uploads/
-.env
-npm-debug.log
-.DS_Store
