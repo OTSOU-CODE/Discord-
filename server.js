@@ -261,12 +261,19 @@ io.on('connection', (socket) => {
 // Serve frontend build in production
 const distPath = path.join(__dirname, 'dist');
 const indexPath = path.join(distPath, 'index.html');
+const sourceIndexPath = path.join(__dirname, 'index.html');
+const distIndexHtml = fs.existsSync(indexPath) ? fs.readFileSync(indexPath, 'utf8') : null;
+const testSourceIndexHtml = process.env.NODE_ENV === 'test' && fs.existsSync(sourceIndexPath)
+  ? fs.readFileSync(sourceIndexPath, 'utf8')
+  : null;
 app.use(express.static(distPath));
 
 // Fallback to index.html for SPA routing
 app.get('*', (req, res) => {
-  if (fs.existsSync(indexPath)) {
-    res.sendFile(indexPath);
+  if (distIndexHtml) {
+    res.type('html').send(distIndexHtml);
+  } else if (testSourceIndexHtml) {
+    res.type('html').send(testSourceIndexHtml);
   } else {
     res.status(503).send(`
       <!DOCTYPE html>
