@@ -12,6 +12,8 @@ import { PodiumModal } from './components/PodiumModal';
 import { NetworkModal } from './components/NetworkModal';
 import { ServerModal } from './components/ServerModal';
 import { playStopAlarm } from './utils/soundEffects';
+import { getLetterPool } from '../server/alphabet.js';
+import { calculateRoundScores } from '../server/scoring.js';
 
 export function App() {
   const [isConnected, setIsConnected] = useState(socket.connected);
@@ -276,7 +278,120 @@ export function App() {
     });
   };
 
+  // Solo Practice In-Browser Game Engine
+  const handleStartSolo = ({ playerName, settings }) => {
+    const pool = getLetterPool(settings.lang, settings.includeRare);
+    const firstLetter = pool[Math.floor(Math.random() * pool.length)];
+    const soloPlayerId = 'p_solo';
+
+    const soloRoom = {
+      code: 'SOLO',
+      hostId: soloPlayerId,
+      isSolo: true,
+      settings: {
+        lang: settings.lang || 'ar',
+        roundDuration: Number(settings.roundDuration) || 60,
+        totalRounds: Number(settings.totalRounds) || 5,
+        includeRare: Boolean(settings.includeRare)
+      },
+      status: 'ROLLING',
+      currentRound: 1,
+      currentLetter: firstLetter,
+      usedLetters: [firstLetter],
+      players: {
+        [soloPlayerId]: {
+          id: soloPlayerId,
+          name: (playerName || 'Player').trim().slice(0, 20),
+          isHost: true,
+          connected: true,
+          score: 0,
+          roundScores: [],
+          draft: {},
+          progress: 0,
+          submitted: false
+        }
+      },
+      answers: {},
+      review: {
+        categoryIndex: 0,
+        votes: {},
+        results: null
+      }
+    };
+
+    setPlayerId(soloPlayerId);
+    setRoom(soloRoom);
+    setInitialDraft({});
+    setRollingData({
+      letter: firstLetter,
+      pool,
+      roundNumber: 1,
+      totalRounds: soloRoom.settings.totalRounds
+    });
+
+    setTimeout(() => {
+      const roundEndTimeMs = Date.now() + soloRoom.settings.roundDuration * 1000;
+      setRollingData(null);
+      setRoundEndTime(roundEndTimeMs);
+      setRoom(prev => {
+        if (!prev || !prev.isSolo) return prev;
+        return {
+          ...prev,
+          status: 'PLAYING',
+          roundEndTime: roundEndTimeMs
+        };
+      });
+    }, 3200);
+  };
+
+  const processSoloRoundFinish = (providedAnswers) => {
+    setRoom(prev => {
+      if (!prev || !prev.isSolo || prev.status !== 'PLAYING') return prev;
+
+      playStopAlarm();
+      const currentDraft = providedAnswers || prev.players[playerId]?.draft || {};
+      const roundScores = calculateRoundScores({
+        letter: prev.currentLetter || '',
+        lang: prev.settings?.lang || 'ar',
+        playerIds: [playerId],
+        answers: { [playerId]: currentDraft },
+        votes: {}
+      });
+
+      return {
+        ...prev,
+        status: 'REVIEW',
+        answers: {
+          ...prev.answers,
+          [prev.currentRound]: { [playerId]: currentDraft }
+        },
+        review: {
+          categoryIndex: 0,
+          votes: {},
+          results: roundScores
+        },
+        players: {
+          ...prev.players,
+          [playerId]: {
+            ...prev.players[playerId],
+            draft: currentDraft,
+            submitted: true
+          }
+        }
+      };
+    });
+    setRoundEndTime(null);
+  };
+
   const handleLeaveRoom = () => {
+    if (room?.isSolo) {
+      setRoom(null);
+      setPlayerId('');
+      setRollingData(null);
+      setRoundEndTime(null);
+      setInitialDraft({});
+      return;
+    }
     socket.emit('LEAVE_ROOM');
     clearSession();
     setRoom(null);
@@ -297,34 +412,184 @@ export function App() {
   };
 
   const handleUpdateDraft = (draft) => {
+    if (room?.isSolo) {
+      const filled = Object.values(draft || {}).filter(v => (v || '').trim().length > 0).length;
+      setRoom(prev => {
+        if (!prev?.isSolo) return prev;
+        return {
+          ...prev,
+          players: {
+            ...prev.players,
+            [playerId]: {
+              ...prev.players[playerId],
+              draft,
+              progress: filled
+            }
+          }
+        };
+      });
+      return;
+    }
     socket.emit('UPDATE_DRAFT', { draft });
   };
 
   const handleSubmitAnswers = (answers) => {
+    if (room?.isSolo) {
+      processSoloRoundFinish(answers);
+      return;
+    }
     socket.emit('SUBMIT_ANSWERS', { answers });
   };
 
   const handleTriggerStop = () => {
+    if (room?.isSolo) {
+      processSoloRoundFinish();
+      return;
+    }
     socket.emit('TRIGGER_STOP');
   };
 
   const handleCastVote = ({ categoryId, targetPlayerId, vote }) => {
+    if (room?.isSolo) {
+      setRoom(prev => {
+        if (!prev || !prev.isSolo || !prev.review) return prev;
+        const voteKey = `${categoryId}:${targetPlayerId}`;
+        const updatedVotes = {
+          ...prev.review.votes,
+          [voteKey]: {
+            ...(prev.review.votes?.[voteKey] || {}),
+            [playerId]: vote
+          }
+        };
+        const currentAnswers = prev.answers?.[prev.currentRound] || { [playerId]: prev.players[playerId]?.draft || {} };
+        const updatedResults = calculateRoundScores({
+          letter: prev.currentLetter || '',
+          lang: prev.settings?.lang || 'ar',
+          playerIds: [playerId],
+          answers: currentAnswers,
+          votes: updatedVotes
+        });
+        return {
+          ...prev,
+          review: {
+            ...prev.review,
+            votes: updatedVotes,
+            results: updatedResults
+          }
+        };
+      });
+      return;
+    }
     socket.emit('CAST_VOTE', { categoryId, targetPlayerId, vote });
   };
 
   const handleChangeReviewCategory = (categoryIndex) => {
+    if (room?.isSolo) {
+      setRoom(prev => {
+        if (!prev || !prev.isSolo || !prev.review) return prev;
+        return {
+          ...prev,
+          review: {
+            ...prev.review,
+            categoryIndex
+          }
+        };
+      });
+      return;
+    }
     socket.emit('CHANGE_REVIEW_CATEGORY', { categoryIndex });
   };
 
   const handleFinishReview = () => {
+    if (room?.isSolo) {
+      setRoom(prev => {
+        if (!prev || !prev.isSolo || prev.status !== 'REVIEW') return prev;
+        const roundPts = prev.review?.results?.playerRoundPoints?.[playerId] ?? prev.review?.results?.playerScores?.[playerId] ?? 0;
+        const newTotalScore = (prev.players[playerId]?.score || 0) + roundPts;
+        return {
+          ...prev,
+          status: 'LEADERBOARD',
+          players: {
+            ...prev.players,
+            [playerId]: {
+              ...prev.players[playerId],
+              score: newTotalScore,
+              roundScores: [...(prev.players[playerId]?.roundScores || []), roundPts]
+            }
+          }
+        };
+      });
+      return;
+    }
     socket.emit('FINISH_REVIEW');
   };
 
   const handleNextRound = () => {
+    if (room?.isSolo) {
+      if (room.currentRound >= room.settings.totalRounds) {
+        setRoom(prev => prev ? { ...prev, status: 'GAME_OVER' } : prev);
+        return;
+      }
+
+      const nextRoundNum = room.currentRound + 1;
+      const pool = getLetterPool(room.settings.lang, room.settings.includeRare);
+      const available = pool.filter(l => !room.usedLetters.includes(l));
+      const candidatePool = available.length > 0 ? available : pool;
+      const nextLetter = candidatePool[Math.floor(Math.random() * candidatePool.length)];
+
+      setRollingData({
+        letter: nextLetter,
+        pool,
+        roundNumber: nextRoundNum,
+        totalRounds: room.settings.totalRounds
+      });
+
+      setRoom(prev => {
+        if (!prev?.isSolo) return prev;
+        return {
+          ...prev,
+          status: 'ROLLING',
+          currentRound: nextRoundNum,
+          currentLetter: nextLetter,
+          usedLetters: [...prev.usedLetters, nextLetter],
+          players: {
+            ...prev.players,
+            [playerId]: {
+              ...prev.players[playerId],
+              draft: {},
+              progress: 0,
+              submitted: false
+            }
+          }
+        };
+      });
+
+      setTimeout(() => {
+        const roundEndTimeMs = Date.now() + room.settings.roundDuration * 1000;
+        setRollingData(null);
+        setRoundEndTime(roundEndTimeMs);
+        setRoom(prev => {
+          if (!prev || !prev.isSolo) return prev;
+          return {
+            ...prev,
+            status: 'PLAYING',
+            roundEndTime: roundEndTimeMs
+          };
+        });
+      }, 3200);
+      return;
+    }
     socket.emit('NEXT_ROUND');
   };
 
   const handleRestartGame = () => {
+    if (room?.isSolo) {
+      handleStartSolo({
+        playerName: room.players[playerId]?.name,
+        settings: room.settings
+      });
+      return;
+    }
     socket.emit('RESTART_GAME');
   };
 
@@ -350,6 +615,7 @@ export function App() {
           <CreateJoinView
             onCreateRoom={handleCreateRoom}
             onJoinRoom={handleJoinRoom}
+            onStartSolo={handleStartSolo}
             currentLang={lang}
             onLangChange={setLang}
             initialRoomCode={initialJoinCode}

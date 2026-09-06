@@ -23,7 +23,8 @@ export function NetworkModal({ isOpen, onClose, t, roomCode }) {
         .then(data => {
           setNetworkInfo(data);
           const base = data?.suggestedLocalUrl || (window.location.origin + window.location.pathname);
-          const localUrl = roomCode ? `${base}?join=${roomCode}` : base;
+          const cleanBase = base.replace(/\/+$/, '');
+          const localUrl = roomCode ? `${cleanBase}/?join=${roomCode}` : `${cleanBase}/`;
           setSelectedUrl(localUrl);
         })
         .catch(() => {
@@ -150,8 +151,18 @@ export function NetworkModal({ isOpen, onClose, t, roomCode }) {
           </div>
         )}
 
-        {/* Helper Note for GitHub Pages / Static Hosting */}
-        {isStaticHost() ? (
+        {/* Helper Note based on Hosting Environment */}
+        {(networkInfo?.isCodespaces || (typeof window !== 'undefined' && (window.location.hostname.includes('.app.github.dev') || window.location.hostname.includes('.github.dev')))) ? (
+          <div className="bg-emerald-50 border border-emerald-300/70 p-3.5 rounded-xl text-xs">
+            <div className="flex items-center gap-1.5 text-emerald-800 font-bold mb-1">
+              <Globe className="w-3.5 h-3.5 text-emerald-600" />
+              <span>{t.codespacesBadge || '100% Hosted on GitHub Codespaces'}</span>
+            </div>
+            <p className="text-emerald-700 text-[11px] leading-relaxed">
+              Your game is running live in the cloud on GitHub's native infrastructure with public port forwarding. Anyone in the world can scan this QR code or open the link to join and play instantly!
+            </p>
+          </div>
+        ) : isStaticHost() ? (
           <div className="bg-amber-50 border border-amber-300/70 p-3.5 rounded-xl text-xs">
             <div className="flex items-center gap-1.5 text-amber-800 font-bold mb-1">
               <Globe className="w-3.5 h-3.5 text-amber-600" />
@@ -160,22 +171,18 @@ export function NetworkModal({ isOpen, onClose, t, roomCode }) {
             <p className="text-amber-700 text-[11px] leading-relaxed">
               {hasConfiguredServer() 
                 ? 'Your friends can join directly from any device or browser by scanning the QR code or clicking the invite link.'
-                : 'Warning: You have not configured a backend server URL yet. Open Server Settings to set your server URL so players can connect.'}
+                : 'Warning: You have not configured a backend server URL yet. Open Server Settings to connect your GitHub Codespaces backend link so players can connect.'}
             </p>
           </div>
         ) : (
-          /* Reverse Proxy Instructions for local host */
-          <div className="bg-ink-900 text-ink-100 p-3.5 rounded-xl text-xs font-mono">
-            <div className="flex items-center gap-1.5 text-amber-400 font-semibold mb-1">
-              <Terminal className="w-3.5 h-3.5" />
-              Play with friends over the Internet (Cloudflare Tunnel):
+          <div className="bg-paper-100 text-ink-700 p-3 rounded-xl text-xs border border-paper-border">
+            <div className="flex items-center gap-1.5 text-amber-800 font-semibold mb-1">
+              <Wifi className="w-3.5 h-3.5 text-amber-600" />
+              Local Wi-Fi &amp; Internet Play:
             </div>
-            <p className="text-ink-400 text-[11px] mb-2 font-sans">
-              Run this command in any terminal to get a free HTTPS public link without port forwarding:
+            <p className="text-ink-600 text-[11px] leading-relaxed">
+              Devices on the same local Wi-Fi router can scan the QR code above to join. To play with friends anywhere in the world without installing anything, launch this repo in <strong>GitHub Codespaces</strong> for an instant 100% GitHub-hosted link!
             </p>
-            <div className="bg-ink-dark px-2.5 py-1.5 rounded text-emerald-400 select-all border border-ink-800">
-              cloudflared tunnel --url http://localhost:3000
-            </div>
           </div>
         )}
 

@@ -1,13 +1,18 @@
 # 🚌 Categories Game (أتوبيس كومبلي / Le Petit Bac)
 
-A modern, self-hosted, real-time multiplayer web app for the classic word game **Categories (أتوبيس كومبلي)**. Built to run locally on your PC via Node.js and be accessible to friends over local Wi-Fi or reverse-proxy tunnels (like Cloudflare Tunnel or Ngrok).
+A modern, real-time multiplayer word game **Categories (أتوبيس كومبلي)** engineered to run **100% natively on GitHub infrastructure** with zero external websites, accounts, or hosting providers.
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new)
 
 ---
 
 ## ✨ Features
 
-- **Real-Time Multiplayer Engine**: Authoritative server-synced countdown timer, in-memory room management, live typing progress indicator, and instant "STOP" freeze mechanism.
-- **Reverse Proxy & Tunnel Ready**: Seamless WebSocket CORS, headers, and HTTPS support designed out-of-the-box for Cloudflare Tunnels (`*.trycloudflare.com`) and Ngrok (`*.ngrok-free.app`).
+- **100% Native GitHub Infrastructure**:
+  - **GitHub Codespaces**: 1-click cloud multiplayer server running on GitHub with automated `.devcontainer` configuration and public HTTPS port forwarding (`*.app.github.dev`). Zero external services needed.
+  - **GitHub Pages**: Automated CI/CD pipeline via GitHub Actions (`deploy.yml`) for static web deployment.
+  - **In-Browser Solo Practice**: Full offline practice mode runnable directly on GitHub Pages with client-side scoring evaluation and zero server dependencies.
+- **Real-Time Multiplayer Engine**: Authoritative countdown timer, in-memory room management, live typing progress indicator, and instant "STOP" freeze mechanism.
 - **9 Fixed Categories**:
   1. 👤 Boy's Name (ولد)
   2. ❤️ Girl's Name (بنت)
@@ -30,112 +35,97 @@ A modern, self-hosted, real-time multiplayer web app for the classic word game *
   - Official Scoring Rules:
     - **10 points**: Valid unique answer.
     - **5 points**: Valid answer shared by two or more players.
-    - **20 points**: Only one player in the entire lobby provided a valid answer for that category!
+    - **20 points**: Solo answer bonus (only one player in the lobby had a valid answer).
     - **0 points**: Blank, rejected by vote, or starting with the wrong letter.
 - **Paper-Notebook Luxury Aesthetic**: Warm cream stationery background (`#FDFBF7`), subtle ruled lines, tactile buttons, sound effects (Web Audio API synthesizers), and canvas confetti victory podium.
-- **Local Wi-Fi QR Code & Network Sharing**: Built-in modal detects your LAN IP and generates a mobile-scannable QR code to join immediately from smartphones on the same Wi-Fi.
+- **Mobile QR Code & Frictionless Join**: QR code and invite link automatically propagate room codes and Codespaces public URLs so friends on mobile phones or laptops join with 1 click.
 
 ---
 
-## 🚀 Quickstart
+## 🐙 100% Native GitHub Hosting
 
-### 1. Install Dependencies
+No third-party hosts, no Render, no Railway, no Cloudflare, and no external websites. Everything runs strictly on GitHub.
+
+### Method 1: GitHub Codespaces (1-Click Cloud Multiplayer — Recommended)
+
+Every GitHub user receives **60 free hours per month** of GitHub Codespaces.
+
+1. Click the badge: [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new)  
+   *(Or in your repository on GitHub, click the green **Code** button &gt; **Codespaces** &gt; **Create codespace on main**)*.
+2. GitHub automatically:
+   - Sets up the Node.js 20 container environment using `.devcontainer/devcontainer.json`.
+   - Runs `npm install && npm run build`.
+   - Starts the game server on port `3000`.
+   - Sets port `3000` visibility to **Public** (`*.app.github.dev`).
+3. GitHub automatically opens the game in your browser at:
+   ```text
+   https://<your-codespace-name>-3000.app.github.dev
+   ```
+4. **Play with Friends**: Click **Create Room**, then click **Wi-Fi / QR Share**. Share the generated link or QR code with friends anywhere in the world—they connect and play immediately!
+
+---
+
+### Method 2: GitHub Pages (Frontend) + GitHub Codespaces (Backend)
+
+You can also host the static web app on **GitHub Pages** and connect it to your GitHub Codespace:
+
+1. In your GitHub repository, go to **Settings** &gt; **Pages**.
+2. Under **Build and deployment** &gt; **Source**, select **GitHub Actions**.
+3. The included `.github/workflows/deploy.yml` workflow will automatically run tests, build the frontend, and deploy it live to:
+   ```text
+   https://<YOUR_USERNAME>.github.io/<YOUR_REPO_NAME>/
+   ```
+4. In the GitHub Pages app, open **Server Settings** (top-right server icon) and paste your Codespace URL (`https://<your-codespace>-3000.app.github.dev`).
+5. Room invite links and QR codes will automatically embed `?server=https://...` so friends joining don't have to configure anything!
+
+---
+
+### Method 3: In-Browser Solo Practice (GitHub Pages / Offline)
+
+Want to play or train solo without starting any server?
+
+1. Open the game on GitHub Pages or locally.
+2. In the home card, select the **Solo Practice (تدريب فردي)** tab.
+3. Configure your language, round time, and number of rounds, then click **Start Solo Practice**.
+4. The client-side engine rolls letters, runs the timer, and evaluates all 9 categories automatically directly in your browser.
+
+---
+
+### Method 4: Local PC & Wi-Fi (Home / Office)
+
+Run the server on your own computer:
+
 ```bash
+# 1. Install dependencies
 npm install
-```
 
-### 2. Build Frontend
-```bash
+# 2. Build frontend
 npm run build
-```
 
-### 3. Start the Server
-```bash
+# 3. Start server
 npm start
 ```
-The server will bind to `0.0.0.0:3000` and display your local and Wi-Fi addresses in the terminal:
+
+The server binds to `0.0.0.0:3000` and displays your local network addresses:
 ```text
+======================================================
+🚌 Categories Game (أتوبيس كومبلي) Server Running!
+======================================================
 📡 Bound:        http://0.0.0.0:3000
 💻 Local:        http://localhost:3000
 📱 Wi-Fi / LAN:  http://192.168.1.X:3000
+======================================================
 ```
-
----
-
-## 🐙 Hosting on GitHub (Frontend + Backend)
-
-You can host the game frontend on **GitHub Pages** for free, and connect it to a free backend host (Render, Railway) or your local PC tunnel.
-
-### Step 1: Push Repository to GitHub
-1. Create a new repository on [GitHub](https://github.com/new).
-2. Link your local project and push:
-   ```bash
-   git remote add origin https://github.com/<YOUR_USERNAME>/<YOUR_REPO_NAME>.git
-   git add .
-   git commit -m "feat: Categories multiplayer game with GitHub Pages support"
-   git branch -M main
-   git push -u origin main
-   ```
-
-### Step 2: Enable GitHub Pages (Automated via GitHub Actions)
-1. On GitHub, go to your repository **Settings** > **Pages**.
-2. Under **Build and deployment** > **Source**, choose **GitHub Actions**.
-3. The included `.github/workflows/deploy.yml` workflow automatically runs the test suite, builds the frontend with relative base assets, and deploys it live to `https://<YOUR_USERNAME>.github.io/<YOUR_REPO_NAME>/`!
-
-### Step 3: Run the Multiplayer Backend Server
-GitHub Pages serves static web files. To run the real-time Socket.io multiplayer engine:
-
-#### Option A: Free Cloud Deployment (Render.com)
-1. Sign up for free at [Render.com](https://render.com).
-2. Click **New +** > **Blueprint**, and select your GitHub repository.
-3. Render automatically uses the included `render.yaml` specification to launch your server for free!
-4. Copy your backend URL (e.g. `https://categories-game.onrender.com`).
-
-#### Option B: Free PC Tunnel (Cloudflare Tunnel)
-- Start the server on your PC:
-  ```bash
-  npm start
-  ```
-- In another terminal:
-  ```bash
-  cloudflared tunnel --url http://localhost:3000
-  ```
-- Copy the public HTTPS URL (e.g. `https://my-words.trycloudflare.com`).
-
-### Step 4: Frictionless Invites for Players
-- In your GitHub Pages web app, click the **Server Settings** icon in the navbar (or the auto-prompt) and enter your backend URL.
-- When you create a room and click **Wi-Fi / QR Share**, the invite link automatically embeds `?join=ROOMCODE&server=YOUR_BACKEND_URL`.
-- **Friends who open the link or scan the QR code connect directly with ZERO manual configuration required!**
-
----
-
-## 🌐 Playing with Friends
-
-### Option A: Local Wi-Fi (Same Network)
-1. Ensure your PC and friends' phones/laptops are connected to the same Wi-Fi router.
-2. Open `http://localhost:3000` on your PC and click **Create Room**.
-3. In the lobby, click **Wi-Fi / QR Share** (or friends can type `http://<YOUR_LOCAL_IP>:3000` and enter the 5-character room code).
-
-### Option B: Internet via Cloudflare Tunnel (Recommended, Free & No Port Forwarding)
-1. Download [cloudflared](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/).
-2. In a separate terminal, run:
-   ```bash
-   cloudflared tunnel --url http://localhost:3000
-   ```
-3. Share the generated HTTPS URL (e.g. `https://random-words.trycloudflare.com`) with your friends anywhere in the world!
-
-### Option C: Internet via Ngrok
-```bash
-ngrok http 3000
-```
+Friends connected to the same Wi-Fi router can scan the in-game QR code or navigate to `http://192.168.1.X:3000` to play together.
 
 ---
 
 ## 🧪 Running Automated Tests
 
-Run the built-in Node test runner:
+Run the full automated test suite (unit tests, engine tests, GitHub hosting verification, and real-time Socket.io integration flow):
+
 ```bash
-node --test test/*.test.js
+npm test
 ```
 
 ---
@@ -144,10 +134,15 @@ node --test test/*.test.js
 
 ```
 Categories/
+├── .devcontainer/
+│   ├── devcontainer.json     # GitHub Codespaces config with automated public port 3000 forwarding
+│   └── on-start.sh           # Codespaces background server startup script
 ├── .github/
 │   └── workflows/
 │       └── deploy.yml        # GitHub Actions automated test, build & deploy to GitHub Pages
-├── dist/                     # Built production client assets (HTML, CSS, JS)
+├── .vscode/
+│   └── tasks.json            # VS Code / Codespaces auto-tasks for server execution and logs
+├── dist/                     # Production build artifacts (served statically by Express on port 3000)
 ├── server/
 │   ├── alphabet.js           # Alphabets, letter pools & text normalizations
 │   ├── categories.js         # 9 fixed categories definitions & metadata
@@ -156,37 +151,35 @@ Categories/
 ├── src/
 │   ├── components/
 │   │   ├── CarouselRoll.jsx  # 3-second animated rolling letter carousel
-│   │   ├── CreateJoinView.jsx# Create room & join room notebook card
+│   │   ├── CreateJoinView.jsx# Create room, join room, and Solo Practice notebook card
 │   │   ├── GameRoundView.jsx # Live 9-category input grid with STOP trigger
 │   │   ├── LeaderboardView.jsx# Scoreboard and round recap
 │   │   ├── LobbyView.jsx     # Players list, room settings & host controls
 │   │   ├── Navbar.jsx        # App header, room code pill, sound & server toggles
-│   │   ├── NetworkModal.jsx  # Wi-Fi IP address detection & QR code generator
+│   │   ├── NetworkModal.jsx  # Wi-Fi / Codespace URL detection & QR code generator
 │   │   ├── PodiumModal.jsx   # Winner podium & canvas confetti celebration
-│   │   ├── ServerModal.jsx   # Backend server connection & cloud deployment modal
+│   │   ├── ServerModal.jsx   # 100% GitHub native hosting & Codespaces connection modal
 │   │   └── VotingReviewView.jsx# Peer voting & answer review screen
 │   ├── constants/
 │   │   ├── categories.js     # Frontend category definitions and icons
 │   │   └── translations.js   # Arabic, English, and French dictionaries
 │   ├── utils/
 │   │   └── soundEffects.js   # Web Audio API synthesizers (bells, alarms, buzzers)
-│   ├── App.jsx               # Root React application & state router
+│   ├── App.jsx               # Root React application, state router & Solo engine
 │   ├── index.css             # Tailwind directives & paper stationery styles
 │   ├── main.jsx              # DOM entry point
-│   └── socket.js             # Socket.io client wrapper, auto-detection & reconnection
+│   └── socket.js             # Socket.io client wrapper & Codespaces auto-detection
 ├── test/
 │   ├── engine.test.js        # Unit tests for scoring & alphabet normalization
-│   ├── githubHosting.test.js # Unit tests for URL normalization
-│   ├── integration.test.js   # Full HTTP, CORS & Socket.io integration test
+│   ├── githubHosting.test.js # Unit tests for GitHub Codespaces URL normalization & detection
+│   ├── integration.test.js   # Full HTTP, CORS, Codespaces headers & Socket.io integration test
 │   └── roomManager.test.js   # Room lifecycle and multiplayer state tests
 ├── .gitignore                # Excludes node_modules, dist, and environment files
-├── Dockerfile                # Docker container definition for cloud deployment
-├── Procfile                  # Railway / Heroku deployment process file
-├── render.yaml               # Render Blueprint for 1-click cloud server deployment
+├── Dockerfile                # Standard container definition
 ├── index.html                # HTML entry template with Google Fonts (Cairo & Outfit)
 ├── package.json              # Project dependencies & scripts
 ├── postcss.config.js         # PostCSS configuration
-├── server.js                 # Express + Socket.io server binding to 0.0.0.0:3000
+├── server.js                 # Express + Socket.io server with Codespaces detection
 ├── tailwind.config.js        # Custom Tailwind paper theme configuration
 └── vite.config.js            # Vite build with relative base path & dev proxy
 ```

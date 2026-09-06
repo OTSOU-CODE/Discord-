@@ -65,7 +65,7 @@ export function isStaticHost() {
 export function resolveServerUrl() {
   if (typeof window === 'undefined') return 'http://localhost:3000';
 
-  // 1. URL query parameter (?server=...)
+  // 1. Explicit URL query parameter (?server=...)
   try {
     const params = new URLSearchParams(window.location.search);
     const serverParam = params.get('server');
@@ -80,7 +80,16 @@ export function resolveServerUrl() {
     // Ignore URL parse error
   }
 
-  // 2. Saved user setting
+  // 2. If running directly on a non-static host (e.g. GitHub Codespaces *.app.github.dev or local Express)
+  // The server IS our origin! Stale localStorage from other domains must not override current live host.
+  if (!isStaticHost()) {
+    if (typeof import.meta !== 'undefined' && import.meta.env?.DEV && window?.location?.port === '5173') {
+      return `http://${window.location.hostname}:3000`;
+    }
+    return window.location.origin;
+  }
+
+  // 3. Saved user setting in localStorage (for GitHub Pages clients connecting to Codespaces)
   try {
     const saved = localStorage.getItem(SERVER_STORAGE_KEY);
     if (saved) {
@@ -91,23 +100,13 @@ export function resolveServerUrl() {
     // Ignore localStorage error
   }
 
-  // 3. Build-time variable
-  if (import.meta.env.VITE_SERVER_URL) {
+  // 4. Build-time variable
+  if (typeof import.meta !== 'undefined' && import.meta.env?.VITE_SERVER_URL) {
     const normalized = normalizeServerUrl(import.meta.env.VITE_SERVER_URL);
     if (normalized) return normalized;
   }
 
-  // 4. Vite local dev server -> Node backend on 3000
-  if (import.meta.env.DEV && window.location.port === '5173') {
-    return `http://${window.location.hostname}:3000`;
-  }
-
-  // 5. If NOT on static hosting (e.g. self-hosted Express serving dist)
-  if (!isStaticHost()) {
-    return window.location.origin;
-  }
-
-  // 6. On static host without explicit server
+  // 5. On static host without explicit server
   return '';
 }
 
@@ -128,14 +127,14 @@ export const socket = io(effectiveSocketUrl, {
 });
 
 export function getServerUrl() {
-  if (ACTIVE_SERVER_URL) return ACTIVE_SERVER_URL;
-  if (typeof window === 'undefined') return 'http://localhost:3000';
-  if (isStaticHost()) return '';
-  return window.location.origin;
+  if (typeof window !== 'undefined') {
+    return resolveServerUrl();
+  }
+  return ACTIVE_SERVER_URL || 'http://localhost:3000';
 }
 
 export function hasConfiguredServer() {
-  return Boolean(ACTIVE_SERVER_URL);
+  return Boolean(getServerUrl());
 }
 
 /**
@@ -165,6 +164,15 @@ export function getApiUrl(path) {
   return `${base}${cleanPath}`;
 }
 
+/**
+ * Checks if running directly inside a GitHub Codespace
+ */
+export function isCodespaceHost() {
+  if (typeof window === 'undefined') return false;
+  const host = window.location.hostname.toLowerCase();
+  return host.includes('.app.github.dev') || host.includes('.github.dev');
+}
+
 export async function testServerHealth(url) {
   const normalized = normalizeServerUrl(url);
   if (!normalized) {
@@ -177,7 +185,7 @@ export async function testServerHealth(url) {
     if (!isLocal) {
       return { 
         ok: false, 
-        error: 'Mixed Content Blocked: Since GitHub Pages is HTTPS, your backend server must also use HTTPS (e.g. Render, Railway, or Cloudflare HTTPS Tunnel).' 
+        error: 'Mixed Content Blocked: Since GitHub Pages is HTTPS, your backend server must also use HTTPS (e.g. your GitHub Codespaces public URL https://<name>-3000.app.github.dev).' 
       };
     }
   }
@@ -202,12 +210,12 @@ export async function testServerHealth(url) {
     return { ok: false, error: `Server responded with HTTP ${res.status}` };
   } catch (err) {
     if (err.name === 'AbortError') {
-      return { ok: false, error: 'Connection timed out (server took too long to respond. Free cloud hosts like Render may take ~30s to wake up).' };
+      return { ok: false, error: 'Connection timed out (server took too long to respond. Check if your GitHub Codespace is active).' };
     }
     if (typeof window !== 'undefined' && window.location.protocol === 'https:' && /^http:\/\//i.test(normalized)) {
       return {
         ok: false,
-        error: 'Blocked by browser (Mixed Content): HTTPS sites cannot make requests to insecure HTTP servers. Please use an HTTPS URL or Cloudflare Tunnel.'
+        error: 'Blocked by browser (Mixed Content): HTTPS sites cannot make requests to insecure HTTP servers. Please use an HTTPS URL like your GitHub Codespaces URL.'
       };
     }
     return { ok: false, error: err.message || 'Failed to connect to server' };

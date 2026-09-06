@@ -3,6 +3,7 @@ import http from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
 import path from 'path';
+import fs from 'fs';
 import os from 'os';
 import { fileURLToPath } from 'url';
 import RoomManager from './server/roomManager.js';
@@ -14,8 +15,15 @@ const __dirname = path.dirname(__filename);
 const PORT = process.env.PORT || 3000;
 const HOST = '0.0.0.0';
 
+// Detect if running on GitHub Codespaces infrastructure
+const isCodespaces = process.env.CODESPACES === 'true' || Boolean(process.env.CODESPACE_NAME);
+const codespaceDomain = process.env.GITHUB_CODESPACES_PORT_FORWARDING_DOMAIN || 'app.github.dev';
+const codespaceUrl = process.env.CODESPACE_NAME
+  ? `https://${process.env.CODESPACE_NAME}-${PORT}.${codespaceDomain}`
+  : null;
+
 const app = express();
-app.set('trust proxy', 1); // Trust first proxy (Cloudflare, ngrok, caddy, nginx)
+app.set('trust proxy', 1); // Trust reverse proxies (GitHub Codespaces, reverse proxies, etc.)
 
 // Configure CORS for Express: origin: true dynamically reflects origin to satisfy credentials
 app.use(cors({
@@ -69,14 +77,19 @@ function getNetworkAddresses() {
 // API endpoint for client to discover network address for sharing / QR code
 app.get('/api/network', (req, res) => {
   const ips = getNetworkAddresses();
-  const hostHeader = req.headers.host;
-  const protocol = req.headers['x-forwarded-proto'] || req.protocol;
+  const rawHost = req.headers['x-forwarded-host'] || req.headers.host || '';
+  const hostHeader = rawHost.split(',')[0].trim();
+  const isHostCodespaces = hostHeader.includes('.app.github.dev') || hostHeader.includes('.github.dev');
+  const protocol = isHostCodespaces ? 'https' : (req.headers['x-forwarded-proto'] || req.protocol);
+  const activeCodespaceUrl = isHostCodespaces ? `${protocol}://${hostHeader}` : codespaceUrl;
 
   res.json({
     port: PORT,
     localIps: ips,
+    isCodespaces: Boolean(isCodespaces || isHostCodespaces),
+    codespaceUrl: activeCodespaceUrl,
     currentHost: `${protocol}://${hostHeader}`,
-    suggestedLocalUrl: ips.length > 0 ? `http://${ips[0]}:${PORT}` : `http://localhost:${PORT}`,
+    suggestedLocalUrl: activeCodespaceUrl || (ips.length > 0 ? `http://${ips[0]}:${PORT}` : `http://localhost:${PORT}`),
     roomCount: roomManager.getRoomCount(),
     categories: CATEGORIES
   });
@@ -247,11 +260,42 @@ io.on('connection', (socket) => {
 
 // Serve frontend build in production
 const distPath = path.join(__dirname, 'dist');
+const indexPath = path.join(distPath, 'index.html');
 app.use(express.static(distPath));
 
 // Fallback to index.html for SPA routing
 app.get('*', (req, res) => {
-  res.sendFile(path.join(distPath, 'index.html'));
+  if (fs.existsSync(indexPath)) {
+    res.sendFile(indexPath);
+  } else {
+    res.status(503).send(`
+      <!DOCTYPE html>
+      <html>
+        <head><title>Categories Game - Build Required</title></head>
+        <body style="font-family: sans-serif; text-align: center; padding: 40px; background: #fdfbf7; color: #1e293b;">
+          <h2>🚌 Categories Game (أتوبيس كومبلي) Server Running</h2>
+          <p>The frontend static build was not found in <code>./dist</code>.</p>
+          <p>Please run the production build command:</p>
+          <pre style="background: #e2e8f0; padding: 10px 20px; display: inline-block; border-radius: 8px; font-weight: bold;">npm run build</pre>
+          <p>Then refresh this page.</p>
+        </body>
+      </html>
+    `);
+  }
+});
+
+// Handle server listen errors gracefully (e.g. if Codespaces already started a background process)
+server.on('error', (err) => {
+  if (err.code === 'EADDRINUSE') {
+    console.warn(`\n⚠️ Port ${PORT} is already in use (Categories Game server is already active).`);
+    console.log(`💻 Local: http://localhost:${PORT}`);
+    if (codespaceUrl) {
+      console.log(`🐙 GitHub Codespaces Public URL: ${codespaceUrl}`);
+    }
+  } else {
+    console.error('Server error:', err);
+    process.exit(1);
+  }
 });
 
 // Start HTTP + WebSocket Server (only when executed directly, not during test imports)
@@ -263,17 +307,18 @@ if (process.env.NODE_ENV !== 'test') {
     console.log('======================================================');
     console.log(`📡 Bound:        http://${HOST}:${PORT}`);
     console.log(`💻 Local:        http://localhost:${PORT}`);
-    if (ips.length > 0) {
+    if (codespaceUrl) {
+      console.log('------------------------------------------------------');
+      console.log('🐙 GitHub Codespaces Public URL (Zero External Services):');
+      console.log(`   ${codespaceUrl}`);
+      console.log('   (Share this link with friends to play directly!)');
+    } else if (ips.length > 0) {
       ips.forEach(ip => {
         console.log(`📱 Wi-Fi / LAN:  http://${ip}:${PORT}`);
       });
     }
-    console.log('------------------------------------------------------');
-    console.log('🌐 For Reverse Proxies (Cloudflare Tunnel / ngrok):');
-    console.log('   - cloudflared tunnel --url http://localhost:3000');
-    console.log('   - ngrok http 3000');
     console.log('======================================================\n');
   });
 }
 
-export { app, server, io, roomManager, getNetworkAddresses, PORT, HOST };
+export { app, server, io, roomManager, getNetworkAddresses, PORT, HOST, isCodespaces, codespaceUrl };

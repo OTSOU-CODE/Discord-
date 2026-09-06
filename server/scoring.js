@@ -132,6 +132,7 @@ export function calculateRoundScores({ letter, lang, playerIds, answers, votes =
 
   return {
     categoryResults,
-    playerRoundPoints
+    playerRoundPoints,
+    playerScores: playerRoundPoints
   };
 }

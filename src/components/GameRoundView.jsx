@@ -45,6 +45,7 @@ export function GameRoundView({
   const [hasStopped, setHasStopped] = useState(false);
   const inputRefs = useRef([]);
   const draftRef = useRef(draft);
+  const hasStoppedRef = useRef(false);
 
   useEffect(() => {
     draftRef.current = draft;
@@ -59,6 +60,9 @@ export function GameRoundView({
       const remainingMs = Math.max(0, targetEnd - Date.now());
       const remainingSec = Math.ceil(remainingMs / 1000);
       setTimeLeft(remainingSec);
+      if (remainingMs <= 0 && !hasStoppedRef.current) {
+        handleStop();
+      }
     };
 
     updateTimer();
@@ -66,10 +70,10 @@ export function GameRoundView({
     return () => clearInterval(interval);
   }, [roundEndTime, room.roundEndTime]);
 
-  // Submit current draft on unmount or freeze
+  // Submit current draft on unmount if not already stopped
   useEffect(() => {
     return () => {
-      if (onSubmitAnswers && draftRef.current) {
+      if (!hasStoppedRef.current && onSubmitAnswers && draftRef.current) {
         onSubmitAnswers(draftRef.current);
       }
     };
@@ -77,7 +81,7 @@ export function GameRoundView({
 
   // Handle input changes and sync draft with server
   const handleInputChange = (catId, value) => {
-    if (hasStopped) return;
+    if (hasStopped || hasStoppedRef.current) return;
     const nextDraft = { ...draft, [catId]: value };
     setDraft(nextDraft);
     onUpdateDraft(nextDraft);
@@ -101,11 +105,12 @@ export function GameRoundView({
   };
 
   const handleStop = () => {
-    if (hasStopped) return;
+    if (hasStoppedRef.current) return;
+    hasStoppedRef.current = true;
     setHasStopped(true);
     playStopAlarm();
     if (onSubmitAnswers) {
-      onSubmitAnswers(draft);
+      onSubmitAnswers(draftRef.current);
     }
     onTriggerStop();
   };

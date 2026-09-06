@@ -38,6 +38,20 @@ test('Integration - HTTP Endpoints & Static Files', async () => {
   assert.ok(networkData.port);
   assert.ok(Array.isArray(networkData.localIps));
   assert.equal(networkData.categories.length, 9);
+  assert.equal(typeof networkData.isCodespaces, 'boolean');
+
+  // Test /api/network with GitHub Codespaces host header
+  const codespaceRes = await fetch(`${baseUrl}/api/network`, {
+    headers: { 
+      'x-forwarded-host': 'my-game-codespace-3000.app.github.dev',
+      'x-forwarded-proto': 'https'
+    }
+  });
+  assert.equal(codespaceRes.status, 200);
+  const codespaceData = await codespaceRes.json();
+  assert.equal(codespaceData.isCodespaces, true);
+  assert.equal(codespaceData.codespaceUrl, 'https://my-game-codespace-3000.app.github.dev');
+  assert.equal(codespaceData.suggestedLocalUrl, 'https://my-game-codespace-3000.app.github.dev');
 
   // Test static index.html served from dist
   const rootRes = await fetch(`${baseUrl}/`);
